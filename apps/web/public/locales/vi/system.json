@@ -1,0 +1,111 @@
+{
+  "title": "Quan ly he thong",
+  "organization_management": "Quan ly to chuc",
+  "users_management": "Quan ly nguoi dung",
+  "permissions_management": "Quan ly quyen han",
+  "roles_management": "Quan ly vai tro",
+  "codes_management": "Quan ly ma co ban",
+  "config_management": "Cai dat moi truong",
+  "language_management": "Quan ly da ngon ngu",
+  "theme_management": "Cai dat giao dien",
+  "configuration": {
+    "tabs": {
+      "database": "Co so du lieu",
+      "notifications": "Thong bao",
+      "storage": "Luu tru tap tin",
+      "security": "Bao mat"
+    },
+    "database": {
+      "title": "Cai dat ket noi co so du lieu",
+      "description": "Nhap thong tin ket noi co so du lieu PostgreSQL.",
+      "host": "May chu",
+      "port": "Cong",
+      "database_name": "Co so du lieu",
+      "user": "Nguoi dung",
+      "password": "Mat khau",
+      "test_connection": "Kiem tra ket noi",
+      "save": "Luu"
+    },
+    "notifications": {
+      "title": "Cai dat thong bao",
+      "description": "Thiet lap phuong thuc nhan thong bao he thong.",
+      "email": "Thong bao email",
+      "email_description": "Nhan thong bao qua email khi co su kien quan trong.",
+      "sms": "Thong bao SMS",
+      "sms_description": "Nhan thong bao qua SMS khi co tinh huong khan cap.",
+      "push": "Thong bao day",
+      "push_description": "Nhan thong bao day thoi gian thuc qua ung dung di dong.",
+      "save": "Luu"
+    },
+    "storage": {
+      "title": "Cai dat luu tru tap tin",
+      "description": "Thiet lap vi tri luu tru cho tap tin tai len.",
+      "local_storage": "Luu tru may chu cuc bo",
+      "storage_path": "Duong dan luu tru",
+      "amazon_s3": "Amazon S3",
+      "bucket_name": "Ten bucket",
+      "region": "Vung",
+      "access_key": "Khoa truy cap",
+      "secret_key": "Khoa bi mat",
+      "save": "Luu"
+    },
+    "security": {
+      "title": "Cai dat bao mat",
+      "description": "Quan ly cai dat truy cap he thong va bao mat du lieu.",
+      "two_factor_auth": "Xac thuc hai yeu to (2FA)",
+      "two_factor_auth_description": "Kich hoat xac thuc hai yeu to de tang cuong bao mat khi dang nhap.",
+      "session_timeout": "Thoi gian het phien (phut)",
+      "session_timeout_description": "Tu dong dang xuat sau thoi gian khong hoat dong da dinh.",
+      "password_policy": "Chinh sach mat khau",
+      "min_length": "Do dai toi thieu",
+      "complexity_required": "Yeu cau chu hoa, chu thuong, so va ky tu dac biet",
+      "save": "Luu"
+    }
+  },
+  "language": {
+    "title": "Quan ly da ngon ngu",
+    "tabs": {
+      "dashboard": "Bang dieu khien",
+      "keys": "Quan ly khoa dich",
+      "translations": "Quan ly ban dich"
+    },
+    "dashboard": {
+      "overall_progress": "Tien do tong the",
+      "translation_keys": "Khoa dich",
+      "total_translation_keys": "Tong so khoa dich",
+      "supported_languages": "Ngon ngu ho tro",
+      "supported_languages_count": "So ngon ngu ho tro",
+      "language_progress": "Tien do theo ngon ngu",
+      "language_progress_description": "Kiem tra ty le hoan thanh ban dich cho moi ngon ngu"
+    },
+    "keys": {
+      "title": "Quan ly khoa dich",
+      "description": "Them, sua hoac xoa khoa dich",
+      "search_placeholder": "Tim kiem khoa dich...",
+      "new_key": "Khoa dich moi",
+      "table": {
+        "key": "Khoa",
+        "namespace": "Khong gian ten",
+        "description": "Mo ta",
+        "completion": "Hoan thanh",
+        "actions": "Thao tac"
+      }
+    },
+    "translations": {
+      "title": "Quan ly ban dich",
+      "description": "Chinh sua ban dich cho moi ngon ngu",
+      "no_translation": "Khong co ban dich"
+    }
+  },
+  "common": {
+    "save": "Luu",
+    "cancel": "Huy",
+    "edit": "Sua",
+    "delete": "Xoa",
+    "create": "Tao",
+    "update": "Cap nhat",
+    "search": "Tim kiem",
+    "actions": "Thao tac",
+    "level": "Cap do"
+  }
+}

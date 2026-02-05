@@ -1,0 +1,39 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(pnpm add:*)",
+      "Bash(pnpm build:*)",
+      "Bash(npm uninstall:*)",
+      "Bash(npx playwright:*)",
+      "Bash(pnpm exec playwright:*)",
+      "Bash(claude mcp add:*)",
+      "mcp__playwright__browser_wait_for",
+      "mcp__playwright__browser_click",
+      "mcp__playwright__browser_take_screenshot",
+      "mcp__playwright__browser_navigate",
+      "mcp__playwright__browser_snapshot",
+      "Bash(pnpm remove:*)",
+      "Bash(pnpm --filter @fms/web build:*)",
+      "Bash(netstat:*)",
+      "Bash(pnpm dev)",
+      "Bash(cmd //c \"taskkill /F /PID 53184\")",
+      "mcp__playwright__browser_type",
+      "Bash(pnpm --filter @fms/ui build:*)",
+      "mcp__playwright__browser_evaluate",
+      "Bash(pnpm --filter @fms/web dev)",
+      "mcp__playwright__browser_press_key",
+      "Bash(docker-compose up:*)",
+      "Bash(npx prisma db seed)",
+      "Bash(pnpm --filter api dev:*)",
+      "Bash(pnpm install:*)",
+      "Bash(pnpm --filter @fms/ui check-types:*)",
+      "Bash(pnpm check-types:*)",
+      "Bash(pnpm --filter web check-types:*)",
+      "Bash(pnpm turbo build:*)",
+      "Bash(pnpm --filter web build:*)",
+      "Bash(pnpm run build:*)",
+      "Bash(grep:*)",
+      "Bash(pnpm turbo run build:*)"
+    ]
+  }
+}

@@ -1,0 +1,13 @@
+{
+  "title": "예방정비",
+  "master": "예방정비마스터",
+  "order": "정비오더생성",
+  "calendar": "예방정비카렌더",
+  "plan": "예방정비계획",
+  "execution": "예방정비수행",
+  "completion": "예방정비완료",
+  "approval": "예방정비승인",
+  "history": "예방정비이력",
+  "analysis": "예방정비분석",
+  "report": "예방정비보고서"
+}

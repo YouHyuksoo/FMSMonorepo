@@ -1,0 +1,81 @@
+{
+  "title": "조직 관리",
+  "subtitle": "조직 정보를 등록, 수정, 관리합니다.",
+  "add_organization": "조직 추가",
+  "edit_organization": "조직 수정",
+  "view_organization": "조직 상세",
+  "delete_organization": "조직 삭제",
+  "code": "조직코드",
+  "name": "조직명",
+  "type": "유형",
+  "parent_name": "상위조직",
+  "sort_order": "정렬순서",
+  "is_active": "활성상태",
+  "updated_at": "수정일시",
+  "description": "설명",
+  "type_company": "회사",
+  "type_department": "부서",
+  "type_team": "팀",
+  "status_active": "활성",
+  "status_inactive": "비활성",
+  "search_placeholder": "조직코드, 조직명으로 검색...",
+  "code_placeholder": "예: DEPT-001",
+  "name_placeholder": "조직명을 입력하세요",
+  "parent_placeholder": "상위 조직을 선택하세요",
+  "description_placeholder": "조직에 대한 설명을 입력하세요",
+  "code_description": "대문자, 숫자, 하이픈, 밑줄만 사용 가능",
+  "is_active_description": "조직 활성화",
+  "code_required": "조직 코드를 입력해주세요.",
+  "code_pattern": "코드는 대문자, 숫자, 하이픈, 밑줄만 사용할 수 있습니다.",
+  "name_required": "조직명을 입력해주세요.",
+  "parent_required": "상위 조직을 선택해주세요.",
+  "sort_order_min": "정렬 순서는 1 이상이어야 합니다.",
+  "actions": {
+    "view": "보기",
+    "edit": "수정",
+    "delete": "삭제"
+  },
+  "toast": {
+    "error": "오류",
+    "success": "성공",
+    "load_failed": "조직 목록을 불러오는데 실패했습니다.",
+    "delete_success": "조직이 삭제되었습니다.",
+    "delete_failed": "조직 삭제에 실패했습니다.",
+    "add_success": "조직이 추가되었습니다.",
+    "edit_success": "조직이 수정되었습니다.",
+    "save_failed": "조직 {mode}에 실패했습니다.",
+    "import_success": "{count}개의 조직이 가져오기 되었습니다.",
+    "import_failed": "데이터 가져오기에 실패했습니다."
+  },
+  "dialog": {
+    "add_title": "조직 추가",
+    "add_description": "새로운 조직을 추가합니다.",
+    "edit_title": "조직 수정",
+    "edit_description": "조직 정보를 수정합니다.",
+    "view_title": "조직 상세",
+    "view_description": "조직 정보를 확인합니다.",
+    "delete_title": "조직 삭제",
+    "delete_description": "\"{name}\" 조직을 삭제하시겠습니까?",
+    "delete_warning": "이 작업은 되돌릴 수 없습니다.",
+    "cancel": "취소",
+    "delete": "삭제"
+  },
+  "export": {
+    "code": "조직코드",
+    "name": "조직명",
+    "type": "유형",
+    "parent_name": "상위조직",
+    "description": "설명",
+    "sort_order": "정렬순서",
+    "is_active": "활성상태",
+    "created_at": "생성일시"
+  },
+  "import": {
+    "type_validation": "유형은 company, department, team 중 하나여야 합니다."
+  },
+  "sample": {
+    "name": "샘플부서",
+    "parent_name": "ABC 제조",
+    "description": "샘플 부서입니다"
+  }
+}

@@ -1,0 +1,13 @@
+{
+  "title": "Preventive Maintenance",
+  "plan": "Preventive Maintenance Plan",
+  "execution": "Preventive Maintenance Execution",
+  "completion": "Preventive Maintenance Completion",
+  "approval": "Preventive Maintenance Approval",
+  "history": "Preventive Maintenance History",
+  "analysis": "Preventive Maintenance Analysis",
+  "report": "Preventive Maintenance Report",
+  "master": "Preventive Maintenance Master",
+  "order": "Maintenance Order Creation",
+  "calendar": "Preventive Maintenance Calendar"
+}

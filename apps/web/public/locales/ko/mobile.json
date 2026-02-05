@@ -1,0 +1,6 @@
+{
+  "title": "모바일QR점검",
+  "qr_management": "QR스캔점검",
+  "result_management": "모바일결과조회",
+  "failure_register": "고장 등록 (QR)"
+}

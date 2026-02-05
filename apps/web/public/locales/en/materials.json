@@ -1,0 +1,9 @@
+{
+  "title": "Materials Management",
+  "inbound": "Material Inbound Management",
+  "outbound": "Material Outbound Management",
+  "stock": "Material Stock Management",
+  "register": "Material Registration Management",
+  "master": "Material Master Management",
+  "issuance_request": "Material Issuance Request"
+}

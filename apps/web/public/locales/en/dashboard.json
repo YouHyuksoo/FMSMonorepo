@@ -1,0 +1,49 @@
+{
+  "title": "Dashboard",
+  "subtitle": "Summary of equipment and maintenance status.",
+  "total_equipment": "Total Equipment",
+  "failed_equipment": "Failed Equipment",
+  "inspection_rate": "Inspection Rate",
+  "pending_work": "Pending Tasks",
+  "from_last_month": "From Last Month",
+  "recent_failures": "Recent Failures",
+  "recent_failures_desc": "Recent failure history.",
+  "todays_inspection": "Today's Inspections",
+  "todays_inspection_desc": "Scheduled inspections for today.",
+  "inspection_status": {
+    "completed": "Completed",
+    "in_progress": "In Progress",
+    "pending": "Pending"
+  },
+  "overview": "Overview",
+  "equipment": {
+    "status": "Equipment Status",
+    "health": "Equipment Health",
+    "maintenance": "Maintenance Status"
+  },
+  "sensor": {
+    "status": "Sensor Status",
+    "alerts": "Sensor Alerts",
+    "monitoring": "Sensor Monitoring"
+  },
+  "maintenance": {
+    "pending": "Pending Tasks",
+    "in_progress": "In Progress Tasks",
+    "completed": "Completed Tasks"
+  },
+  "energy": {
+    "consumption": "Energy Consumption",
+    "efficiency": "Energy Efficiency",
+    "savings": "Energy Savings"
+  },
+  "carbon": {
+    "emissions": "Carbon Emissions",
+    "reduction": "Carbon Reduction",
+    "target": "Reduction Target"
+  },
+  "kpi": {
+    "overall": "Overall KPI",
+    "equipment": "Equipment KPI",
+    "maintenance": "Maintenance KPI"
+  }
+}

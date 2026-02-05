@@ -1,0 +1,13 @@
+{
+  "title": "위치기반모니터링",
+  "management": "위치 관리",
+  "registration": "위치 등록 관리",
+  "master": "위치 마스터 관리",
+  "type": "위치 유형 관리",
+  "hierarchy": "위치 계층 관리",
+  "map": "위치 지도 관리",
+  "history": "위치 이력 관리",
+  "report": "위치 보고서 관리",
+  "layout_management": "설비배치도",
+  "monitor_management": "실시간모니터링"
+}

@@ -1,0 +1,12 @@
+{
+  "title": "Mobile Management",
+  "work_order": "Work Order Management",
+  "maintenance": "Maintenance Management",
+  "inspection": "Inspection Management",
+  "failure": "Failure Management",
+  "material": "Material Management",
+  "report": "Report Management",
+  "qr_management": "QR Scan Inspection",
+  "result_management": "Mobile Result Inquiry",
+  "failure_register": "Failure Registration (QR)"
+}

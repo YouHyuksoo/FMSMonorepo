@@ -1,0 +1,49 @@
+{
+  "title": "仪表板",
+  "subtitle": "设备和维护状态概览。",
+  "total_equipment": "设备总数",
+  "failed_equipment": "故障设备",
+  "inspection_rate": "点检执行率",
+  "pending_work": "待处理工作",
+  "from_last_month": "与上月相比",
+  "recent_failures": "近期故障记录",
+  "recent_failures_desc": "近期发生的故障内容。",
+  "todays_inspection": "今日点检计划",
+  "todays_inspection_desc": "今日预定的点检列表。",
+  "inspection_status": {
+    "completed": "已完成",
+    "in_progress": "进行中",
+    "pending": "待处理"
+  },
+  "overview": "概览",
+  "equipment": {
+    "status": "设备状态",
+    "health": "设备健康度",
+    "maintenance": "维护状态"
+  },
+  "sensor": {
+    "status": "传感器状态",
+    "alerts": "传感器警报",
+    "monitoring": "传感器监控"
+  },
+  "maintenance": {
+    "pending": "待处理任务",
+    "in_progress": "进行中任务",
+    "completed": "已完成任务"
+  },
+  "energy": {
+    "consumption": "能源消耗",
+    "efficiency": "能源效率",
+    "savings": "能源节约"
+  },
+  "carbon": {
+    "emissions": "碳排放量",
+    "reduction": "碳减排",
+    "target": "减排目标"
+  },
+  "kpi": {
+    "overall": "综合KPI",
+    "equipment": "设备KPI",
+    "maintenance": "维护KPI"
+  }
+}

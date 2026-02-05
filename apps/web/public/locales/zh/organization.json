@@ -1,0 +1,81 @@
+{
+  "title": "组织管理",
+  "subtitle": "注册、编辑和管理组织信息。",
+  "add_organization": "添加组织",
+  "edit_organization": "编辑组织",
+  "view_organization": "组织详情",
+  "delete_organization": "删除组织",
+  "code": "组织编码",
+  "name": "组织名称",
+  "type": "类型",
+  "parent_name": "上级组织",
+  "sort_order": "排序",
+  "is_active": "状态",
+  "updated_at": "更新时间",
+  "description": "描述",
+  "type_company": "公司",
+  "type_department": "部门",
+  "type_team": "团队",
+  "status_active": "活跃",
+  "status_inactive": "停用",
+  "search_placeholder": "按编码、名称搜索...",
+  "code_placeholder": "例如：DEPT-001",
+  "name_placeholder": "请输入组织名称",
+  "parent_placeholder": "请选择上级组织",
+  "description_placeholder": "请输入组织描述",
+  "code_description": "只能使用大写字母、数字、连字符和下划线",
+  "is_active_description": "激活组织",
+  "code_required": "请输入组织编码。",
+  "code_pattern": "编码只能包含大写字母、数字、连字符和下划线。",
+  "name_required": "请输入组织名称。",
+  "parent_required": "请选择上级组织。",
+  "sort_order_min": "排序顺序必须至少为1。",
+  "actions": {
+    "view": "查看",
+    "edit": "编辑",
+    "delete": "删除"
+  },
+  "toast": {
+    "error": "错误",
+    "success": "成功",
+    "load_failed": "加载组织列表失败。",
+    "delete_success": "组织已删除。",
+    "delete_failed": "删除组织失败。",
+    "add_success": "组织已添加。",
+    "edit_success": "组织已更新。",
+    "save_failed": "组织{mode}失败。",
+    "import_success": "已导入{count}个组织。",
+    "import_failed": "数据导入失败。"
+  },
+  "dialog": {
+    "add_title": "添加组织",
+    "add_description": "添加新组织。",
+    "edit_title": "编辑组织",
+    "edit_description": "编辑组织信息。",
+    "view_title": "组织详情",
+    "view_description": "查看组织信息。",
+    "delete_title": "删除组织",
+    "delete_description": "确定要删除\"{name}\"组织吗？",
+    "delete_warning": "此操作无法撤销。",
+    "cancel": "取消",
+    "delete": "删除"
+  },
+  "export": {
+    "code": "组织编码",
+    "name": "组织名称",
+    "type": "类型",
+    "parent_name": "上级组织",
+    "description": "描述",
+    "sort_order": "排序",
+    "is_active": "状态",
+    "created_at": "创建时间"
+  },
+  "import": {
+    "type_validation": "类型必须是company、department或team之一。"
+  },
+  "sample": {
+    "name": "示例部门",
+    "parent_name": "ABC制造",
+    "description": "这是一个示例部门"
+  }
+}

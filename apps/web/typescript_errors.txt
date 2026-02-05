@@ -1,0 +1,759 @@
+app/system/language/page.tsx(52,12): error TS7053: Element implicitly has an 'any' type because expression of type 'string' can't be used to index type '{ "1": { ko: string; en: string; ja: string; zh: string; }; "2": { ko: string; en: string; ja: string; zh: string; }; "3": { ko: string; en: string; ja: string; zh: string; }; "4": { ko: string; en: string; ja: string; zh: string; }; }'.
+  No index signature with a parameter of type 'string' was found on type '{ "1": { ko: string; en: string; ja: string; zh: string; }; "2": { ko: string; en: string; ja: string; zh: string; }; "3": { ko: string; en: string; ja: string; zh: string; }; "4": { ko: string; en: string; ja: string; zh: string; }; }'.
+app/system/language/page.tsx(66,25): error TS7053: Element implicitly has an 'any' type because expression of type 'string' can't be used to index type '{ "1": { ko: string; en: string; ja: string; zh: string; }; "2": { ko: string; en: string; ja: string; zh: string; }; "3": { ko: string; en: string; ja: string; zh: string; }; "4": { ko: string; en: string; ja: string; zh: string; }; }'.
+  No index signature with a parameter of type 'string' was found on type '{ "1": { ko: string; en: string; ja: string; zh: string; }; "2": { ko: string; en: string; ja: string; zh: string; }; "3": { ko: string; en: string; ja: string; zh: string; }; "4": { ko: string; en: string; ja: string; zh: string; }; }'.
+app/system/language/page.tsx(79,27): error TS7053: Element implicitly has an 'any' type because expression of type 'string' can't be used to index type '{ "1": { ko: string; en: string; ja: string; zh: string; }; "2": { ko: string; en: string; ja: string; zh: string; }; "3": { ko: string; en: string; ja: string; zh: string; }; "4": { ko: string; en: string; ja: string; zh: string; }; }'.
+  No index signature with a parameter of type 'string' was found on type '{ "1": { ko: string; en: string; ja: string; zh: string; }; "2": { ko: string; en: string; ja: string; zh: string; }; "3": { ko: string; en: string; ja: string; zh: string; }; "4": { ko: string; en: string; ja: string; zh: string; }; }'.
+app/system/language/page.tsx(171,21): error TS7053: Element implicitly has an 'any' type because expression of type 'string' can't be used to index type '{ "1": { ko: string; en: string; ja: string; zh: string; }; "2": { ko: string; en: string; ja: string; zh: string; }; "3": { ko: string; en: string; ja: string; zh: string; }; "4": { ko: string; en: string; ja: string; zh: string; }; }'.
+  No index signature with a parameter of type 'string' was found on type '{ "1": { ko: string; en: string; ja: string; zh: string; }; "2": { ko: string; en: string; ja: string; zh: string; }; "3": { ko: string; en: string; ja: string; zh: string; }; "4": { ko: string; en: string; ja: string; zh: string; }; }'.
+app/system/language/page.tsx(316,39): error TS7053: Element implicitly has an 'any' type because expression of type 'string' can't be used to index type '{ "1": { ko: string; en: string; ja: string; zh: string; }; "2": { ko: string; en: string; ja: string; zh: string; }; "3": { ko: string; en: string; ja: string; zh: string; }; "4": { ko: string; en: string; ja: string; zh: string; }; }'.
+  No index signature with a parameter of type 'string' was found on type '{ "1": { ko: string; en: string; ja: string; zh: string; }; "2": { ko: string; en: string; ja: string; zh: string; }; "3": { ko: string; en: string; ja: string; zh: string; }; "4": { ko: string; en: string; ja: string; zh: string; }; }'.
+app/system/permissions/page.tsx(200,53): error TS2345: Argument of type 'Role[]' is not assignable to parameter of type 'import("C:/Project/FMSMonorepo/packages/types/src/permission").Role[]'.
+  Type 'Role' is missing the following properties from type 'Role': createdAt, updatedAt
+components/dashboard/dashboard.tsx(151,23): error TS2532: Object is possibly 'undefined'.
+components/equipment/equipment-bom-management.tsx(75,44): error TS2698: Spread types may only be created from object types.
+components/equipment/equipment-bom-management.tsx(76,50): error TS2698: Spread types may only be created from object types.
+components/equipment/equipment-bom-management.tsx(77,46): error TS2698: Spread types may only be created from object types.
+components/equipment/equipment-bom-management.tsx(78,50): error TS2698: Spread types may only be created from object types.
+components/equipment/equipment-bom-management.tsx(144,11): error TS2322: Type 'string | undefined' is not assignable to type 'string'.
+  Type 'undefined' is not assignable to type 'string'.
+components/equipment/equipment-bom-management.tsx(145,11): error TS2322: Type 'string | undefined' is not assignable to type 'string'.
+  Type 'undefined' is not assignable to type 'string'.
+components/equipment/equipment-bom-management.tsx(276,36): error TS2532: Object is possibly 'undefined'.
+components/equipment/equipment-bom-management.tsx(389,11): error TS2322: Type 'string | undefined' is not assignable to type 'string'.
+  Type 'undefined' is not assignable to type 'string'.
+components/equipment/equipment-bom-management.tsx(390,11): error TS2322: Type 'string | undefined' is not assignable to type 'string'.
+  Type 'undefined' is not assignable to type 'string'.
+components/equipment/equipment-bom-management.tsx(422,7): error TS2322: Type 'string | undefined' is not assignable to type 'string'.
+  Type 'undefined' is not assignable to type 'string'.
+components/equipment/equipment-bom-management.tsx(423,7): error TS2322: Type 'string | undefined' is not assignable to type 'string'.
+  Type 'undefined' is not assignable to type 'string'.
+components/equipment/equipment-bom-management.tsx(433,24): error TS2532: Object is possibly 'undefined'.
+components/equipment/equipment-overview.tsx(264,12): error TS2322: Type '{ children: Element; data: never[]; columns: never[]; headerLeft: Element; showSearch: false; showFilter: false; showExport: false; }' is not assignable to type 'IntrinsicAttributes & DataTableProps<never>'.
+  Property 'children' does not exist on type 'IntrinsicAttributes & DataTableProps<never>'.
+components/equipment/equipment-qr-code-dialog.tsx(55,6): error TS2554: Expected 0-1 arguments, but got 2.
+components/equipment/equipment-specification-management.tsx(92,5): error TS2322: Type 'string' is not assignable to type 'number'.
+components/equipment/equipment-specification-management.tsx(93,5): error TS2322: Type 'string' is not assignable to type 'number'.
+components/equipment/equipment-specification-management.tsx(95,5): error TS2322: Type 'string' is not assignable to type 'number'.
+components/equipment/equipment-specification-management.tsx(100,5): error TS2322: Type 'string' is not assignable to type 'number'.
+components/equipment/equipment-specification-management.tsx(101,5): error TS2322: Type 'string' is not assignable to type 'number'.
+components/equipment/equipment-specification-management.tsx(102,5): error TS2322: Type 'string' is not assignable to type 'number'.
+components/equipment/equipment-specification-management.tsx(107,5): error TS2353: Object literal may only specify known properties, and 'standardName' does not exist in type 'Partial<SafetyStandard> | (() => Partial<SafetyStandard>)'.
+components/equipment/equipment-specification-management.tsx(113,5): error TS2353: Object literal may only specify known properties, and 'certificationName' does not exist in type 'Partial<Certification> | (() => Partial<Certification>)'.
+components/equipment/equipment-specification-management.tsx(180,90): error TS2532: Object is possibly 'undefined'.
+components/equipment/equipment-specification-management.tsx(239,30): error TS2488: Type 'SpecificationItem[] | undefined' must have a '[Symbol.iterator]()' method that returns an iterator.
+components/equipment/equipment-specification-management.tsx(249,5): error TS2322: Type '{ id?: string | undefined; name?: string | undefined; category?: "technical" | "performance" | "physical" | "electrical" | "mechanical" | undefined; items?: SpecificationItem[] | undefined; order?: number | undefined; }' is not assignable to type 'SpecificationGroup'.
+  Types of property 'id' are incompatible.
+    Type 'string | undefined' is not assignable to type 'string'.
+      Type 'undefined' is not assignable to type 'string'.
+components/equipment/equipment-specification-management.tsx(267,25): error TS18048: 'targetGroup.items' is possibly 'undefined'.
+components/equipment/equipment-specification-management.tsx(268,5): error TS2322: Type '{ id?: string | undefined; name?: string | undefined; category?: "technical" | "performance" | "physical" | "electrical" | "mechanical" | undefined; items?: SpecificationItem[] | undefined; order?: number | undefined; }' is not assignable to type 'SpecificationGroup'.
+  Types of property 'id' are incompatible.
+    Type 'string | undefined' is not assignable to type 'string'.
+      Type 'undefined' is not assignable to type 'string'.
+components/equipment/equipment-specification-management.tsx(286,40): error TS2322: Type 'string' is not assignable to type 'number'.
+components/equipment/equipment-specification-management.tsx(286,57): error TS2322: Type 'string' is not assignable to type 'number'.
+components/equipment/equipment-specification-management.tsx(286,84): error TS2322: Type 'string' is not assignable to type 'number'.
+components/equipment/equipment-specification-management.tsx(334,43): error TS2322: Type 'string' is not assignable to type 'number'.
+components/equipment/equipment-specification-management.tsx(334,57): error TS2322: Type 'string' is not assignable to type 'number'.
+components/equipment/equipment-specification-management.tsx(334,71): error TS2322: Type 'string' is not assignable to type 'number'.
+components/equipment/equipment-specification-management.tsx(382,31): error TS2353: Object literal may only specify known properties, and 'standardName' does not exist in type 'SetStateAction<Partial<SafetyStandard>>'.
+components/equipment/equipment-specification-management.tsx(431,9): error TS2353: Object literal may only specify known properties, and 'certificationName' does not exist in type 'SetStateAction<Partial<Certification>>'.
+components/equipment/equipment-specification-management.tsx(531,16): error TS2322: Type '"warning"' is not assignable to type '"default" | "destructive" | null | undefined'.
+components/equipment/equipment-specification-management.tsx(791,42): error TS2551: Property 'standardName' does not exist on type 'SafetyStandard'. Did you mean 'standard'?
+components/equipment/equipment-specification-management.tsx(792,78): error TS2339: Property 'description' does not exist on type 'SafetyStandard'.
+components/equipment/equipment-specification-management.tsx(793,33): error TS2339: Property 'description' does not exist on type 'SafetyStandard'.
+components/equipment/equipment-specification-management.tsx(795,42): error TS2551: Property 'compliant' does not exist on type 'SafetyStandard'. Did you mean 'compliance'?
+components/equipment/equipment-specification-management.tsx(846,44): error TS2339: Property 'certificationName' does not exist on type 'Certification'.
+components/equipment/equipment-specification-management.tsx(849,44): error TS2339: Property 'validFrom' does not exist on type 'Certification'.
+components/equipment/equipment-specification-management.tsx(849,70): error TS2339: Property 'validFrom' does not exist on type 'Certification'.
+components/equipment/equipment-specification-management.tsx(850,44): error TS2339: Property 'validTo' does not exist on type 'Certification'.
+components/equipment/equipment-specification-management.tsx(850,68): error TS2339: Property 'validTo' does not exist on type 'Certification'.
+components/equipment/equipment-specification-management.tsx(1084,79): error TS2322: Type 'string' is not assignable to type 'number'.
+components/equipment/equipment-specification-management.tsx(1095,79): error TS2322: Type 'string' is not assignable to type 'number'.
+components/equipment/equipment-specification-management.tsx(1117,79): error TS2322: Type 'string' is not assignable to type 'number'.
+components/equipment/equipment-specification-management.tsx(1160,75): error TS2322: Type 'string' is not assignable to type 'number'.
+components/equipment/equipment-specification-management.tsx(1171,75): error TS2322: Type 'string' is not assignable to type 'number'.
+components/equipment/equipment-specification-management.tsx(1182,75): error TS2322: Type 'string' is not assignable to type 'number'.
+components/equipment/equipment-specification-management.tsx(1224,43): error TS2551: Property 'standardName' does not exist on type 'Partial<SafetyStandard>'. Did you mean 'standard'?
+components/equipment/equipment-specification-management.tsx(1225,81): error TS2353: Object literal may only specify known properties, and 'standardName' does not exist in type 'SetStateAction<Partial<SafetyStandard>>'.
+components/equipment/equipment-specification-management.tsx(1235,43): error TS2339: Property 'description' does not exist on type 'Partial<SafetyStandard>'.
+components/equipment/equipment-specification-management.tsx(1236,81): error TS2353: Object literal may only specify known properties, and 'description' does not exist in type 'SetStateAction<Partial<SafetyStandard>>'.
+components/equipment/equipment-specification-management.tsx(1248,47): error TS2551: Property 'compliant' does not exist on type 'Partial<SafetyStandard>'. Did you mean 'compliance'?
+components/equipment/equipment-specification-management.tsx(1249,83): error TS2353: Object literal may only specify known properties, and 'compliant' does not exist in type 'SetStateAction<Partial<SafetyStandard>>'.
+components/equipment/equipment-specification-management.tsx(1281,42): error TS2339: Property 'certificationName' does not exist on type 'Partial<Certification>'.
+components/equipment/equipment-specification-management.tsx(1282,79): error TS2353: Object literal may only specify known properties, and 'certificationName' does not exist in type 'SetStateAction<Partial<Certification>>'.
+components/equipment/equipment-specification-management.tsx(1313,17): error TS2322: Type '{ date: Date | undefined; setDate: (date: any) => void; className: string; }' is not assignable to type 'IntrinsicAttributes & DatePickerProps'.
+  Property 'date' does not exist on type 'IntrinsicAttributes & DatePickerProps'.
+components/equipment/equipment-specification-management.tsx(1313,41): error TS2339: Property 'validFrom' does not exist on type 'Partial<Certification>'.
+components/equipment/equipment-specification-management.tsx(1313,80): error TS2339: Property 'validFrom' does not exist on type 'Partial<Certification>'.
+components/equipment/equipment-specification-management.tsx(1314,27): error TS7006: Parameter 'date' implicitly has an 'any' type.
+components/equipment/equipment-specification-management.tsx(1315,64): error TS2353: Object literal may only specify known properties, and 'validFrom' does not exist in type 'SetStateAction<Partial<Certification>>'.
+components/equipment/equipment-specification-management.tsx(1325,17): error TS2322: Type '{ date: Date | undefined; setDate: (date: any) => void; className: string; }' is not assignable to type 'IntrinsicAttributes & DatePickerProps'.
+  Property 'date' does not exist on type 'IntrinsicAttributes & DatePickerProps'.
+components/equipment/equipment-specification-management.tsx(1325,41): error TS2339: Property 'validTo' does not exist on type 'Partial<Certification>'.
+components/equipment/equipment-specification-management.tsx(1325,78): error TS2339: Property 'validTo' does not exist on type 'Partial<Certification>'.
+components/equipment/equipment-specification-management.tsx(1326,27): error TS7006: Parameter 'date' implicitly has an 'any' type.
+components/equipment/equipment-specification-management.tsx(1327,64): error TS2353: Object literal may only specify known properties, and 'validTo' does not exist in type 'SetStateAction<Partial<Certification>>'.
+components/equipment/equipment-type-management.tsx(43,7): error TS2739: Type '{ id: string; code: string; name: string; description: string; properties: never[]; isActive: true; createdAt: string; updatedAt: string; }' is missing the following properties from type 'EquipmentType': createdBy, updatedBy
+components/equipment/equipment-type-management.tsx(54,7): error TS2741: Property 'isActive' is missing in type '{ id: string; code: string; name: string; dataType: "string"; required: false; order: number; }' but required in type 'EquipmentProperty'.
+components/equipment/equipment-type-management.tsx(70,7): error TS2741: Property 'isActive' is missing in type '{ id: string; code: string; name: string; dataType: "string"; required: true; order: number; }' but required in type 'EquipmentProperty'.
+components/equipment/equipment-type-management.tsx(78,7): error TS2741: Property 'isActive' is missing in type '{ id: string; code: string; name: string; dataType: "string"; required: true; order: number; }' but required in type 'EquipmentProperty'.
+components/failure/desktop-failure-form.tsx(85,13): error TS18048: 'file' is possibly 'undefined'.
+components/failure/desktop-failure-form.tsx(86,50): error TS2345: Argument of type 'File | undefined' is not assignable to parameter of type 'Blob | MediaSource'.
+  Type 'undefined' is not assignable to type 'Blob | MediaSource'.
+components/failure/desktop-failure-form.tsx(97,9): error TS18048: 'previewToRemove' is possibly 'undefined'.
+components/failure/desktop-failure-form.tsx(98,27): error TS2345: Argument of type 'string | undefined' is not assignable to parameter of type 'string'.
+  Type 'undefined' is not assignable to type 'string'.
+components/inspection/inspection-result-management.tsx(36,3): error TS2724: '"@/hooks/api/use-inspection"' has no exported member named 'useCreateInspectionResult'. Did you mean 'useInspectionResult'?
+components/inspection/inspection-result-management.tsx(44,52): error TS2554: Expected 0-1 arguments, but got 2.
+components/inspection/inspection-result-management.tsx(90,40): error TS2339: Property 'startedAt' does not exist on type 'InspectionResult'.
+components/inspection/inspection-result-management.tsx(91,42): error TS2339: Property 'completedAt' does not exist on type 'InspectionResult'.
+components/inspection/inspection-result-management.tsx(92,39): error TS2339: Property 'duration' does not exist on type 'InspectionResult'.
+components/inspection/inspection-result-management.tsx(93,37): error TS2339: Property 'status' does not exist on type 'InspectionResult'.
+components/inspection/inspection-result-management.tsx(95,44): error TS2339: Property 'completedBy' does not exist on type 'InspectionResult'.
+components/inspection/inspection-result-management.tsx(148,43): error TS7006: Parameter 'result' implicitly has an 'any' type.
+components/inspection/inspection-result-management.tsx(166,32): error TS7006: Parameter 'r' implicitly has an 'any' type.
+components/inspection/inspection-result-management.tsx(167,33): error TS7006: Parameter 'r' implicitly has an 'any' type.
+components/inspection/inspection-result-management.tsx(168,33): error TS7006: Parameter 'r' implicitly has an 'any' type.
+components/inspection/inspection-result-management.tsx(169,36): error TS7006: Parameter 'sum' implicitly has an 'any' type.
+components/inspection/inspection-result-management.tsx(169,41): error TS7006: Parameter 'r' implicitly has an 'any' type.
+components/inspection/inspection-result-management.tsx(170,52): error TS7006: Parameter 'r' implicitly has an 'any' type.
+components/inspection/inspection-result-management.tsx(187,26): error TS2339: Property 'totalItemCount' does not exist on type 'InspectionResult'.
+components/inspection/inspection-result-management.tsx(279,28): error TS2339: Property 'standardItem' does not exist on type 'InspectionResultItem'.
+components/inspection/inspection-result-management.tsx(299,9): error TS2561: Object literal may only specify known properties, but 'schedule' does not exist in type 'InspectionResult'. Did you mean to write 'scheduleId'?
+components/inspection/inspection-result-management.tsx(325,9): error TS2561: Object literal may only specify known properties, but 'schedule' does not exist in type 'InspectionResult'. Did you mean to write 'scheduleId'?
+components/inspection/inspection-result-management.tsx(416,69): error TS2322: Type '{ columns: ({ key: string; title: string; render: (value: string) => string; } | { key: string; title: string; render?: undefined; } | { key: string; title: string; render: (value: string) => Element; } | { ...; } | { ...; })[]; data: any; onRowClick: (result: InspectionResult) => void; }' is not assignable to type 'IntrinsicAttributes & DataTableProps<InspectionResult>'.
+  Property 'onRowClick' does not exist on type 'IntrinsicAttributes & DataTableProps<InspectionResult>'.
+components/inspection/inspection-result-management.tsx(426,48): error TS2339: Property 'status' does not exist on type 'InspectionResult'.
+components/inspection/inspection-result-management.tsx(432,78): error TS2551: Property 'schedule' does not exist on type 'InspectionResult'. Did you mean 'scheduleId'?
+components/inspection/inspection-result-management.tsx(436,78): error TS2551: Property 'schedule' does not exist on type 'InspectionResult'. Did you mean 'scheduleId'?
+components/inspection/inspection-result-management.tsx(440,78): error TS2339: Property 'completedBy' does not exist on type 'InspectionResult'.
+components/inspection/inspection-result-management.tsx(444,87): error TS2339: Property 'startedAt' does not exist on type 'InspectionResult'.
+components/inspection/inspection-result-management.tsx(446,31): error TS2339: Property 'completedAt' does not exist on type 'InspectionResult'.
+components/inspection/inspection-result-management.tsx(450,46): error TS2339: Property 'completedAt' does not exist on type 'InspectionResult'.
+components/inspection/inspection-result-management.tsx(454,31): error TS2339: Property 'duration' does not exist on type 'InspectionResult'.
+components/inspection/inspection-result-management.tsx(457,80): error TS2339: Property 'duration' does not exist on type 'InspectionResult'.
+components/inspection/inspection-result-management.tsx(465,40): error TS2339: Property 'totalItemCount' does not exist on type 'InspectionResult'.
+components/inspection/inspection-result-management.tsx(465,72): error TS2339: Property 'abnormalItemCount' does not exist on type 'InspectionResult'.
+components/inspection/inspection-result-management.tsx(466,40): error TS2339: Property 'totalItemCount' does not exist on type 'InspectionResult'.
+components/inspection/inspection-result-management.tsx(472,37): error TS2339: Property 'totalItemCount' does not exist on type 'InspectionResult'.
+components/inspection/inspection-result-management.tsx(472,69): error TS2339: Property 'abnormalItemCount' does not exist on type 'InspectionResult'.
+components/inspection/inspection-result-management.tsx(472,104): error TS2339: Property 'totalItemCount' does not exist on type 'InspectionResult'.
+components/inspection/inspection-result-management.tsx(501,40): error TS2339: Property 'standardItem' does not exist on type 'InspectionResultItem'.
+components/inspection/inspection-result-management.tsx(509,77): error TS2339: Property 'value' does not exist on type 'InspectionResultItem'.
+components/inspection/inspection-result-management.tsx(514,34): error TS2339: Property 'isPass' does not exist on type 'InspectionResultItem'.
+components/inspection/inspection-result-management.tsx(519,50): error TS2339: Property 'isPass' does not exist on type 'InspectionResultItem'.
+components/inspection/inspection-result-management.tsx(520,36): error TS2339: Property 'isPass' does not exist on type 'InspectionResultItem'.
+components/inspection/inspection-result-management.tsx(531,28): error TS2339: Property 'imageUrl' does not exist on type 'InspectionResultItem'.
+components/inspection/inspection-result-management.tsx(536,40): error TS2339: Property 'imageUrl' does not exist on type 'InspectionResultItem'.
+components/inspection/inspection-result-management.tsx(537,40): error TS2339: Property 'standardItem' does not exist on type 'InspectionResultItem'.
+components/kpi/equipment-health-grid.tsx(94,44): error TS7006: Parameter 'issue' implicitly has an 'any' type.
+components/kpi/equipment-health-grid.tsx(94,51): error TS7006: Parameter 'index' implicitly has an 'any' type.
+components/kpi/kpi-charts.tsx(27,15): error TS2724: '"@fms/types"' has no exported member named 'KpiMetrics'. Did you mean 'KPIMetrics'?
+components/kpi/kpi-charts.tsx(27,27): error TS2305: Module '"@fms/types"' has no exported member 'EquipmentHealth'.
+components/kpi/mtbf-dashboard.tsx(80,59): error TS2339: Property 'id' does not exist on type 'MtbfAnalysis'.
+components/kpi/mtbf-dashboard.tsx(127,77): error TS2353: Object literal may only specify known properties, and 'defaultVisible' does not exist in type 'DataTableColumn<MtbfAnalysis>'.
+components/kpi/mtbf-dashboard.tsx(137,7): error TS2353: Object literal may only specify known properties, and 'defaultVisible' does not exist in type 'DataTableColumn<MtbfAnalysis>'.
+components/kpi/mtbf-dashboard.tsx(139,53): error TS2353: Object literal may only specify known properties, and 'defaultVisible' does not exist in type 'DataTableColumn<MtbfAnalysis>'.
+components/kpi/mtbf-dashboard.tsx(145,7): error TS2353: Object literal may only specify known properties, and 'defaultVisible' does not exist in type 'DataTableColumn<MtbfAnalysis>'.
+components/kpi/mtbf-dashboard.tsx(152,7): error TS2353: Object literal may only specify known properties, and 'defaultVisible' does not exist in type 'DataTableColumn<MtbfAnalysis>'.
+components/kpi/mtbf-dashboard.tsx(159,7): error TS2353: Object literal may only specify known properties, and 'defaultVisible' does not exist in type 'DataTableColumn<MtbfAnalysis>'.
+components/kpi/mtbf-dashboard.tsx(166,7): error TS2353: Object literal may only specify known properties, and 'defaultVisible' does not exist in type 'DataTableColumn<MtbfAnalysis>'.
+components/kpi/mtbf-dashboard.tsx(168,63): error TS2353: Object literal may only specify known properties, and 'defaultVisible' does not exist in type 'DataTableColumn<MtbfAnalysis>'.
+components/kpi/mtbf-dashboard.tsx(185,7): error TS2353: Object literal may only specify known properties, and 'defaultVisible' does not exist in type 'DataTableColumn<MtbfAnalysis>'.
+components/kpi/mtbf-dashboard.tsx(212,7): error TS2353: Object literal may only specify known properties, and 'defaultVisible' does not exist in type 'DataTableColumn<MtbfAnalysis>'.
+components/kpi/mtbf-dashboard.tsx(219,7): error TS2353: Object literal may only specify known properties, and 'defaultVisible' does not exist in type 'DataTableColumn<MtbfAnalysis>'.
+components/kpi/mtbf-dashboard.tsx(224,77): error TS2353: Object literal may only specify known properties, and 'defaultVisible' does not exist in type 'DataTableColumn<FailureHistory>'.
+components/kpi/mtbf-dashboard.tsx(230,7): error TS2353: Object literal may only specify known properties, and 'defaultVisible' does not exist in type 'DataTableColumn<FailureHistory>'.
+components/kpi/mtbf-dashboard.tsx(232,76): error TS2353: Object literal may only specify known properties, and 'defaultVisible' does not exist in type 'DataTableColumn<FailureHistory>'.
+components/kpi/mtbf-dashboard.tsx(233,59): error TS2353: Object literal may only specify known properties, and 'defaultVisible' does not exist in type 'DataTableColumn<FailureHistory>'.
+components/kpi/mtbf-dashboard.tsx(239,7): error TS2353: Object literal may only specify known properties, and 'defaultVisible' does not exist in type 'DataTableColumn<FailureHistory>'.
+components/kpi/mtbf-dashboard.tsx(246,7): error TS2353: Object literal may only specify known properties, and 'defaultVisible' does not exist in type 'DataTableColumn<FailureHistory>'.
+components/kpi/mtbf-dashboard.tsx(253,7): error TS2353: Object literal may only specify known properties, and 'defaultVisible' does not exist in type 'DataTableColumn<FailureHistory>'.
+components/kpi/mtbf-dashboard.tsx(308,43): error TS2339: Property 'id' does not exist on type 'MtbfAnalysis'.
+components/kpi/mtbf-dashboard.tsx(308,57): error TS2339: Property 'id' does not exist on type 'MtbfAnalysis'.
+components/kpi/mtbf-dashboard.tsx(442,21): error TS2322: Type '{ columns: Column<MtbfAnalysis>[]; data: MtbfAnalysis[]; loading: boolean; searchPlaceholder: string; showSearch: true; showFilter: true; showColumnSettings: true; pagination: { ...; }; emptyMessage: string; initialVisibleColumns: string[]; }' is not assignable to type 'IntrinsicAttributes & DataTableProps<MtbfAnalysis>'.
+  Property 'initialVisibleColumns' does not exist on type 'IntrinsicAttributes & DataTableProps<MtbfAnalysis>'.
+components/kpi/mtbf-dashboard.tsx(457,49): error TS2322: Type '{ data: MtbfTrend[]; loading: boolean; }' is not assignable to type 'IntrinsicAttributes & MtbfTrendChartProps'.
+  Property 'loading' does not exist on type 'IntrinsicAttributes & MtbfTrendChartProps'.
+components/kpi/mtbf-dashboard.tsx(495,21): error TS2322: Type '{ columns: Column<FailureHistory>[]; data: FailureHistory[]; loading: boolean; searchPlaceholder: string; showSearch: true; showFilter: true; showColumnSettings: true; pagination: { ...; }; emptyMessage: string; initialVisibleColumns: string[]; }' is not assignable to type 'IntrinsicAttributes & DataTableProps<FailureHistory>'.
+  Property 'initialVisibleColumns' does not exist on type 'IntrinsicAttributes & DataTableProps<FailureHistory>'.
+components/kpi/mtbf-dashboard.tsx(508,39): error TS2322: Type '{ data: FailurePattern[]; loading: boolean; }' is not assignable to type 'IntrinsicAttributes'.
+  Property 'data' does not exist on type 'IntrinsicAttributes'.
+components/kpi/mtbf-dashboard.tsx(511,36): error TS2322: Type '{ data: ReliabilityAnalysis[]; loading: boolean; }' is not assignable to type 'IntrinsicAttributes'.
+  Property 'data' does not exist on type 'IntrinsicAttributes'.
+components/kpi/reliability-analysis.tsx(24,70): error TS2532: Object is possibly 'undefined'.
+components/landing/features-section.tsx(121,48): error TS2322: Type '{ hidden: { opacity: number; y: number; }; visible: { opacity: number; y: number; transition: { type: string; stiffness: number; damping: number; }; }; }' is not assignable to type 'Variants'.
+  Property 'visible' is incompatible with index signature.
+    Type '{ opacity: number; y: number; transition: { type: string; stiffness: number; damping: number; }; }' is not assignable to type 'Variant'.
+      Type '{ opacity: number; y: number; transition: { type: string; stiffness: number; damping: number; }; }' is not assignable to type 'TargetAndTransition'.
+        Type '{ opacity: number; y: number; transition: { type: string; stiffness: number; damping: number; }; }' is not assignable to type '{ transition?: Transition<any> | undefined; transitionEnd?: ResolvedValues$1 | undefined; }'.
+          Types of property 'transition' are incompatible.
+            Type '{ type: string; stiffness: number; damping: number; }' is not assignable to type 'Transition<any> | undefined'.
+              Type '{ type: string; stiffness: number; damping: number; }' is not assignable to type 'TransitionWithValueOverrides<any>'.
+                Type '{ type: string; stiffness: number; damping: number; }' is not assignable to type 'ValueAnimationTransition<any>'.
+                  Types of property 'type' are incompatible.
+                    Type 'string' is not assignable to type 'AnimationGeneratorType | undefined'.
+components/landing/hero-section.tsx(106,23): error TS2322: Type '{ hidden: { opacity: number; y: number; }; visible: { opacity: number; y: number; transition: { type: string; stiffness: number; damping: number; }; }; }' is not assignable to type 'Variants'.
+  Property 'visible' is incompatible with index signature.
+    Type '{ opacity: number; y: number; transition: { type: string; stiffness: number; damping: number; }; }' is not assignable to type 'Variant'.
+      Type '{ opacity: number; y: number; transition: { type: string; stiffness: number; damping: number; }; }' is not assignable to type 'TargetAndTransition'.
+        Type '{ opacity: number; y: number; transition: { type: string; stiffness: number; damping: number; }; }' is not assignable to type '{ transition?: Transition<any> | undefined; transitionEnd?: ResolvedValues$1 | undefined; }'.
+          Types of property 'transition' are incompatible.
+            Type '{ type: string; stiffness: number; damping: number; }' is not assignable to type 'Transition<any> | undefined'.
+              Type '{ type: string; stiffness: number; damping: number; }' is not assignable to type 'TransitionWithValueOverrides<any>'.
+                Type '{ type: string; stiffness: number; damping: number; }' is not assignable to type 'ValueAnimationTransition<any>'.
+                  Types of property 'type' are incompatible.
+                    Type 'string' is not assignable to type 'AnimationGeneratorType | undefined'.
+components/landing/hero-section.tsx(115,13): error TS2322: Type '{ hidden: { opacity: number; y: number; }; visible: { opacity: number; y: number; transition: { type: string; stiffness: number; damping: number; }; }; }' is not assignable to type 'Variants'.
+  Property 'visible' is incompatible with index signature.
+    Type '{ opacity: number; y: number; transition: { type: string; stiffness: number; damping: number; }; }' is not assignable to type 'Variant'.
+      Type '{ opacity: number; y: number; transition: { type: string; stiffness: number; damping: number; }; }' is not assignable to type 'TargetAndTransition'.
+        Type '{ opacity: number; y: number; transition: { type: string; stiffness: number; damping: number; }; }' is not assignable to type '{ transition?: Transition<any> | undefined; transitionEnd?: ResolvedValues$1 | undefined; }'.
+          Types of property 'transition' are incompatible.
+            Type '{ type: string; stiffness: number; damping: number; }' is not assignable to type 'Transition<any> | undefined'.
+              Type '{ type: string; stiffness: number; damping: number; }' is not assignable to type 'TransitionWithValueOverrides<any>'.
+                Type '{ type: string; stiffness: number; damping: number; }' is not assignable to type 'ValueAnimationTransition<any>'.
+                  Types of property 'type' are incompatible.
+                    Type 'string' is not assignable to type 'AnimationGeneratorType | undefined'.
+components/landing/hero-section.tsx(125,13): error TS2322: Type '{ hidden: { opacity: number; y: number; }; visible: { opacity: number; y: number; transition: { type: string; stiffness: number; damping: number; }; }; }' is not assignable to type 'Variants'.
+  Property 'visible' is incompatible with index signature.
+    Type '{ opacity: number; y: number; transition: { type: string; stiffness: number; damping: number; }; }' is not assignable to type 'Variant'.
+      Type '{ opacity: number; y: number; transition: { type: string; stiffness: number; damping: number; }; }' is not assignable to type 'TargetAndTransition'.
+        Type '{ opacity: number; y: number; transition: { type: string; stiffness: number; damping: number; }; }' is not assignable to type '{ transition?: Transition<any> | undefined; transitionEnd?: ResolvedValues$1 | undefined; }'.
+          Types of property 'transition' are incompatible.
+            Type '{ type: string; stiffness: number; damping: number; }' is not assignable to type 'Transition<any> | undefined'.
+              Type '{ type: string; stiffness: number; damping: number; }' is not assignable to type 'TransitionWithValueOverrides<any>'.
+                Type '{ type: string; stiffness: number; damping: number; }' is not assignable to type 'ValueAnimationTransition<any>'.
+                  Types of property 'type' are incompatible.
+                    Type 'string' is not assignable to type 'AnimationGeneratorType | undefined'.
+components/landing/hero-section.tsx(135,13): error TS2322: Type '{ hidden: { opacity: number; y: number; }; visible: { opacity: number; y: number; transition: { type: string; stiffness: number; damping: number; }; }; }' is not assignable to type 'Variants'.
+  Property 'visible' is incompatible with index signature.
+    Type '{ opacity: number; y: number; transition: { type: string; stiffness: number; damping: number; }; }' is not assignable to type 'Variant'.
+      Type '{ opacity: number; y: number; transition: { type: string; stiffness: number; damping: number; }; }' is not assignable to type 'TargetAndTransition'.
+        Type '{ opacity: number; y: number; transition: { type: string; stiffness: number; damping: number; }; }' is not assignable to type '{ transition?: Transition<any> | undefined; transitionEnd?: ResolvedValues$1 | undefined; }'.
+          Types of property 'transition' are incompatible.
+            Type '{ type: string; stiffness: number; damping: number; }' is not assignable to type 'Transition<any> | undefined'.
+              Type '{ type: string; stiffness: number; damping: number; }' is not assignable to type 'TransitionWithValueOverrides<any>'.
+                Type '{ type: string; stiffness: number; damping: number; }' is not assignable to type 'ValueAnimationTransition<any>'.
+                  Types of property 'type' are incompatible.
+                    Type 'string' is not assignable to type 'AnimationGeneratorType | undefined'.
+components/landing/hero-section.tsx(152,13): error TS2322: Type '{ hidden: { opacity: number; y: number; }; visible: { opacity: number; y: number; transition: { type: string; stiffness: number; damping: number; }; }; }' is not assignable to type 'Variants'.
+  Property 'visible' is incompatible with index signature.
+    Type '{ opacity: number; y: number; transition: { type: string; stiffness: number; damping: number; }; }' is not assignable to type 'Variant'.
+      Type '{ opacity: number; y: number; transition: { type: string; stiffness: number; damping: number; }; }' is not assignable to type 'TargetAndTransition'.
+        Type '{ opacity: number; y: number; transition: { type: string; stiffness: number; damping: number; }; }' is not assignable to type '{ transition?: Transition<any> | undefined; transitionEnd?: ResolvedValues$1 | undefined; }'.
+          Types of property 'transition' are incompatible.
+            Type '{ type: string; stiffness: number; damping: number; }' is not assignable to type 'Transition<any> | undefined'.
+              Type '{ type: string; stiffness: number; damping: number; }' is not assignable to type 'TransitionWithValueOverrides<any>'.
+                Type '{ type: string; stiffness: number; damping: number; }' is not assignable to type 'ValueAnimationTransition<any>'.
+                  Types of property 'type' are incompatible.
+                    Type 'string' is not assignable to type 'AnimationGeneratorType | undefined'.
+components/landing/hero-section.tsx(158,17): error TS2322: Type '{ animate: { y: number[]; transition: { duration: number; repeat: number; ease: string; }; }; }' is not assignable to type 'Variants'.
+  Property 'animate' is incompatible with index signature.
+    Type '{ y: number[]; transition: { duration: number; repeat: number; ease: string; }; }' is not assignable to type 'Variant'.
+      Type '{ y: number[]; transition: { duration: number; repeat: number; ease: string; }; }' is not assignable to type 'TargetAndTransition'.
+        Type '{ y: number[]; transition: { duration: number; repeat: number; ease: string; }; }' is not assignable to type '{ transition?: Transition<any> | undefined; transitionEnd?: ResolvedValues$1 | undefined; }'.
+          Types of property 'transition' are incompatible.
+            Type '{ duration: number; repeat: number; ease: string; }' is not assignable to type 'Transition<any> | undefined'.
+              Type '{ duration: number; repeat: number; ease: string; }' is not assignable to type 'TransitionWithValueOverrides<any>'.
+                Type '{ duration: number; repeat: number; ease: string; }' is not assignable to type 'ValueAnimationTransition<any>'.
+                  Types of property 'ease' are incompatible.
+                    Type 'string' is not assignable to type 'Easing | Easing[] | undefined'.
+components/landing/hero-section.tsx(174,13): error TS2322: Type '{ hidden: { opacity: number; y: number; }; visible: { opacity: number; y: number; transition: { type: string; stiffness: number; damping: number; }; }; }' is not assignable to type 'Variants'.
+  Property 'visible' is incompatible with index signature.
+    Type '{ opacity: number; y: number; transition: { type: string; stiffness: number; damping: number; }; }' is not assignable to type 'Variant'.
+      Type '{ opacity: number; y: number; transition: { type: string; stiffness: number; damping: number; }; }' is not assignable to type 'TargetAndTransition'.
+        Type '{ opacity: number; y: number; transition: { type: string; stiffness: number; damping: number; }; }' is not assignable to type '{ transition?: Transition<any> | undefined; transitionEnd?: ResolvedValues$1 | undefined; }'.
+          Types of property 'transition' are incompatible.
+            Type '{ type: string; stiffness: number; damping: number; }' is not assignable to type 'Transition<any> | undefined'.
+              Type '{ type: string; stiffness: number; damping: number; }' is not assignable to type 'TransitionWithValueOverrides<any>'.
+                Type '{ type: string; stiffness: number; damping: number; }' is not assignable to type 'ValueAnimationTransition<any>'.
+                  Types of property 'type' are incompatible.
+                    Type 'string' is not assignable to type 'AnimationGeneratorType | undefined'.
+components/landing/showcase-section.tsx(109,49): error TS2322: Type '{ hidden: { opacity: number; scale: number; }; visible: { opacity: number; scale: number; transition: { type: string; stiffness: number; damping: number; }; }; }' is not assignable to type 'Variants'.
+  Property 'visible' is incompatible with index signature.
+    Type '{ opacity: number; scale: number; transition: { type: string; stiffness: number; damping: number; }; }' is not assignable to type 'Variant'.
+      Type '{ opacity: number; scale: number; transition: { type: string; stiffness: number; damping: number; }; }' is not assignable to type 'TargetAndTransition'.
+        Type '{ opacity: number; scale: number; transition: { type: string; stiffness: number; damping: number; }; }' is not assignable to type '{ transition?: Transition<any> | undefined; transitionEnd?: ResolvedValues$1 | undefined; }'.
+          Types of property 'transition' are incompatible.
+            Type '{ type: string; stiffness: number; damping: number; }' is not assignable to type 'Transition<any> | undefined'.
+              Type '{ type: string; stiffness: number; damping: number; }' is not assignable to type 'TransitionWithValueOverrides<any>'.
+                Type '{ type: string; stiffness: number; damping: number; }' is not assignable to type 'ValueAnimationTransition<any>'.
+                  Types of property 'type' are incompatible.
+                    Type 'string' is not assignable to type 'AnimationGeneratorType | undefined'.
+components/language/language-management.tsx(17,82): error TS2554: Expected 1-2 arguments, but got 3.
+components/language/language-management.tsx(19,54): error TS2554: Expected 1-2 arguments, but got 3.
+components/language/language-management.tsx(25,82): error TS2554: Expected 1-2 arguments, but got 3.
+components/language/language-management.tsx(26,72): error TS2554: Expected 1-2 arguments, but got 3.
+components/language/language-management.tsx(27,76): error TS2554: Expected 1-2 arguments, but got 3.
+components/language/translation-dashboard.tsx(20,84): error TS2554: Expected 1-2 arguments, but got 3.
+components/language/translation-dashboard.tsx(22,56): error TS2554: Expected 1-2 arguments, but got 3.
+components/language/translation-dashboard.tsx(29,57): error TS2554: Expected 1-2 arguments, but got 3.
+components/language/translation-dashboard.tsx(30,68): error TS2554: Expected 1-2 arguments, but got 3.
+components/language/translation-dashboard.tsx(36,80): error TS2554: Expected 1-2 arguments, but got 3.
+components/language/translation-dashboard.tsx(46,58): error TS2554: Expected 1-2 arguments, but got 3.
+components/language/translation-dashboard.tsx(47,69): error TS2554: Expected 1-2 arguments, but got 3.
+components/language/translation-dashboard.tsx(71,51): error TS2554: Expected 1-2 arguments, but got 3.
+components/language/translation-dashboard.tsx(75,49): error TS2554: Expected 1-2 arguments, but got 3.
+components/language/translation-dashboard.tsx(79,49): error TS2554: Expected 1-2 arguments, but got 3.
+components/language/translation-dashboard.tsx(92,59): error TS2554: Expected 1-2 arguments, but got 3.
+components/language/translation-dashboard.tsx(93,70): error TS2554: Expected 1-2 arguments, but got 3.
+components/language/translation-dashboard.tsx(103,68): error TS2554: Expected 1-2 arguments, but got 3.
+components/language/translation-key-management.tsx(63,42): error TS2554: Expected 1-2 arguments, but got 3.
+components/language/translation-key-management.tsx(70,48): error TS2554: Expected 1-2 arguments, but got 3.
+components/language/translation-key-management.tsx(77,42): error TS2554: Expected 1-2 arguments, but got 3.
+components/language/translation-key-management.tsx(81,51): error TS2554: Expected 1-2 arguments, but got 3.
+components/language/translation-key-management.tsx(105,38): error TS2554: Expected 1-2 arguments, but got 3.
+components/language/translation-key-management.tsx(131,91): error TS2554: Expected 1-2 arguments, but got 3.
+components/language/translation-key-management.tsx(133,63): error TS2554: Expected 1-2 arguments, but got 3.
+components/language/translation-key-management.tsx(138,49): error TS2554: Expected 1-2 arguments, but got 3.
+components/language/translation-key-management.tsx(146,85): error TS2554: Expected 1-2 arguments, but got 3.
+components/language/translation-key-management.tsx(154,85): error TS2554: Expected 1-2 arguments, but got 3.
+components/language/translation-key-management.tsx(163,56): error TS2554: Expected 1-2 arguments, but got 3.
+components/language/translation-key-management.tsx(175,54): error TS2554: Expected 1-2 arguments, but got 3.
+components/language/translation-key-management.tsx(191,55): error TS2554: Expected 1-2 arguments, but got 3.
+components/language/translation-key-management.tsx(204,70): error TS2554: Expected 1-2 arguments, but got 3.
+components/language/translation-key-management.tsx(213,22): error TS2322: Type '({ accessorKey: string; header: string; cell: ({ row }: { row: { original: TranslationKey; }; }) => Element; } | { accessorKey: string; header: string; cell?: undefined; })[]' is not assignable to type 'DataTableColumn<TranslationKey>[]'.
+  Type '{ accessorKey: string; header: string; cell: ({ row }: { row: { original: TranslationKey; }; }) => Element; } | { accessorKey: string; header: string; cell?: undefined; }' is not assignable to type 'DataTableColumn<TranslationKey>'.
+    Type '{ accessorKey: string; header: string; cell: ({ row }: { row: { original: TranslationKey; }; }) => Element; }' is missing the following properties from type 'DataTableColumn<TranslationKey>': key, title
+components/language/translation-management.tsx(37,14): error TS2339: Property 'currentLanguage' does not exist on type '{ t: (key: string, params?: Record<string, any> | undefined) => string; ready: boolean; }'.
+components/language/translation-management.tsx(69,69): error TS2554: Expected 1-2 arguments, but got 3.
+components/language/translation-management.tsx(72,66): error TS2554: Expected 1-2 arguments, but got 3.
+components/language/translation-management.tsx(74,65): error TS2554: Expected 1-2 arguments, but got 3.
+components/language/translation-management.tsx(81,87): error TS2554: Expected 1-2 arguments, but got 3.
+components/language/translation-management.tsx(83,59): error TS2554: Expected 1-2 arguments, but got 3.
+components/language/translation-management.tsx(89,51): error TS2554: Expected 1-2 arguments, but got 3.
+components/language/translation-management.tsx(93,51): error TS2554: Expected 1-2 arguments, but got 3.
+components/language/translation-management.tsx(117,44): error TS2554: Expected 1-2 arguments, but got 3.
+components/language/translation-management.tsx(128,55): error TS2554: Expected 1-2 arguments, but got 3.
+components/language/translation-management.tsx(132,53): error TS2554: Expected 1-2 arguments, but got 3.
+components/language/translation-management.tsx(136,53): error TS2554: Expected 1-2 arguments, but got 3.
+components/language/translation-management.tsx(176,51): error TS2554: Expected 1-2 arguments, but got 3.
+components/language/translation-management.tsx(182,50): error TS2554: Expected 1-2 arguments, but got 3.
+components/language/translation-management.tsx(191,93): error TS2554: Expected 1-2 arguments, but got 3.
+components/language/translation-management.tsx(196,73): error TS2554: Expected 1-2 arguments, but got 3.
+components/language/translation-management.tsx(201,48): error TS2554: Expected 1-2 arguments, but got 3.
+components/language/translation-management.tsx(204,50): error TS2554: Expected 1-2 arguments, but got 3.
+components/language/translation-management.tsx(215,60): error TS2554: Expected 1-2 arguments, but got 3.
+components/language/translation-management.tsx(224,52): error TS2554: Expected 1-2 arguments, but got 3.
+components/location/equipment-map-icon.tsx(18,10): error TS2678: Type '"running"' is not comparable to type 'EquipmentStatus'.
+components/location/equipment-map-icon.tsx(24,10): error TS2678: Type '"stopped"' is not comparable to type 'EquipmentStatus'.
+components/location/equipment-map-icon.tsx(36,10): error TS2678: Type '"failure"' is not comparable to type 'EquipmentStatus'.
+components/location/equipment-map-icon.tsx(78,29): error TS2367: This comparison appears to be unintentional because the types 'EquipmentStatus' and '"failure"' have no overlap.
+components/location/equipment-palette-item.tsx(15,10): error TS2678: Type '"running"' is not comparable to type 'EquipmentStatus'.
+components/location/equipment-palette-item.tsx(17,10): error TS2678: Type '"stopped"' is not comparable to type 'EquipmentStatus'.
+components/location/equipment-palette-item.tsx(21,10): error TS2678: Type '"failure"' is not comparable to type 'EquipmentStatus'.
+components/maintenance-template/template-master-management.tsx(18,28): error TS2307: Cannot find module '@/components/ui/ScrollArea' or its corresponding type declarations.
+components/maintenance-template/template-master-management.tsx(162,5): error TS2741: Property 'width' is missing in type '{ id: string; header: string; cell: (item: InspectionMasterItem) => string; }' but required in type 'Column<InspectionMasterItem>'.
+components/maintenance-template/template-master-management.tsx(164,5): error TS2741: Property 'width' is missing in type '{ id: string; header: string; cell: (item: InspectionMasterItem) => string; }' but required in type 'Column<InspectionMasterItem>'.
+components/maintenance-template/template-master-management.tsx(217,5): error TS2322: Type 'EquipmentType | EquipmentType | undefined' is not assignable to type 'EquipmentType | undefined'.
+  Property 'category' is missing in type 'import("C:/Project/FMSMonorepo/packages/types/src/equipment-master").EquipmentType' but required in type 'import("C:/Project/FMSMonorepo/packages/types/src/inspection-master").EquipmentType'.
+components/maintenance-template/template-master-management.tsx(329,17): error TS2322: Type 'Column<InspectionMasterItem>[]' is not assignable to type 'Column<{ id: string | number; }>[]'.
+  Type 'Column<InspectionMasterItem>' is not assignable to type 'Column<{ id: string | number; }>'.
+    Type '{ id: string | number; }' is missing the following properties from type 'InspectionMasterItem': sequence, name
+components/maintenance-template/template-master-management.tsx(406,9): error TS2322: Type '{ children: Element[]; open: boolean; onOpenChange: (open: boolean) => void; title: string; size: "xl"; }' is not assignable to type 'IntrinsicAttributes & ModalProps'.
+  Property 'open' does not exist on type 'IntrinsicAttributes & ModalProps'.
+components/maintenance-template/template-master-management.tsx(420,9): error TS2322: Type '{ children: (Element | null)[]; open: boolean; onOpenChange: (open: boolean) => void; title: string; size: "xl"; }' is not assignable to type 'IntrinsicAttributes & ModalProps'.
+  Property 'open' does not exist on type 'IntrinsicAttributes & ModalProps'.
+components/maintenance-template/template-master-management.tsx(440,14): error TS2322: Type '{ children: Element[]; open: boolean; onOpenChange: (open: boolean) => void; title: string; }' is not assignable to type 'IntrinsicAttributes & ModalProps'.
+  Property 'open' does not exist on type 'IntrinsicAttributes & ModalProps'.
+components/maintenance-template/template-master-management.tsx(445,95): error TS2304: Cannot find name 'handleItemFormChange'.
+components/maintenance-template/template-master-management.tsx(449,77): error TS2304: Cannot find name 'handleItemFormChange'.
+components/maintenance-template/template-master-management.tsx(454,83): error TS2304: Cannot find name 'handleItemFormChange'.
+components/maintenance-template/template-master-management.tsx(459,76): error TS2304: Cannot find name 'handleItemFormChange'.
+components/maintenance-template/template-master-management.tsx(468,86): error TS2304: Cannot find name 'handleItemFormChange'.
+components/maintenance-template/template-master-management.tsx(472,111): error TS2304: Cannot find name 'handleItemFormChange'.
+components/maintenance-template/template-standard-management.tsx(18,87): error TS2307: Cannot find module '@/components/ui/Card' or its corresponding type declarations.
+components/maintenance-template/template-standard-management.tsx(52,5): error TS2353: Object literal may only specify known properties, and 'status' does not exist in type 'Partial<InspectionStandard> | (() => Partial<InspectionStandard>)'.
+components/maintenance-template/template-standard-management.tsx(60,38): error TS2339: Property 'status' does not exist on type 'InspectionStandard'.
+components/maintenance-template/template-standard-management.tsx(61,39): error TS2339: Property 'status' does not exist on type 'InspectionStandard'.
+components/maintenance-template/template-standard-management.tsx(62,41): error TS2339: Property 'status' does not exist on type 'InspectionStandard'.
+components/maintenance-template/template-standard-management.tsx(63,42): error TS2339: Property 'status' does not exist on type 'InspectionStandard'.
+components/maintenance-template/template-standard-management.tsx(64,43): error TS2339: Property 'status' does not exist on type 'InspectionStandard'.
+components/maintenance-template/template-standard-management.tsx(67,54): error TS2339: Property 'status' does not exist on type 'InspectionStandard'.
+components/maintenance-template/template-standard-management.tsx(68,48): error TS2339: Property 'status' does not exist on type 'InspectionStandard'.
+components/maintenance-template/template-standard-management.tsx(82,39): error TS2339: Property 'status' does not exist on type 'InspectionStandard'.
+components/maintenance-template/template-standard-management.tsx(119,104): error TS2339: Property 'status' does not exist on type 'InspectionStandard'.
+components/maintenance-template/template-standard-management.tsx(202,7): error TS2353: Object literal may only specify known properties, and 'status' does not exist in type 'SetStateAction<Partial<InspectionStandard>>'.
+components/maintenance-template/template-standard-management.tsx(322,13): error TS2322: Type '{ data: InspectionStandard[]; columns: Column<InspectionStandard>[]; totalCount: number; currentPage: number; onPageChange: Dispatch<SetStateAction<number>>; itemsPerPage: number; onItemsPerPageChange: Dispatch<...>; onRowClick: Dispatch<...>; }' is not assignable to type 'IntrinsicAttributes & DataGridProps<InspectionStandard>'.
+  Property 'onRowClick' does not exist on type 'IntrinsicAttributes & DataGridProps<InspectionStandard>'.
+components/maintenance-template/template-standard-management.tsx(331,62): error TS2339: Property 'status' does not exist on type 'InspectionStandard'.
+components/maintenance-template/template-standard-management.tsx(380,29): error TS2322: Type 'Column<InspectionStandardItem>[]' is not assignable to type 'Column<{ id: string | number; }>[]'.
+  Type 'Column<InspectionStandardItem>' is not assignable to type 'Column<{ id: string | number; }>'.
+    Type '{ id: string | number; }' is missing the following properties from type 'InspectionStandardItem': standardId, masterItemId, sequence, name, and 3 more.
+components/maintenance-template/template-standard-management.tsx(382,42): error TS7006: Parameter 'item' implicitly has an 'any' type.
+components/maintenance-template/template-standard-management.tsx(392,9): error TS2322: Type '{ children: Element[]; open: boolean; onOpenChange: (open: boolean) => void; title: string; size: "xl"; }' is not assignable to type 'IntrinsicAttributes & ModalProps'.
+  Property 'open' does not exist on type 'IntrinsicAttributes & ModalProps'.
+components/maintenance-template/template-standard-management.tsx(450,21): error TS2322: Type 'Column<InspectionStandardItem>[]' is not assignable to type 'Column<{ id: string | number; }>[]'.
+  Type 'Column<InspectionStandardItem>' is not assignable to type 'Column<{ id: string | number; }>'.
+    Type '{ id: string | number; }' is missing the following properties from type 'InspectionStandardItem': standardId, masterItemId, sequence, name, and 3 more.
+components/maintenance-template/template-standard-management.tsx(463,9): error TS2322: Type '{ children: Element[]; open: boolean; onOpenChange: (open: boolean) => void; title: string; }' is not assignable to type 'IntrinsicAttributes & ModalProps'.
+  Property 'open' does not exist on type 'IntrinsicAttributes & ModalProps'.
+components/maintenance-template/template-standard-management.tsx(516,14): error TS2322: Type '{ children: Element[]; open: boolean; onOpenChange: (open: boolean) => void; title: string; }' is not assignable to type 'IntrinsicAttributes & ModalProps'.
+  Property 'open' does not exist on type 'IntrinsicAttributes & ModalProps'.
+components/maintenance-template/template-standard-management.tsx(528,14): error TS2322: Type '{ children: (Element | null)[]; open: boolean; onOpenChange: () => void; title: string; }' is not assignable to type 'IntrinsicAttributes & ModalProps'.
+  Property 'open' does not exist on type 'IntrinsicAttributes & ModalProps'.
+components/maintenance/maintenance-form.tsx(3,35): error TS2305: Module '"@fms/types"' has no exported member 'MaintenanceFormData'.
+components/maintenance/maintenance-form.tsx(84,7): error TS2353: Object literal may only specify known properties, and 'min' does not exist in type 'StandardFormField'.
+components/maintenance/maintenance-form.tsx(94,7): error TS2353: Object literal may only specify known properties, and 'min' does not exist in type 'StandardFormField'.
+components/maintenance/maintenance-form.tsx(107,7): error TS2353: Object literal may only specify known properties, and 'rows' does not exist in type 'StandardFormField'.
+components/maintenance/maintenance-plan-form.tsx(3,52): error TS2305: Module '"@fms/types"' has no exported member 'MaintenancePlanFormData'.
+components/maintenance/maintenance-plan-form.tsx(68,23): error TS2339: Property 'team' does not exist on type 'User'.
+components/maintenance/maintenance-plan-form.tsx(130,7): error TS2353: Object literal may only specify known properties, and 'min' does not exist in type 'StandardFormField'.
+components/maintenance/maintenance-plan-form.tsx(138,7): error TS2353: Object literal may only specify known properties, and 'min' does not exist in type 'StandardFormField'.
+components/maintenance/maintenance-plan-form.tsx(162,7): error TS2353: Object literal may only specify known properties, and 'rows' does not exist in type 'StandardFormField'.
+components/maintenance/maintenance-plan-form.tsx(170,7): error TS2353: Object literal may only specify known properties, and 'rows' does not exist in type 'StandardFormField'.
+components/maintenance/maintenance-plan-form.tsx(206,39): error TS2339: Property 'scheduledStartDate' does not exist on type 'Partial<MaintenancePlan> | Partial<MaintenanceRequest>'.
+  Property 'scheduledStartDate' does not exist on type 'Partial<MaintenanceRequest>'.
+components/maintenance/maintenance-plan-form.tsx(206,81): error TS2339: Property 'scheduledStartDate' does not exist on type 'Partial<MaintenancePlan> | Partial<MaintenanceRequest>'.
+  Property 'scheduledStartDate' does not exist on type 'Partial<MaintenanceRequest>'.
+components/maintenance/maintenance-plan-form.tsx(207,37): error TS2339: Property 'scheduledEndDate' does not exist on type 'Partial<MaintenancePlan> | Partial<MaintenanceRequest>'.
+  Property 'scheduledEndDate' does not exist on type 'Partial<MaintenanceRequest>'.
+components/maintenance/maintenance-plan-form.tsx(207,77): error TS2339: Property 'scheduledEndDate' does not exist on type 'Partial<MaintenancePlan> | Partial<MaintenanceRequest>'.
+  Property 'scheduledEndDate' does not exist on type 'Partial<MaintenanceRequest>'.
+components/maintenance/maintenance-plan-management.tsx(50,51): error TS2554: Expected 0-1 arguments, but got 2.
+components/maintenance/maintenance-request-management.tsx(43,54): error TS2554: Expected 0-1 arguments, but got 2.
+components/material/material-inbound-management.tsx(222,30): error TS2353: Object literal may only specify known properties, and 'transactionType' does not exist in type 'Partial<MaterialFormData>'.
+components/material/material-issuance-request-management.tsx(14,58): error TS2307: Cannot find module '@/components/ui/Card' or its corresponding type declarations.
+components/material/material-issuance-request-management.tsx(190,14): error TS2322: Type '{ children: Element; open: boolean; onOpenChange: (open: boolean) => void; title: string; size: "lg"; }' is not assignable to type 'IntrinsicAttributes & ModalProps'.
+  Property 'open' does not exist on type 'IntrinsicAttributes & ModalProps'.
+components/material/material-management.tsx(121,44): error TS2554: Expected 0-1 arguments, but got 2.
+components/material/material-management.tsx(183,16): error TS2322: Type '"warning"' is not assignable to type '"default" | "destructive" | "outline" | "secondary" | undefined'.
+components/material/material-management.tsx(252,47): error TS7006: Parameter 'item' implicitly has an 'any' type.
+components/material/material-management.tsx(379,42): error TS7006: Parameter 'm' implicitly has an 'any' type.
+components/material/material-management.tsx(391,100): error TS7006: Parameter 'm' implicitly has an 'any' type.
+components/material/material-management.tsx(445,11): error TS2322: Type '{ onSubmit: (data: any) => Promise<void>; onCancel: () => void; initialData: Material | undefined; mode: FormMode; }' is not assignable to type 'IntrinsicAttributes & MaterialFormProps'.
+  Property 'mode' does not exist on type 'IntrinsicAttributes & MaterialFormProps'.
+components/material/material-outbound-form.tsx(41,56): error TS2339: Property 'materialCode' does not exist on type 'Material'.
+components/material/material-outbound-form.tsx(69,47): error TS2339: Property 'materialCode' does not exist on type 'Material'.
+components/material/material-outbound-form.tsx(69,77): error TS2339: Property 'materialCode' does not exist on type 'Material'.
+components/material/material-outbound-form.tsx(70,33): error TS2339: Property 'materialName' does not exist on type 'Material'.
+components/material/material-outbound-form.tsx(70,58): error TS2339: Property 'materialCode' does not exist on type 'Material'.
+components/material/material-outbound-management.tsx(87,39): error TS2339: Property 'warehouseName' does not exist on type '{ status: "issued"; issuedBy: string; issuedAt: string; id: string; materialId: string; materialCode: string; materialName: string; quantity: number; unit: string; requestedBy: string; requestedAt: string; ... 4 more ...; referenceNo?: string | undefined; }'.
+components/material/material-outbound-management.tsx(97,13): error TS2353: Object literal may only specify known properties, and 'issuedBy' does not exist in type 'MaterialTransaction'.
+components/material/material-outbound-management.tsx(247,29): error TS2322: Type '"default" | "secondary"' is not assignable to type 'ButtonVariant | undefined'.
+  Type '"default"' is not assignable to type 'ButtonVariant | undefined'.
+components/material/material-outbound-management.tsx(288,14): error TS2322: Type '{ children: Element; open: boolean; onOpenChange: (open: boolean) => void; title: string; size: "lg"; }' is not assignable to type 'IntrinsicAttributes & ModalProps'.
+  Property 'open' does not exist on type 'IntrinsicAttributes & ModalProps'.
+components/material/material-stock-management.tsx(14,58): error TS2307: Cannot find module '@/components/ui/Card' or its corresponding type declarations.
+components/material/material-stock-management.tsx(193,14): error TS2322: Type '{ children: Element[]; open: boolean; onOpenChange: (open: boolean) => void; title: string; }' is not assignable to type 'IntrinsicAttributes & ModalProps'.
+  Property 'open' does not exist on type 'IntrinsicAttributes & ModalProps'.
+components/metering/calibration-cost-form.tsx(86,11): error TS2322: Type '{ calibrationCost: number; travelCost: number; materialCost: number; totalCost: number; paymentDate: string | undefined; equipmentName: string; instrumentType: string; calibratedBy: string; ... 6 more ...; notes: string; }' is not assignable to type 'Partial<CalibrationRecord>'.
+  Types of property 'paymentStatus' are incompatible.
+    Type 'string' is not assignable to type '"pending" | "overdue" | "paid" | undefined'.
+components/metering/calibration-form.tsx(74,11): error TS2322: Type '{ accuracy: number | undefined; equipmentName: string; instrumentType: string; serialNumber: string; calibrationDate: string; nextCalibrationDate: string; calibratedBy: string; result: string; status: string; certificateNumber: string; notes: string; }' is not assignable to type 'Partial<CalibrationRecord>'.
+  Types of property 'result' are incompatible.
+    Type 'string' is not assignable to type '"pass" | "fail" | "conditional" | undefined'.
+components/metering/meter-reading-form.tsx(147,19): error TS2322: Type '{ date: Date | undefined; onSelect: (date: Date | undefined) => void; }' is not assignable to type 'IntrinsicAttributes & DatePickerProps'.
+  Property 'date' does not exist on type 'IntrinsicAttributes & DatePickerProps'.
+components/mobile-qr/mobile-failure-capture-form.tsx(57,11): error TS18048: 'file' is possibly 'undefined'.
+components/mobile-qr/mobile-failure-capture-form.tsx(58,48): error TS2345: Argument of type 'File | undefined' is not assignable to parameter of type 'Blob | MediaSource'.
+  Type 'undefined' is not assignable to type 'Blob | MediaSource'.
+components/mobile-qr/mobile-failure-capture-form.tsx(83,25): error TS2345: Argument of type 'string | undefined' is not assignable to parameter of type 'string'.
+  Type 'undefined' is not assignable to type 'string'.
+components/mobile-qr/qr-scanner-modal.tsx(4,52): error TS2305: Module '"html5-qrcode"' has no exported member 'QrCodeError'.
+components/organization/organization-form.tsx(232,19): error TS2322: Type 'string | number | boolean | undefined' is not assignable to type 'string | number | readonly string[] | undefined'.
+  Type 'false' is not assignable to type 'string | number | readonly string[] | undefined'.
+components/organization/organization-form.tsx(246,19): error TS2322: Type 'string | number | boolean | undefined' is not assignable to type 'string | undefined'.
+  Type 'number' is not assignable to type 'string'.
+components/organization/organization-form.tsx(271,19): error TS2322: Type 'string | number | boolean | undefined' is not assignable to type 'string | number | readonly string[] | undefined'.
+  Type 'false' is not assignable to type 'string | number | readonly string[] | undefined'.
+components/organization/organization-form.tsx(287,19): error TS2322: Type 'string | number | boolean | undefined' is not assignable to type 'string | number | readonly string[] | undefined'.
+  Type 'false' is not assignable to type 'string | number | readonly string[] | undefined'.
+components/organization/organization-form.tsx(301,21): error TS2322: Type 'string | number | boolean | undefined' is not assignable to type 'boolean | undefined'.
+  Type 'string' is not assignable to type 'boolean | undefined'.
+components/organization/organization-management.tsx(21,29): error TS2724: '"@/lib/utils/export-utils"' has no exported member named 'ImportColumn'. Did you mean 'ExportColumn'?
+components/organization/organization-management.tsx(308,18): error TS7006: Parameter 'value' implicitly has an 'any' type.
+components/organization/organization-management.tsx(373,9): error TS2322: Type 'FormMode' is not assignable to type '"create" | "edit"'.
+  Type '"view"' is not assignable to type '"create" | "edit"'.
+components/organization/organization-management.tsx(385,9): error TS2322: Type '{ code: string; name: string; type: string; parentName: string; description: string; sortOrder: number; isActive: boolean; }[]' is not assignable to type 'Partial<Organization>[]'.
+  Type '{ code: string; name: string; type: string; parentName: string; description: string; sortOrder: number; isActive: boolean; }' is not assignable to type 'Partial<Organization>'.
+    Types of property 'type' are incompatible.
+      Type 'string' is not assignable to type '"company" | "department" | "team" | undefined'.
+components/preventive/preventive-maintenance-calendar.tsx(9,15): error TS2305: Module '"@fms/types"' has no exported member 'PreventiveScheduleRecord'.
+components/preventive/preventive-master-form.tsx(47,41): error TS2367: This comparison appears to be unintentional because the types 'EquipmentType | undefined' and 'string' have no overlap.
+components/preventive/preventive-master-form.tsx(62,11): error TS2353: Object literal may only specify known properties, and 'nextScheduleDate' does not exist in type 'Partial<PreventiveMaster>'.
+components/preventive/preventive-master-form.tsx(62,48): error TS2339: Property 'nextScheduleDate' does not exist on type 'Partial<PreventiveMaster>'.
+components/preventive/preventive-master-form.tsx(63,43): error TS2339: Property 'nextScheduleDate' does not exist on type 'Partial<PreventiveMaster>'.
+components/preventive/preventive-master-form.tsx(86,9): error TS2561: Object literal may only specify known properties, but 'taskDescription' does not exist in type 'Partial<PreventiveMaster>'. Did you mean to write 'description'?
+components/preventive/preventive-master-form.tsx(122,52): error TS2551: Property 'taskDescription' does not exist on type 'Partial<PreventiveMaster>'. Did you mean 'description'?
+components/preventive/preventive-master-form.tsx(124,50): error TS2339: Property 'estimatedCost' does not exist on type 'Partial<PreventiveMaster>'.
+components/preventive/preventive-master-form.tsx(127,37): error TS2339: Property 'nextScheduleDate' does not exist on type 'Partial<PreventiveMaster>'.
+components/preventive/preventive-master-form.tsx(128,41): error TS2339: Property 'nextScheduleDate' does not exist on type 'Partial<PreventiveMaster>'.
+components/preventive/preventive-master-form.tsx(145,7): error TS2353: Object literal may only specify known properties, and 'onChange' does not exist in type 'StandardFormField'.
+components/preventive/preventive-master-form.tsx(145,18): error TS7006: Parameter 'value' implicitly has an 'any' type.
+components/preventive/preventive-master-form.tsx(156,7): error TS2353: Object literal may only specify known properties, and 'onChange' does not exist in type 'StandardFormField'.
+components/preventive/preventive-master-form.tsx(156,18): error TS7006: Parameter 'value' implicitly has an 'any' type.
+components/preventive/preventive-master-form.tsx(172,7): error TS2353: Object literal may only specify known properties, and 'value' does not exist in type 'StandardFormField'.
+components/preventive/preventive-master-form.tsx(190,7): error TS2353: Object literal may only specify known properties, and 'min' does not exist in type 'StandardFormField'.
+components/preventive/preventive-master-form.tsx(197,7): error TS2353: Object literal may only specify known properties, and 'min' does not exist in type 'StandardFormField'.
+components/preventive/preventive-master-form.tsx(209,74): error TS2353: Object literal may only specify known properties, and 'fields' does not exist in type 'StandardFormGroup'.
+components/preventive/preventive-master-form.tsx(223,7): error TS2322: Type 'PeriodType | PreventivePeriodType' is not assignable to type 'PreventivePeriodType'.
+  Type 'PeriodType.DAILY' is not assignable to type 'PreventivePeriodType'.
+components/preventive/preventive-master-form.tsx(225,9): error TS2367: This comparison appears to be unintentional because the types 'PeriodType | undefined' and '"TIME_BASED"' have no overlap.
+components/preventive/preventive-master-form.tsx(228,9): error TS2367: This comparison appears to be unintentional because the types 'PeriodType | undefined' and '"USAGE_BASED"' have no overlap.
+components/preventive/preventive-master-form.tsx(229,18): error TS2367: This comparison appears to be unintentional because the types 'PeriodType | undefined' and '"USAGE_BASED"' have no overlap.
+components/preventive/preventive-master-form.tsx(229,82): error TS2339: Property 'unitOfMeasure' does not exist on type 'InspectionMaster'.
+components/preventive/preventive-master-form.tsx(231,9): error TS2367: This comparison appears to be unintentional because the types 'PeriodType | undefined' and '"CONDITION_BASED"' have no overlap.
+components/preventive/preventive-master-form.tsx(232,29): error TS2339: Property 'checkPoint' does not exist on type 'InspectionMaster'.
+components/preventive/preventive-master-form.tsx(238,38): error TS2339: Property 'lastExecutedDate' does not exist on type 'Partial<PreventiveMaster>'.
+components/preventive/preventive-master-form.tsx(239,35): error TS2339: Property 'effectiveDate' does not exist on type 'Partial<PreventiveMaster>'.
+components/preventive/preventive-master-management.tsx(288,9): error TS2322: Type 'FormMode' is not assignable to type '"create" | "edit"'.
+  Type '"view"' is not assignable to type '"create" | "edit"'.
+components/preventive/preventive-order-form.tsx(41,33): error TS2339: Property 'SCHEDULED' does not exist on type 'typeof PreventiveOrderStatus'.
+components/preventive/preventive-order-form.tsx(105,30): error TS2339: Property 'estimatedCost' does not exist on type 'PreventiveMaster'.
+components/preventive/preventive-order-form.tsx(202,65): error TS2339: Property 'SCHEDULED' does not exist on type 'typeof PreventiveOrderStatus'.
+components/preventive/preventive-order-management.tsx(48,49): error TS2551: Property 'taskDescription' does not exist on type 'PreventiveMaster'. Did you mean 'description'?
+components/preventive/preventive-order-management.tsx(246,43): error TS2551: Property 'taskDescription' does not exist on type 'PreventiveMaster'. Did you mean 'description'?
+components/preventive/preventive-order-management.tsx(251,43): error TS2551: Property 'taskDescription' does not exist on type 'PreventiveMaster'. Did you mean 'description'?
+components/preventive/preventive-order-management.tsx(291,23): error TS2367: This comparison appears to be unintentional because the types 'PreventiveOrderStatus' and '"completed"' have no overlap.
+components/preventive/preventive-order-management.tsx(300,11): error TS2783: 'id' is specified more than once, so this usage will be overwritten.
+components/preventive/preventive-order-management.tsx(301,11): error TS2783: 'masterId' is specified more than once, so this usage will be overwritten.
+components/preventive/preventive-order-management.tsx(302,11): error TS2783: 'equipmentId' is specified more than once, so this usage will be overwritten.
+components/preventive/preventive-order-management.tsx(304,11): error TS2783: 'createdBy' is specified more than once, so this usage will be overwritten.
+components/preventive/preventive-order-management.tsx(305,11): error TS2783: 'createdAt' is specified more than once, so this usage will be overwritten.
+components/preventive/preventive-order-management.tsx(306,11): error TS2783: 'updatedBy' is specified more than once, so this usage will be overwritten.
+components/preventive/preventive-order-management.tsx(307,11): error TS2783: 'updatedAt' is specified more than once, so this usage will be overwritten.
+components/sensor/sensor-analysis-management.tsx(84,64): error TS2532: Object is possibly 'undefined'.
+components/sensor/sensor-dashboard.tsx(152,52): error TS2532: Object is possibly 'undefined'.
+components/sensor/sensor-dashboard.tsx(409,30): error TS2532: Object is possibly 'undefined'.
+components/sensor/sensor-dashboard.tsx(415,25): error TS2532: Object is possibly 'undefined'.
+components/sensor/sensor-dashboard.tsx(419,29): error TS2532: Object is possibly 'undefined'.
+components/tpm/tpm-activity-form.tsx(128,7): error TS2353: Object literal may only specify known properties, and 'rows' does not exist in type 'StandardFormField'.
+components/tpm/tpm-activity-form.tsx(168,7): error TS2353: Object literal may only specify known properties, and 'renderInput' does not exist in type 'StandardFormField'.
+components/tpm/tpm-activity-form.tsx(279,7): error TS2353: Object literal may only specify known properties, and 'renderInput' does not exist in type 'StandardFormField'.
+components/tpm/tpm-activity-form.tsx(497,7): error TS2322: Type '(data: TPMActivityFormData) => Promise<void>' is not assignable to type '(data: Record<string, any>) => void | Promise<void>'.
+  Types of parameters 'data' and 'data' are incompatible.
+    Type 'Record<string, any>' is missing the following properties from type 'TPMActivityFormData': title, description, teamId, activityType, and 8 more.
+components/tpm/tpm-team-form.tsx(118,7): error TS2353: Object literal may only specify known properties, and 'rows' does not exist in type 'StandardFormField'.
+components/tpm/tpm-team-form.tsx(158,7): error TS2322: Type '"time"' is not assignable to type '"number" | "date" | "select" | "multiselect" | "custom" | "text" | "checkbox" | "radio" | "switch" | "email" | "textarea" | "file" | "password" | "datetime"'.
+components/tpm/tpm-team-form.tsx(176,7): error TS2353: Object literal may only specify known properties, and 'renderInput' does not exist in type 'StandardFormField'.
+components/tpm/tpm-team-form.tsx(383,7): error TS2322: Type '(data: TPMTeamFormData) => Promise<void>' is not assignable to type '(data: Record<string, any>) => void | Promise<void>'.
+  Types of parameters 'data' and 'data' are incompatible.
+    Type 'Record<string, any>' is missing the following properties from type 'TPMTeamFormData': code, name, description, department, and 8 more.
+components/tpm/tpm-team-management.tsx(183,15): error TS2741: Property 'leaderName' is missing in type '{ status: "active"; isActive: true; createdAt: string; updatedAt: string; createdBy: string; updatedBy: string; code: string; name: string; description: string; department: string; leader: string; ... 7 more ...; id: string; }' but required in type 'TPMTeam'.
+components/tpm/tpm-team-management.tsx(328,13): error TS2353: Object literal may only specify known properties, and 'facilitatorName' does not exist in type 'Partial<TPMTeam>'.
+hooks/use-mock-or-api.ts(345,23): error TS2352: Conversion of type 'TInput & { id: string; createdAt: string; updatedAt: string; }' to type 'TData' may be a mistake because neither type sufficiently overlaps with the other. If this was intentional, convert the expression to 'unknown' first.
+  'TInput & { id: string; createdAt: string; updatedAt: string; }' is assignable to the constraint of type 'TData', but 'TData' could be instantiated with a different subtype of constraint 'BaseEntity'.
+lib/auth-context.tsx(50,5): error TS2322: Type 'string | undefined' is not assignable to type 'string'.
+  Type 'undefined' is not assignable to type 'string'.
+lib/auth-context.tsx(198,38): error TS2345: Argument of type 'string | undefined' is not assignable to parameter of type 'string'.
+  Type 'undefined' is not assignable to type 'string'.
+lib/mock-data/equipment-specification.ts(76,9): error TS2353: Object literal may only specify known properties, and 'order' does not exist in type 'Omit<PerformanceIndicator, "actualValue" | "lastMeasured" | "trend">'.
+lib/mock-data/equipment-specification.ts(88,9): error TS2353: Object literal may only specify known properties, and 'order' does not exist in type 'OperatingCondition'.
+lib/mock-data/equipment-specification.ts(101,18): error TS2532: Object is possibly 'undefined'.
+lib/mock-data/equipment-specification.ts(102,20): error TS2532: Object is possibly 'undefined'.
+lib/mock-data/equipment-specification.ts(103,20): error TS2532: Object is possibly 'undefined'.
+lib/mock-data/equipment-specification.ts(104,20): error TS2532: Object is possibly 'undefined'.
+lib/mock-data/equipment-specification.ts(211,9): error TS2353: Object literal may only specify known properties, and 'order' does not exist in type 'PerformanceIndicator'.
+lib/mock-data/equipment-specification.ts(225,9): error TS2353: Object literal may only specify known properties, and 'order' does not exist in type 'OperatingCondition'.
+lib/mock-data/equipment-specification.ts(236,9): error TS2353: Object literal may only specify known properties, and 'order' does not exist in type 'SafetyStandard'.
+lib/mock-data/equipment-specification.ts(248,9): error TS2353: Object literal may only specify known properties, and 'order' does not exist in type 'Certification'.
+lib/mock-data/equipment-specification.ts(260,18): error TS2532: Object is possibly 'undefined'.
+lib/mock-data/equipment-specification.ts(261,20): error TS2532: Object is possibly 'undefined'.
+lib/mock-data/equipment-specification.ts(262,20): error TS2532: Object is possibly 'undefined'.
+lib/mock-data/equipment-specification.ts(263,20): error TS2532: Object is possibly 'undefined'.
+lib/mock-data/inspection-master.ts(12,3): error TS2740: Type '{ id: string; name: string; }' is missing the following properties from type 'EquipmentType': code, properties, isActive, createdAt, and 3 more.
+lib/mock-data/inspection-master.ts(13,3): error TS2740: Type '{ id: string; name: string; }' is missing the following properties from type 'EquipmentType': code, properties, isActive, createdAt, and 3 more.
+lib/mock-data/inspection-master.ts(14,3): error TS2740: Type '{ id: string; name: string; }' is missing the following properties from type 'EquipmentType': code, properties, isActive, createdAt, and 3 more.
+lib/mock-data/inspection-master.ts(15,3): error TS2740: Type '{ id: string; name: string; }' is missing the following properties from type 'EquipmentType': code, properties, isActive, createdAt, and 3 more.
+lib/mock-data/inspection-master.ts(16,3): error TS2740: Type '{ id: string; name: string; }' is missing the following properties from type 'EquipmentType': code, properties, isActive, createdAt, and 3 more.
+lib/mock-data/inspection-master.ts(17,3): error TS2740: Type '{ id: string; name: string; }' is missing the following properties from type 'EquipmentType': code, properties, isActive, createdAt, and 3 more.
+lib/mock-data/inspection-master.ts(18,3): error TS2740: Type '{ id: string; name: string; }' is missing the following properties from type 'EquipmentType': code, properties, isActive, createdAt, and 3 more.
+lib/mock-data/inspection-master.ts(22,3): error TS2739: Type '{ id: string; name: string; }' is missing the following properties from type 'InspectionType': code, category
+lib/mock-data/inspection-master.ts(23,3): error TS2739: Type '{ id: string; name: string; }' is missing the following properties from type 'InspectionType': code, category
+lib/mock-data/inspection-master.ts(24,3): error TS2739: Type '{ id: string; name: string; }' is missing the following properties from type 'InspectionType': code, category
+lib/mock-data/inspection-master.ts(25,3): error TS2739: Type '{ id: string; name: string; }' is missing the following properties from type 'InspectionType': code, category
+lib/mock-data/inspection-master.ts(26,3): error TS2739: Type '{ id: string; name: string; }' is missing the following properties from type 'InspectionType': code, category
+lib/mock-data/inspection-master.ts(27,3): error TS2739: Type '{ id: string; name: string; }' is missing the following properties from type 'InspectionType': code, category
+lib/mock-data/inspection-master.ts(31,3): error TS2741: Property 'code' is missing in type '{ id: string; name: string; }' but required in type 'Department'.
+lib/mock-data/inspection-master.ts(32,3): error TS2741: Property 'code' is missing in type '{ id: string; name: string; }' but required in type 'Department'.
+lib/mock-data/inspection-master.ts(33,3): error TS2741: Property 'code' is missing in type '{ id: string; name: string; }' but required in type 'Department'.
+lib/mock-data/inspection-master.ts(34,3): error TS2741: Property 'code' is missing in type '{ id: string; name: string; }' but required in type 'Department'.
+lib/mock-data/inspection-master.ts(35,3): error TS2741: Property 'code' is missing in type '{ id: string; name: string; }' but required in type 'Department'.
+lib/mock-data/inspection-master.ts(39,3): error TS2740: Type '{ id: string; name: string; }' is missing the following properties from type 'User': username, email, level, department, and 9 more.
+lib/mock-data/inspection-master.ts(40,3): error TS2740: Type '{ id: string; name: string; }' is missing the following properties from type 'User': username, email, level, department, and 9 more.
+lib/mock-data/inspection-master.ts(41,3): error TS2740: Type '{ id: string; name: string; }' is missing the following properties from type 'User': username, email, level, department, and 9 more.
+lib/mock-data/inspection-master.ts(42,3): error TS2740: Type '{ id: string; name: string; }' is missing the following properties from type 'User': username, email, level, department, and 9 more.
+lib/mock-data/inspection-master.ts(43,3): error TS2740: Type '{ id: string; name: string; }' is missing the following properties from type 'User': username, email, level, department, and 9 more.
+lib/mock-data/inspection-master.ts(44,3): error TS2740: Type '{ id: string; name: string; }' is missing the following properties from type 'User': username, email, level, department, and 9 more.
+lib/mock-data/inspection-master.ts(54,5): error TS2322: Type 'import("C:/Project/FMSMonorepo/packages/types/src/equipment-master").EquipmentType | undefined' is not assignable to type 'import("C:/Project/FMSMonorepo/packages/types/src/inspection-master").EquipmentType | undefined'.
+  Property 'category' is missing in type 'import("C:/Project/FMSMonorepo/packages/types/src/equipment-master").EquipmentType' but required in type 'import("C:/Project/FMSMonorepo/packages/types/src/inspection-master").EquipmentType'.
+lib/mock-data/inspection-master.ts(80,9): error TS2353: Object literal may only specify known properties, and 'standardValue' does not exist in type 'InspectionMasterItem'.
+lib/mock-data/inspection-master.ts(100,5): error TS2322: Type 'import("C:/Project/FMSMonorepo/packages/types/src/equipment-master").EquipmentType | undefined' is not assignable to type 'import("C:/Project/FMSMonorepo/packages/types/src/inspection-master").EquipmentType | undefined'.
+  Property 'category' is missing in type 'import("C:/Project/FMSMonorepo/packages/types/src/equipment-master").EquipmentType' but required in type 'import("C:/Project/FMSMonorepo/packages/types/src/inspection-master").EquipmentType'.
+lib/mock-data/inspection-master.ts(116,9): error TS2353: Object literal may only specify known properties, and 'standardValue' does not exist in type 'InspectionMasterItem'.
+lib/mock-data/inspection-master.ts(146,5): error TS2322: Type 'import("C:/Project/FMSMonorepo/packages/types/src/equipment-master").EquipmentType | undefined' is not assignable to type 'import("C:/Project/FMSMonorepo/packages/types/src/inspection-master").EquipmentType | undefined'.
+  Property 'category' is missing in type 'import("C:/Project/FMSMonorepo/packages/types/src/equipment-master").EquipmentType' but required in type 'import("C:/Project/FMSMonorepo/packages/types/src/inspection-master").EquipmentType'.
+lib/mock-data/inspection-master.ts(162,9): error TS2353: Object literal may only specify known properties, and 'standardValue' does not exist in type 'InspectionMasterItem'.
+lib/mock-data/inspection-master.ts(191,5): error TS2322: Type 'import("C:/Project/FMSMonorepo/packages/types/src/equipment-master").EquipmentType | undefined' is not assignable to type 'import("C:/Project/FMSMonorepo/packages/types/src/inspection-master").EquipmentType | undefined'.
+  Property 'category' is missing in type 'import("C:/Project/FMSMonorepo/packages/types/src/equipment-master").EquipmentType' but required in type 'import("C:/Project/FMSMonorepo/packages/types/src/inspection-master").EquipmentType'.
+lib/mock-data/inspection-master.ts(224,5): error TS2322: Type 'import("C:/Project/FMSMonorepo/packages/types/src/equipment-master").EquipmentType | undefined' is not assignable to type 'import("C:/Project/FMSMonorepo/packages/types/src/inspection-master").EquipmentType | undefined'.
+  Property 'category' is missing in type 'import("C:/Project/FMSMonorepo/packages/types/src/equipment-master").EquipmentType' but required in type 'import("C:/Project/FMSMonorepo/packages/types/src/inspection-master").EquipmentType'.
+lib/mock-data/inspection-result.ts(40,7): error TS2561: Object literal may only specify known properties, but 'schedule' does not exist in type 'InspectionResult'. Did you mean to write 'scheduleId'?
+lib/mock-data/inspection-result.ts(66,36): error TS2339: Property 'measurementUnit' does not exist on type 'InspectionMasterItem'.
+lib/mock-data/inspection-result.ts(68,53): error TS2339: Property 'targetValue' does not exist on type 'InspectionMasterItem'.
+lib/mock-data/inspection-result.ts(74,54): error TS2365: Operator '+' cannot be applied to types 'string | number' and 'number'.
+lib/mock-data/inspection-result.ts(77,67): error TS2363: The right-hand side of an arithmetic operation must be of type 'any', 'number', 'bigint' or an enum type.
+lib/mock-data/inspection-result.ts(104,9): error TS2322: Type 'number | undefined' is not assignable to type 'string | undefined'.
+  Type 'number' is not assignable to type 'string'.
+lib/mock-data/inspection-schedule.ts(28,5): error TS2322: Type 'string | undefined' is not assignable to type 'string'.
+  Type 'undefined' is not assignable to type 'string'.
+lib/mock-data/inspection-schedule.ts(63,5): error TS2322: Type 'string | undefined' is not assignable to type 'string'.
+  Type 'undefined' is not assignable to type 'string'.
+lib/mock-data/inspection-schedule.ts(98,5): error TS2322: Type 'string | undefined' is not assignable to type 'string'.
+  Type 'undefined' is not assignable to type 'string'.
+lib/mock-data/inspection-schedule.ts(133,5): error TS2322: Type 'string | undefined' is not assignable to type 'string'.
+  Type 'undefined' is not assignable to type 'string'.
+lib/mock-data/inspection-schedule.ts(178,5): error TS2322: Type 'string | undefined' is not assignable to type 'string'.
+  Type 'undefined' is not assignable to type 'string'.
+lib/mock-data/inspection-schedule.ts(213,5): error TS2322: Type 'string | undefined' is not assignable to type 'string'.
+  Type 'undefined' is not assignable to type 'string'.
+lib/mock-data/inspection-schedule.ts(248,5): error TS2322: Type 'string | undefined' is not assignable to type 'string'.
+  Type 'undefined' is not assignable to type 'string'.
+lib/mock-data/inspection-schedule.ts(283,5): error TS2322: Type 'string | undefined' is not assignable to type 'string'.
+  Type 'undefined' is not assignable to type 'string'.
+lib/mock-data/inspection-schedule.ts(320,5): error TS2322: Type 'string | undefined' is not assignable to type 'string'.
+  Type 'undefined' is not assignable to type 'string'.
+lib/mock-data/inspection-schedule.ts(365,5): error TS2322: Type 'string | undefined' is not assignable to type 'string'.
+  Type 'undefined' is not assignable to type 'string'.
+lib/mock-data/inspection-schedule.ts(400,5): error TS2322: Type 'string | undefined' is not assignable to type 'string'.
+  Type 'undefined' is not assignable to type 'string'.
+lib/mock-data/inspection-schedule.ts(435,5): error TS2322: Type 'string | undefined' is not assignable to type 'string'.
+  Type 'undefined' is not assignable to type 'string'.
+lib/mock-data/inspection-schedule.ts(471,5): error TS2322: Type 'string | undefined' is not assignable to type 'string'.
+  Type 'undefined' is not assignable to type 'string'.
+lib/mock-data/inspection-schedule.ts(506,5): error TS2322: Type 'string | undefined' is not assignable to type 'string'.
+  Type 'undefined' is not assignable to type 'string'.
+lib/mock-data/inspection-schedule.ts(541,5): error TS2322: Type 'string | undefined' is not assignable to type 'string'.
+  Type 'undefined' is not assignable to type 'string'.
+lib/mock-data/inspection-schedule.ts(586,5): error TS2322: Type 'string | undefined' is not assignable to type 'string'.
+  Type 'undefined' is not assignable to type 'string'.
+lib/mock-data/inspection-schedule.ts(631,5): error TS2322: Type 'string | undefined' is not assignable to type 'string'.
+  Type 'undefined' is not assignable to type 'string'.
+lib/mock-data/inspection-schedule.ts(666,5): error TS2322: Type 'string | undefined' is not assignable to type 'string'.
+  Type 'undefined' is not assignable to type 'string'.
+lib/mock-data/inspection-schedule.ts(701,5): error TS2322: Type 'string | undefined' is not assignable to type 'string'.
+  Type 'undefined' is not assignable to type 'string'.
+lib/mock-data/inspection-schedule.ts(746,5): error TS2322: Type 'string | undefined' is not assignable to type 'string'.
+  Type 'undefined' is not assignable to type 'string'.
+lib/mock-data/inspection-standard.ts(11,5): error TS2353: Object literal may only specify known properties, and 'status' does not exist in type 'InspectionStandard'.
+lib/mock-data/inspection-standard.ts(30,5): error TS2353: Object literal may only specify known properties, and 'status' does not exist in type 'InspectionStandard'.
+lib/mock-data/inspection-standard.ts(49,5): error TS2353: Object literal may only specify known properties, and 'status' does not exist in type 'InspectionStandard'.
+lib/mock-data/inspection-standard.ts(65,5): error TS2353: Object literal may only specify known properties, and 'status' does not exist in type 'InspectionStandard'.
+lib/mock-data/inspection-standard.ts(81,5): error TS2353: Object literal may only specify known properties, and 'status' does not exist in type 'InspectionStandard'.
+lib/mock-data/inspection-standard.ts(97,3): error TS2739: Type '{ id: string; standardId: string; masterItemId: string; masterItem: { masterId: string; masterName: string; id: string; sequence: number; name: string; description?: string | undefined; checkMethod?: string | undefined; ... 8 more ...; imageUrl?: string | undefined; } | undefined; ... 7 more ...; updatedAt: string; }' is missing the following properties from type 'InspectionStandardItem': name, isActive
+lib/mock-data/inspection-standard.ts(112,3): error TS2739: Type '{ id: string; standardId: string; masterItemId: string; masterItem: { masterId: string; masterName: string; id: string; sequence: number; name: string; description?: string | undefined; checkMethod?: string | undefined; ... 8 more ...; imageUrl?: string | undefined; } | undefined; ... 7 more ...; updatedAt: string; }' is missing the following properties from type 'InspectionStandardItem': name, isActive
+lib/mock-data/inspection-standard.ts(127,3): error TS2739: Type '{ id: string; standardId: string; masterItemId: string; masterItem: { masterId: string; masterName: string; id: string; sequence: number; name: string; description?: string | undefined; checkMethod?: string | undefined; ... 8 more ...; imageUrl?: string | undefined; } | undefined; ... 7 more ...; updatedAt: string; }' is missing the following properties from type 'InspectionStandardItem': name, isActive
+lib/mock-data/inspection-standard.ts(145,1): error TS2532: Object is possibly 'undefined'.
+lib/mock-data/inspection-standard.ts(145,37): error TS2322: Type 'InspectionStandardItem | undefined' is not assignable to type 'InspectionStandardItem'.
+  Type 'undefined' is not assignable to type 'InspectionStandardItem'.
+lib/mock-data/inspection-standard.ts(145,69): error TS2322: Type 'InspectionStandardItem | undefined' is not assignable to type 'InspectionStandardItem'.
+  Type 'undefined' is not assignable to type 'InspectionStandardItem'.
+lib/mock-data/inspection-standard.ts(146,1): error TS2532: Object is possibly 'undefined'.
+lib/mock-data/inspection-standard.ts(146,37): error TS2322: Type 'InspectionStandardItem | undefined' is not assignable to type 'InspectionStandardItem'.
+  Type 'undefined' is not assignable to type 'InspectionStandardItem'.
+lib/mock-data/kpi.ts(1,15): error TS2724: '"@fms/types"' has no exported member named 'KpiMetrics'. Did you mean 'KPIMetrics'?
+lib/mock-data/kpi.ts(1,27): error TS2724: '"@fms/types"' has no exported member named 'KpiTrend'. Did you mean 'KPITrend'?
+lib/mock-data/kpi.ts(1,37): error TS2305: Module '"@fms/types"' has no exported member 'EquipmentHealth'.
+lib/mock-data/location-monitoring.ts(4,14): error TS2322: Type '{ id: string; name: string; type: string; status: "running" | "stopped" | "maintenance" | "failure"; }[]' is not assignable to type 'DraggableEquipment[]'.
+  Type '{ id: string; name: string; type: string; status: "running" | "stopped" | "maintenance" | "failure"; }' is not assignable to type 'DraggableEquipment'.
+    Types of property 'status' are incompatible.
+      Type '"running" | "stopped" | "maintenance" | "failure"' is not assignable to type 'EquipmentStatus'.
+        Type '"running"' is not assignable to type 'EquipmentStatus'.
+lib/mock-data/location-monitoring.ts(16,9): error TS2532: Object is possibly 'undefined'.
+lib/mock-data/location-monitoring.ts(17,11): error TS2532: Object is possibly 'undefined'.
+lib/mock-data/location-monitoring.ts(18,11): error TS2532: Object is possibly 'undefined'.
+lib/mock-data/location-monitoring.ts(19,5): error TS2322: Type '"running" | "stopped" | "maintenance" | "failure"' is not assignable to type 'EquipmentStatus'.
+  Type '"running"' is not assignable to type 'EquipmentStatus'.
+lib/mock-data/location-monitoring.ts(19,13): error TS2532: Object is possibly 'undefined'.
+lib/mock-data/location-monitoring.ts(25,9): error TS2532: Object is possibly 'undefined'.
+lib/mock-data/location-monitoring.ts(26,11): error TS2532: Object is possibly 'undefined'.
+lib/mock-data/location-monitoring.ts(27,11): error TS2532: Object is possibly 'undefined'.
+lib/mock-data/location-monitoring.ts(28,5): error TS2322: Type '"failure"' is not assignable to type 'EquipmentStatus'.
+lib/mock-data/maintenance.ts(6,3): error TS2724: '"@fms/types"' has no exported member named 'MaintenanceUser'. Did you mean 'MaintenanceWork'?
+lib/mock-data/maintenance.ts(7,3): error TS2724: '"@fms/types"' has no exported member named 'MaintenanceTeam'. Did you mean 'MaintenancePlan'?
+lib/mock-data/maintenance.ts(32,5): error TS2322: Type '"repair"' is not assignable to type '"breakdown" | "preventive" | "improvement" | "emergency" | "general" | undefined'.
+lib/mock-data/maintenance.ts(60,5): error TS2322: Type '"inspection"' is not assignable to type '"breakdown" | "preventive" | "improvement" | "emergency" | "general" | undefined'.
+lib/mock-data/maintenance.ts(88,5): error TS2322: Type '"repair"' is not assignable to type '"breakdown" | "preventive" | "improvement" | "emergency" | "general" | undefined'.
+lib/mock-data/maintenance.ts(141,5): error TS2322: Type '"emergency_repair"' is not assignable to type '"breakdown" | "preventive" | "improvement" | "emergency" | "general" | undefined'.
+lib/mock-data/maintenance.ts(432,7): error TS2741: Property 'estimatedDuration' is missing in type '{ id: string; procedureId: string; step: number; title: string; description: string; result: "completed"; notes: string; duration: number; completedBy: string; completedByName: string; completedAt: string; }' but required in type 'MaintenanceProcedure'.
+lib/mock-data/maintenance.ts(447,7): error TS2741: Property 'quantity' is missing in type '{ id: string; materialId: string; materialCode: string; materialName: string; plannedQuantity: number; actualQuantity: number; unit: string; unitCost: number; totalCost: number; warehouseId: string; warehouseName: string; usedBy: string; usedByName: string; usedAt: string; }' but required in type 'MaintenanceMaterial'.
+lib/mock-data/material-inbound.ts(19,5): error TS2353: Object literal may only specify known properties, and 'issuedBy' does not exist in type 'MaterialTransaction'.
+lib/mock-data/material-inbound.ts(22,3): error TS2739: Type '{ id: string; transactionType: "in"; materialCode: string; materialName: string; warehouseName: string; quantity: number; unit: string; totalAmount: number; requestedBy: string; requestedAt: string; status: "pending"; referenceNo: string; }' is missing the following properties from type 'MaterialTransaction': materialId, warehouseId, unitPrice, purpose
+lib/mock-data/material-inbound.ts(51,5): error TS2353: Object literal may only specify known properties, and 'issuedBy' does not exist in type 'MaterialTransaction'.
+lib/mock-data/material-inbound.ts(54,3): error TS2739: Type '{ id: string; transactionType: "in"; materialCode: string; materialName: string; warehouseName: string; quantity: number; unit: string; totalAmount: number; requestedBy: string; requestedAt: string; status: "approved"; referenceNo: string; approvedBy: string; approvedAt: string; }' is missing the following properties from type 'MaterialTransaction': materialId, warehouseId, unitPrice, purpose
+lib/mock-data/material-inbound.ts(85,5): error TS2353: Object literal may only specify known properties, and 'issuedBy' does not exist in type 'MaterialTransaction'.
+lib/mock-data/material-outbound.ts(19,5): error TS2353: Object literal may only specify known properties, and 'issuedBy' does not exist in type 'MaterialTransaction'.
+lib/mock-data/material-outbound.ts(22,3): error TS2739: Type '{ id: string; transactionType: "out"; materialCode: string; materialName: string; warehouseName: string; quantity: number; unit: string; totalAmount: number; requestedBy: string; requestedAt: string; status: "pending"; referenceNo: string; }' is missing the following properties from type 'MaterialTransaction': materialId, warehouseId, unitPrice, purpose
+lib/mock-data/material-outbound.ts(49,5): error TS2353: Object literal may only specify known properties, and 'issuedBy' does not exist in type 'MaterialTransaction'.
+lib/mock-data/material-outbound.ts(52,3): error TS2739: Type '{ id: string; transactionType: "out"; materialCode: string; materialName: string; warehouseName: string; quantity: number; unit: string; totalAmount: number; requestedBy: string; requestedAt: string; status: "approved"; referenceNo: string; approvedBy: string; approvedAt: string; }' is missing the following properties from type 'MaterialTransaction': materialId, warehouseId, unitPrice, purpose
+lib/mock-data/material-outbound.ts(81,5): error TS2353: Object literal may only specify known properties, and 'issuedBy' does not exist in type 'MaterialTransaction'.
+lib/mock-data/material.ts(6,5): error TS2353: Object literal may only specify known properties, and 'materialCode' does not exist in type 'Material'.
+lib/mock-data/material.ts(22,5): error TS2353: Object literal may only specify known properties, and 'materialCode' does not exist in type 'Material'.
+lib/mock-data/material.ts(38,5): error TS2353: Object literal may only specify known properties, and 'materialCode' does not exist in type 'Material'.
+lib/mock-data/material.ts(54,5): error TS2353: Object literal may only specify known properties, and 'materialCode' does not exist in type 'Material'.
+lib/mock-data/metering.ts(82,27): error TS7053: Element implicitly has an 'any' type because expression of type 'string' can't be used to index type '{ EQ001: number; EQ002: number; EQ003: number; EQ004: number; EQ005: number; EQ006: number; EQ007: number; EQ008: number; }'.
+  No index signature with a parameter of type 'string' was found on type '{ EQ001: number; EQ002: number; EQ003: number; EQ004: number; EQ005: number; EQ006: number; EQ007: number; EQ008: number; }'.
+lib/mock-data/metering.ts(89,50): error TS18048: 'seasonEffect' is possibly 'undefined'.
+lib/mock-data/metering.ts(89,65): error TS18048: 'weekdayEffect' is possibly 'undefined'.
+lib/mock-data/metering.ts(109,9): error TS2322: Type 'string | undefined' is not assignable to type 'string'.
+  Type 'undefined' is not assignable to type 'string'.
+lib/mock-data/metering.ts(115,9): error TS2322: Type 'string | undefined' is not assignable to type 'string'.
+  Type 'undefined' is not assignable to type 'string'.
+lib/mock-data/metering.ts(117,9): error TS2322: Type 'string | undefined' is not assignable to type '"rejected" | "pending" | "confirmed"'.
+  Type 'undefined' is not assignable to type '"rejected" | "pending" | "confirmed"'.
+lib/mock-data/preventive-schedule.ts(1,15): error TS2305: Module '"@fms/types"' has no exported member 'PreventiveScheduleRecord'.
+lib/mock-data/preventive-schedule.ts(7,3): error TS2322: Type 'string | undefined' is not assignable to type 'string'.
+  Type 'undefined' is not assignable to type 'string'.
+lib/mock-data/preventive-schedule.ts(12,3): error TS2322: Type 'string | undefined' is not assignable to type 'string'.
+  Type 'undefined' is not assignable to type 'string'.
+lib/mock-data/preventive.ts(26,5): error TS2561: Object literal may only specify known properties, but 'taskDescription' does not exist in type 'PreventiveMaster'. Did you mean to write 'description'?
+lib/mock-data/preventive.ts(44,5): error TS2561: Object literal may only specify known properties, but 'taskDescription' does not exist in type 'PreventiveMaster'. Did you mean to write 'description'?
+lib/mock-data/preventive.ts(60,5): error TS2561: Object literal may only specify known properties, but 'taskDescription' does not exist in type 'PreventiveMaster'. Did you mean to write 'description'?
+lib/mock-data/preventive.ts(76,5): error TS2561: Object literal may only specify known properties, but 'taskDescription' does not exist in type 'PreventiveMaster'. Did you mean to write 'description'?
+lib/mock-data/preventive.ts(91,5): error TS2561: Object literal may only specify known properties, but 'taskDescription' does not exist in type 'PreventiveMaster'. Did you mean to write 'description'?
+lib/mock-data/preventive.ts(106,5): error TS2561: Object literal may only specify known properties, but 'taskDescription' does not exist in type 'PreventiveMaster'. Did you mean to write 'description'?
+lib/mock-data/preventive.ts(127,5): error TS2353: Object literal may only specify known properties, and 'actualStartDate' does not exist in type 'PreventiveOrder'.
+lib/mock-data/preventive.ts(143,3): error TS2739: Type '{ id: string; preventiveMasterId: string; equipmentId: string; equipmentName: string; templateId: string; scheduledDate: string; assignedTo: string; assignedToName: string; status: any; priority: PreventivePriority.HIGH; ... 6 more ...; updatedAt: string; }' is missing the following properties from type 'PreventiveOrder': orderNumber, masterId
+lib/mock-data/preventive.ts(152,35): error TS2339: Property 'SCHEDULED' does not exist on type 'typeof PreventiveOrderStatus'.
+lib/mock-data/preventive.ts(169,5): error TS2353: Object literal may only specify known properties, and 'actualStartDate' does not exist in type 'PreventiveOrder'.
+lib/mock-data/preventive.ts(182,3): error TS2739: Type '{ id: string; preventiveMasterId: string; equipmentId: string; equipmentName: string; templateId: string; scheduledDate: string; assignedTo: string; assignedToName: string; status: PreventiveOrderStatus.OVERDUE; ... 7 more ...; updatedAt: string; }' is missing the following properties from type 'PreventiveOrder': orderNumber, masterId
+lib/mock-data/preventive.ts(201,3): error TS2739: Type '{ id: string; preventiveMasterId: string; equipmentId: string; equipmentName: string; templateId: string; scheduledDate: string; assignedTo: string; assignedToName: string; status: any; priority: PreventivePriority.CRITICAL; ... 6 more ...; updatedAt: string; }' is missing the following properties from type 'PreventiveOrder': orderNumber, masterId
+lib/mock-data/preventive.ts(210,35): error TS2339: Property 'SCHEDULED' does not exist on type 'typeof PreventiveOrderStatus'.
+lib/mock-data/preventive.ts(220,3): error TS2739: Type '{ id: string; preventiveMasterId: string; equipmentId: string; equipmentName: string; templateId: string; scheduledDate: string; assignedTo: string; assignedToName: string; status: any; priority: PreventivePriority.HIGH; ... 6 more ...; updatedAt: string; }' is missing the following properties from type 'PreventiveOrder': orderNumber, masterId
+lib/mock-data/preventive.ts(229,35): error TS2339: Property 'SCHEDULED' does not exist on type 'typeof PreventiveOrderStatus'.
+lib/mock-data/preventive.ts(246,5): error TS2353: Object literal may only specify known properties, and 'actualStartDate' does not exist in type 'PreventiveOrder'.
+lib/mock-data/preventive.ts(269,5): error TS2353: Object literal may only specify known properties, and 'actualStartDate' does not exist in type 'PreventiveOrder'.
+lib/mock-data/tpm.ts(193,5): error TS2322: Type '"focused"' is not assignable to type '"tpm.activity.autonomous" | "tpm.activity.planned" | "tpm.activity.quality" | "tpm.activity.focused" | "tpm.activity.early" | "tpm.activity.training" | "tpm.activity.safety" | "tpm.activity.office"'.
+lib/mock-data/tpm.ts(194,5): error TS2322: Type '"媛쒕퀎媛쒖꽑"' is not assignable to type 'TPMPillar'.
+lib/mock-data/tpm.ts(320,5): error TS2322: Type '"quality"' is not assignable to type '"tpm.activity.autonomous" | "tpm.activity.planned" | "tpm.activity.quality" | "tpm.activity.focused" | "tpm.activity.early" | "tpm.activity.training" | "tpm.activity.safety" | "tpm.activity.office"'.
+lib/mock-data/tpm.ts(321,5): error TS2322: Type '"?덉쭏蹂댁쟾"' is not assignable to type 'TPMPillar'.
+lib/mock-data/tpm.ts(402,9): error TS1117: An object literal cannot have multiple properties with the same name.
+lib/mock-data/tpm.ts(419,5): error TS2322: Type '"safety"' is not assignable to type '"tpm.activity.autonomous" | "tpm.activity.planned" | "tpm.activity.quality" | "tpm.activity.focused" | "tpm.activity.early" | "tpm.activity.training" | "tpm.activity.safety" | "tpm.activity.office"'.
+lib/mock-data/tpm.ts(420,5): error TS2322: Type '"?덉쟾?섍꼍"' is not assignable to type 'TPMPillar'.
+lib/utils/export-utils.ts(194,32): error TS2322: Type 'string | undefined' is not assignable to type 'string'.
+  Type 'undefined' is not assignable to type 'string'.
+lib/utils/export-utils.ts(231,32): error TS2322: Type 'string | undefined' is not assignable to type 'string'.
+  Type 'undefined' is not assignable to type 'string'.
+lib/utils/export-utils.ts(232,31): error TS2322: Type 'string | undefined' is not assignable to type 'string'.
+  Type 'undefined' is not assignable to type 'string'.
+lib/utils/export-utils.ts(233,31): error TS2322: Type 'string | undefined' is not assignable to type 'string'.
+  Type 'undefined' is not assignable to type 'string'.
+lib/utils/export-utils.ts(235,7): error TS2322: Type 'string | undefined' is not assignable to type 'string'.
+  Type 'undefined' is not assignable to type 'string'.
+lib/utils/import-utils.ts(58,45): error TS2538: Type 'undefined' cannot be used as an index type.
+lib/utils/import-utils.ts(90,51): error TS2345: Argument of type 'any[] | undefined' is not assignable to parameter of type 'any[]'.
+  Type 'undefined' is not assignable to type 'any[]'.
+lib/utils/import-utils.ts(101,27): error TS2345: Argument of type 'any[] | undefined' is not assignable to parameter of type 'any[]'.
+  Type 'undefined' is not assignable to type 'any[]'.
+lib/utils/import-utils.ts(104,9): error TS2345: Argument of type 'any[] | undefined' is not assignable to parameter of type 'any[]'.
+  Type 'undefined' is not assignable to type 'any[]'.
+lib/utils/import-utils.ts(143,13): error TS2345: Argument of type 'string' is not assignable to parameter of type 'Record<string, any>'.
+lib/utils/import-utils.ts(189,43): error TS2345: Argument of type 'string' is not assignable to parameter of type 'Record<string, any>'.
+lib/utils/import-utils.ts(207,15): error TS2345: Argument of type 'string' is not assignable to parameter of type 'Record<string, any>'.
+lib/utils/import-utils.ts(222,15): error TS2345: Argument of type 'string' is not assignable to parameter of type 'Record<string, any>'.
+lib/utils/import-utils.ts(237,15): error TS2345: Argument of type 'string' is not assignable to parameter of type 'Record<string, any>'.
+lib/utils/import-utils.ts(256,15): error TS2345: Argument of type 'string' is not assignable to parameter of type 'Record<string, any>'.

@@ -1,0 +1,9 @@
+{
+  "title": "物料管理",
+  "inbound": "物料入库管理",
+  "outbound": "物料出库管理",
+  "stock": "库存主数据管理",
+  "register": "物料注册管理",
+  "master": "物料主数据管理",
+  "issuance_request": "物料出库申请"
+}

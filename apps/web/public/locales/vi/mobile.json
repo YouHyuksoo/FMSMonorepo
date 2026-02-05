@@ -1,0 +1,12 @@
+{
+  "title": "Quản lý di động",
+  "work_order": "Quản lý lệnh công việc",
+  "maintenance": "Quản lý bảo trì",
+  "inspection": "Quản lý kiểm tra",
+  "failure": "Quản lý sự cố",
+  "material": "Quản lý vật tư",
+  "report": "Quản lý báo cáo",
+  "qr_management": "Kiểm tra quét QR",
+  "result_management": "Tra cứu kết quả di động",
+  "failure_register": "Đăng ký sự cố (QR)"
+}

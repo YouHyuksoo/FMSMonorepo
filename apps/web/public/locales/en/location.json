@@ -1,0 +1,13 @@
+{
+  "title": "Location Management",
+  "management": "Location Management",
+  "registration": "Location Registration Management",
+  "master": "Location Master Management",
+  "type": "Location Type Management",
+  "hierarchy": "Location Hierarchy Management",
+  "map": "Location Map Management",
+  "history": "Location History Management",
+  "report": "Location Report Management",
+  "layout_management": "Equipment Layout",
+  "monitor_management": "Real-time Monitoring"
+}

@@ -1,0 +1,13 @@
+{
+  "title": "位置管理",
+  "management": "位置管理",
+  "registration": "位置注册管理",
+  "master": "位置主数据管理",
+  "type": "位置类型管理",
+  "hierarchy": "位置层级管理",
+  "map": "位置地图管理",
+  "history": "位置历史管理",
+  "report": "位置报告管理",
+  "layout_management": "设备布局图",
+  "monitor_management": "实时监控"
+}

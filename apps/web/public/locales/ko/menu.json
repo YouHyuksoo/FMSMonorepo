@@ -1,0 +1,109 @@
+{
+  "dashboard": {
+    "title": "대시보드",
+    "integrated": "통합 대시보드"
+  },
+  "master": {
+    "title": "기준정보관리"
+  },
+  "equipment": {
+    "title": "설비정보관리",
+    "overview": "설비통합조회",
+    "master_management": "설비마스터관리",
+    "registration_management": "설비등록관리",
+    "bom_management": "설비BOM관리",
+    "spec": "설비사양관리",
+    "docs": "설비자료관리"
+  },
+  "sensor": {
+    "title": "센서 관리",
+    "overview": "센서 현황",
+    "dashboard": "센서 대시보드",
+    "registration_management": "센서 등록",
+    "groups": "센서 그룹 관리",
+    "types": "센서 유형 관리",
+    "analysis": "센서 데이터 분석"
+  },
+  "materials": {
+    "title": "보전자재관리",
+    "registration_management": "자재등록관리",
+    "master_management": "자재마스터관리",
+    "inventory_management": "재고마스터관리",
+    "inbound": "자재입고관리",
+    "outbound": "자재출고관리",
+    "issuance_request": "자재출고요청"
+  },
+  "maintenanceTemplate": {
+    "title": "보전템플릿",
+    "master": "템플릿 마스터 관리",
+    "standard": "템플릿 항목 관리"
+  },
+  "inspection": {
+    "title": "점검관리",
+    "schedule": "점검스케줄설정",
+    "result": "점검결과입력",
+    "calendar": "점검관리카렌더"
+  },
+  "maintenance": {
+    "title": "보전작업관리",
+    "request_management": "작업요청등록",
+    "plan_management": "작업계획배정",
+    "complete_management": "작업완료처리"
+  },
+  "failure": {
+    "title": "고장관리",
+    "registration": "고장등록",
+    "history": "고장이력조회"
+  },
+  "preventive": {
+    "title": "예방정비",
+    "master": "예방정비마스터",
+    "order": "정비오더생성",
+    "calendar": "예방정비카렌더"
+  },
+  "metering": {
+    "title": "검침/검교정",
+    "reading_management": "검침관리",
+    "calibration_management": "계측기검교정",
+    "analytics_management": "검침분석",
+    "calendar_management": "교정일정캘린더"
+  },
+  "budget_management": {
+    "title": "예산 및 비용 관리",
+    "cost_analysis": "예산 비용 분석"
+  },
+  "prediction": {
+    "title": "예지보전(AI)",
+    "result_management": "예측결과조회",
+    "sensor_management": "센서데이터관리"
+  },
+  "tpm": {
+    "title": "TPM활동관리",
+    "registration": "TPM활동등록",
+    "team": "분임조관리"
+  },
+  "location": {
+    "title": "위치기반모니터링",
+    "layout_management": "설비배치도",
+    "monitor_management": "실시간모니터링"
+  },
+  "mobile": {
+    "title": "모바일QR점검",
+    "qr_management": "QR스캔점검",
+    "result_management": "모바일결과조회",
+    "failure_register": "고장 등록 (QR)"
+  },
+  "system": {
+    "title": "시스템관리",
+    "organization_management": "조직관리",
+    "users_management": "사용자관리",
+    "permissions_management": "권한관리",
+    "roles_management": "역할관리",
+    "codes_management": "기초코드관리",
+    "config_management": "환경설정",
+    "language_management": "다국어관리",
+    "theme_management": "테마설정",
+    "code_management": "코드관리",
+    "configuration": "환경설정관리"
+  }
+}

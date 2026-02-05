@@ -1,0 +1,49 @@
+{
+  "title": "대시보드",
+  "subtitle": "설비 및 유지보수 현황에 대한 요약입니다.",
+  "total_equipment": "총 설비",
+  "failed_equipment": "고장 설비",
+  "inspection_rate": "점검 실행률",
+  "pending_work": "대기 작업",
+  "from_last_month": "지난 달 대비",
+  "recent_failures": "최근 고장 이력",
+  "recent_failures_desc": "최근에 발생한 고장 내역입니다.",
+  "todays_inspection": "금일 점검 일정",
+  "todays_inspection_desc": "오늘 예정된 점검 목록입니다.",
+  "inspection_status": {
+    "completed": "완료",
+    "in_progress": "진행중",
+    "pending": "대기"
+  },
+  "overview": "개요",
+  "equipment": {
+    "status": "설비 상태",
+    "health": "설비 건강도",
+    "maintenance": "보전 현황"
+  },
+  "sensor": {
+    "status": "센서 상태",
+    "alerts": "센서 알림",
+    "monitoring": "센서 모니터링"
+  },
+  "maintenance": {
+    "pending": "대기 중인 작업",
+    "in_progress": "진행 중인 작업",
+    "completed": "완료된 작업"
+  },
+  "energy": {
+    "consumption": "에너지 소비량",
+    "efficiency": "에너지 효율",
+    "savings": "에너지 절감"
+  },
+  "carbon": {
+    "emissions": "탄소 배출량",
+    "reduction": "탄소 감축",
+    "target": "감축 목표"
+  },
+  "kpi": {
+    "overall": "종합 KPI",
+    "equipment": "설비 KPI",
+    "maintenance": "보전 KPI"
+  }
+}

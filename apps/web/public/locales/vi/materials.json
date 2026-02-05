@@ -1,0 +1,9 @@
+{
+  "title": "Quản lý vật tư",
+  "inbound": "Quản lý nhập kho vật tư",
+  "outbound": "Quản lý xuất kho vật tư",
+  "stock": "Quản lý tồn kho",
+  "register": "Quản lý đăng ký vật tư",
+  "master": "Quản lý master vật tư",
+  "issuance_request": "Yêu cầu xuất kho vật tư"
+}

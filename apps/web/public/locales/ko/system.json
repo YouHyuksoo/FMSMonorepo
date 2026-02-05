@@ -1,0 +1,111 @@
+{
+  "title": "시스템관리",
+  "organization_management": "조직관리",
+  "users_management": "사용자관리",
+  "permissions_management": "권한관리",
+  "roles_management": "역할관리",
+  "codes_management": "기초코드관리",
+  "config_management": "환경설정",
+  "language_management": "다국어관리",
+  "theme_management": "테마설정",
+  "configuration": {
+    "tabs": {
+      "database": "데이터베이스",
+      "notifications": "알림",
+      "storage": "파일 저장소",
+      "security": "보안"
+    },
+    "database": {
+      "title": "데이터베이스 연결 설정",
+      "description": "PostgreSQL 데이터베이스 연결 정보를 입력하세요.",
+      "host": "호스트",
+      "port": "포트",
+      "database_name": "데이터베이스",
+      "user": "사용자",
+      "password": "비밀번호",
+      "test_connection": "연결 테스트",
+      "save": "저장"
+    },
+    "notifications": {
+      "title": "알림 설정",
+      "description": "시스템 알림 수신 방법을 설정합니다.",
+      "email": "이메일 알림",
+      "email_description": "주요 이벤트 발생 시 이메일로 알림을 받습니다.",
+      "sms": "SMS 알림",
+      "sms_description": "긴급 상황 발생 시 SMS로 알림을 받습니다.",
+      "push": "푸시 알림",
+      "push_description": "모바일 앱을 통해 실시간 푸시 알림을 받습니다.",
+      "save": "저장"
+    },
+    "storage": {
+      "title": "파일 저장소 설정",
+      "description": "업로드된 파일의 저장 위치를 설정합니다.",
+      "local_storage": "로컬 서버 저장소",
+      "storage_path": "저장 경로",
+      "amazon_s3": "Amazon S3",
+      "bucket_name": "버킷 이름",
+      "region": "리전",
+      "access_key": "액세스 키",
+      "secret_key": "시크릿 키",
+      "save": "저장"
+    },
+    "security": {
+      "title": "보안 설정",
+      "description": "시스템 접근 및 데이터 보안 관련 설정을 관리합니다.",
+      "two_factor_auth": "2단계 인증(2FA)",
+      "two_factor_auth_description": "로그인 시 추가적인 보안 계층을 위해 2단계 인증을 활성화합니다.",
+      "session_timeout": "세션 타임아웃 (분)",
+      "session_timeout_description": "지정된 시간 동안 활동이 없으면 자동으로 로그아웃됩니다.",
+      "password_policy": "비밀번호 정책",
+      "min_length": "최소 길이",
+      "complexity_required": "대/소문자, 숫자, 특수문자 포함",
+      "save": "저장"
+    }
+  },
+  "language": {
+    "title": "다국어 관리",
+    "tabs": {
+      "dashboard": "대시보드",
+      "keys": "번역 키 관리",
+      "translations": "번역 관리"
+    },
+    "dashboard": {
+      "overall_progress": "전체 진행률",
+      "translation_keys": "번역 키",
+      "total_translation_keys": "총 번역 키 수",
+      "supported_languages": "지원 언어",
+      "supported_languages_count": "지원하는 언어 수",
+      "language_progress": "언어별 진행률",
+      "language_progress_description": "각 언어별 번역 완성도를 확인하세요"
+    },
+    "keys": {
+      "title": "번역 키 관리",
+      "description": "번역 키를 추가, 수정, 삭제할 수 있습니다",
+      "search_placeholder": "번역 키 검색...",
+      "new_key": "새 번역 키",
+      "table": {
+        "key": "키",
+        "namespace": "네임스페이스",
+        "description": "설명",
+        "completion": "완성도",
+        "actions": "작업"
+      }
+    },
+    "translations": {
+      "title": "번역 관리",
+      "description": "각 언어별 번역을 편집할 수 있습니다",
+      "no_translation": "번역 없음"
+    }
+  },
+  "common": {
+    "save": "저장",
+    "cancel": "취소",
+    "edit": "편집",
+    "delete": "삭제",
+    "create": "생성",
+    "update": "수정",
+    "search": "검색",
+    "actions": "작업",
+    "level": "레벨"
+  }
+}

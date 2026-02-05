@@ -1,0 +1,13 @@
+{
+  "title": "Quản lý vị trí",
+  "management": "Quản lý vị trí",
+  "registration": "Quản lý đăng ký vị trí",
+  "master": "Quản lý master vị trí",
+  "type": "Quản lý loại vị trí",
+  "hierarchy": "Quản lý phân cấp vị trí",
+  "map": "Quản lý bản đồ vị trí",
+  "history": "Quản lý lịch sử vị trí",
+  "report": "Quản lý báo cáo vị trí",
+  "layout_management": "Sơ đồ bố trí thiết bị",
+  "monitor_management": "Giám sát thời gian thực"
+}

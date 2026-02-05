@@ -1,0 +1,111 @@
+{
+  "title": "系统管理",
+  "organization_management": "组织管理",
+  "users_management": "用户管理",
+  "permissions_management": "权限管理",
+  "roles_management": "角色管理",
+  "codes_management": "基础代码管理",
+  "config_management": "环境设置",
+  "language_management": "多语言管理",
+  "theme_management": "主题设置",
+  "configuration": {
+    "tabs": {
+      "database": "数据库",
+      "notifications": "通知",
+      "storage": "文件存储",
+      "security": "安全"
+    },
+    "database": {
+      "title": "数据库连接设置",
+      "description": "请输入PostgreSQL数据库连接信息。",
+      "host": "主机",
+      "port": "端口",
+      "database_name": "数据库",
+      "user": "用户",
+      "password": "密码",
+      "test_connection": "测试连接",
+      "save": "保存"
+    },
+    "notifications": {
+      "title": "通知设置",
+      "description": "设置系统通知接收方式。",
+      "email": "邮件通知",
+      "email_description": "重要事件发生时通过邮件接收通知。",
+      "sms": "短信通知",
+      "sms_description": "紧急情况发生时通过短信接收通知。",
+      "push": "推送通知",
+      "push_description": "通过移动应用接收实时推送通知。",
+      "save": "保存"
+    },
+    "storage": {
+      "title": "文件存储设置",
+      "description": "设置上传文件的存储位置。",
+      "local_storage": "本地服务器存储",
+      "storage_path": "存储路径",
+      "amazon_s3": "Amazon S3",
+      "bucket_name": "存储桶名称",
+      "region": "区域",
+      "access_key": "访问密钥",
+      "secret_key": "密钥",
+      "save": "保存"
+    },
+    "security": {
+      "title": "安全设置",
+      "description": "管理系统访问和数据安全相关设置。",
+      "two_factor_auth": "双因素认证(2FA)",
+      "two_factor_auth_description": "登录时启用双因素认证以增加安全层。",
+      "session_timeout": "会话超时（分钟）",
+      "session_timeout_description": "指定时间内无活动将自动登出。",
+      "password_policy": "密码策略",
+      "min_length": "最小长度",
+      "complexity_required": "包含大小写字母、数字和特殊字符",
+      "save": "保存"
+    }
+  },
+  "language": {
+    "title": "多语言管理",
+    "tabs": {
+      "dashboard": "仪表板",
+      "keys": "翻译键管理",
+      "translations": "翻译管理"
+    },
+    "dashboard": {
+      "overall_progress": "整体进度",
+      "translation_keys": "翻译键",
+      "total_translation_keys": "翻译键总数",
+      "supported_languages": "支持语言",
+      "supported_languages_count": "支持的语言数量",
+      "language_progress": "各语言进度",
+      "language_progress_description": "查看各语言的翻译完成度"
+    },
+    "keys": {
+      "title": "翻译键管理",
+      "description": "添加、编辑或删除翻译键",
+      "search_placeholder": "搜索翻译键...",
+      "new_key": "新建翻译键",
+      "table": {
+        "key": "键",
+        "namespace": "命名空间",
+        "description": "描述",
+        "completion": "完成度",
+        "actions": "操作"
+      }
+    },
+    "translations": {
+      "title": "翻译管理",
+      "description": "编辑各语言的翻译",
+      "no_translation": "无翻译"
+    }
+  },
+  "common": {
+    "save": "保存",
+    "cancel": "取消",
+    "edit": "编辑",
+    "delete": "删除",
+    "create": "创建",
+    "update": "更新",
+    "search": "搜索",
+    "actions": "操作",
+    "level": "级别"
+  }
+}

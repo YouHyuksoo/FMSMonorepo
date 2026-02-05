@@ -1,0 +1,49 @@
+{
+  "title": "Bảng điều khiển",
+  "subtitle": "Tóm tắt tình trạng thiết bị và bảo trì.",
+  "total_equipment": "Tổng thiết bị",
+  "failed_equipment": "Thiết bị hỏng",
+  "inspection_rate": "Tỷ lệ kiểm tra",
+  "pending_work": "Công việc chờ xử lý",
+  "from_last_month": "So với tháng trước",
+  "recent_failures": "Sự cố gần đây",
+  "recent_failures_desc": "Danh sách sự cố gần đây.",
+  "todays_inspection": "Kiểm tra hôm nay",
+  "todays_inspection_desc": "Danh sách kiểm tra dự kiến hôm nay.",
+  "inspection_status": {
+    "completed": "Hoàn thành",
+    "in_progress": "Đang tiến hành",
+    "pending": "Chờ xử lý"
+  },
+  "overview": "Tổng quan",
+  "equipment": {
+    "status": "Trạng thái thiết bị",
+    "health": "Sức khỏe thiết bị",
+    "maintenance": "Tình trạng bảo trì"
+  },
+  "sensor": {
+    "status": "Trạng thái cảm biến",
+    "alerts": "Cảnh báo cảm biến",
+    "monitoring": "Giám sát cảm biến"
+  },
+  "maintenance": {
+    "pending": "Công việc chờ xử lý",
+    "in_progress": "Công việc đang tiến hành",
+    "completed": "Công việc hoàn thành"
+  },
+  "energy": {
+    "consumption": "Tiêu thụ năng lượng",
+    "efficiency": "Hiệu suất năng lượng",
+    "savings": "Tiết kiệm năng lượng"
+  },
+  "carbon": {
+    "emissions": "Phát thải carbon",
+    "reduction": "Giảm carbon",
+    "target": "Mục tiêu giảm thiểu"
+  },
+  "kpi": {
+    "overall": "KPI tổng hợp",
+    "equipment": "KPI thiết bị",
+    "maintenance": "KPI bảo trì"
+  }
+}

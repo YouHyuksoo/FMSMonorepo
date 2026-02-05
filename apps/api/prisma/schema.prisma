@@ -1,0 +1,811 @@
+/**
+ * @file apps/api/prisma/schema.prisma
+ * @description FMS 데이터베이스 스키마 정의
+ *
+ * 주요 모델:
+ * - Organization: 조직 (계층형)
+ * - User: 사용자
+ * - Equipment: 설비
+ * - MaintenanceRequest/Plan/Work: 유지보수 워크플로우
+ * - InspectionMaster/Schedule/Result: 점검 관리
+ * - Material/MaterialStock: 자재 관리
+ * - Failure: 고장 관리
+ * - Sensor/SensorData: 센서 모니터링
+ */
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+// ============================================
+// 조직 및 사용자 관리
+// ============================================
+
+model Organization {
+  id          String   @id @default(uuid())
+  name        String
+  code        String   @unique
+  type        OrganizationType
+  parentId    String?
+  parent      Organization?  @relation("OrgHierarchy", fields: [parentId], references: [id])
+  children    Organization[] @relation("OrgHierarchy")
+
+  // 관계
+  users       User[]
+  equipments  Equipment[]
+
+  createdAt   DateTime @default(now())
+  updatedAt   DateTime @updatedAt
+
+  @@map("organizations")
+}
+
+enum OrganizationType {
+  COMPANY
+  DIVISION
+  DEPARTMENT
+  TEAM
+  LINE
+}
+
+model User {
+  id              String   @id @default(uuid())
+  email           String   @unique
+  password        String
+  name            String
+  employeeNumber  String?  @unique
+  phone           String?
+  position        String?
+
+  organizationId  String
+  organization    Organization @relation(fields: [organizationId], references: [id])
+
+  // 권한
+  roles           UserRole[]
+
+  // 작업 관련
+  maintenanceWorksAssigned    MaintenanceWork[] @relation("AssignedWorker")
+  maintenanceWorksRequested   MaintenanceRequest[] @relation("Requester")
+  inspectionResults           InspectionResult[] @relation("Inspector")
+
+  isActive        Boolean  @default(true)
+  lastLoginAt     DateTime?
+  createdAt       DateTime @default(now())
+  updatedAt       DateTime @updatedAt
+
+  @@map("users")
+}
+
+model Role {
+  id          String   @id @default(uuid())
+  name        String   @unique
+  description String?
+
+  permissions RolePermission[]
+  users       UserRole[]
+
+  createdAt   DateTime @default(now())
+  updatedAt   DateTime @updatedAt
+
+  @@map("roles")
+}
+
+model Permission {
+  id          String   @id @default(uuid())
+  name        String   @unique
+  resource    String
+  action      String
+  description String?
+
+  roles       RolePermission[]
+
+  @@map("permissions")
+}
+
+model UserRole {
+  userId    String
+  roleId    String
+  user      User   @relation(fields: [userId], references: [id], onDelete: Cascade)
+  role      Role   @relation(fields: [roleId], references: [id], onDelete: Cascade)
+
+  assignedAt DateTime @default(now())
+
+  @@id([userId, roleId])
+  @@map("user_roles")
+}
+
+model RolePermission {
+  roleId       String
+  permissionId String
+  role         Role       @relation(fields: [roleId], references: [id], onDelete: Cascade)
+  permission   Permission @relation(fields: [permissionId], references: [id], onDelete: Cascade)
+
+  @@id([roleId, permissionId])
+  @@map("role_permissions")
+}
+
+// ============================================
+// 설비 관리
+// ============================================
+
+model Equipment {
+  id              String   @id @default(uuid())
+  code            String   @unique
+  name            String
+  model           String?
+  manufacturer    String?
+  serialNumber    String?
+
+  categoryId      String
+  category        EquipmentCategory @relation(fields: [categoryId], references: [id])
+
+  organizationId  String
+  organization    Organization @relation(fields: [organizationId], references: [id])
+
+  locationId      String?
+  location        Location? @relation(fields: [locationId], references: [id])
+
+  status          EquipmentStatus @default(OPERATING)
+  criticality     Criticality     @default(MEDIUM)
+
+  // 기본 정보
+  installDate     DateTime?
+  warrantyEndDate DateTime?
+  purchaseDate    DateTime?
+  purchaseCost    Decimal?  @db.Decimal(15, 2)
+
+  // 사양
+  specifications  Json?
+
+  // 관계
+  maintenanceRequests MaintenanceRequest[]
+  maintenancePlans    MaintenancePlan[]
+  inspectionSchedules InspectionSchedule[]
+  sensors             Sensor[]
+  failures            Failure[]
+  documents           EquipmentDocument[]
+  spareParts          EquipmentSparePart[]
+
+  createdAt       DateTime @default(now())
+  updatedAt       DateTime @updatedAt
+
+  @@map("equipments")
+}
+
+model EquipmentCategory {
+  id          String   @id @default(uuid())
+  name        String
+  code        String   @unique
+  parentId    String?
+  parent      EquipmentCategory?  @relation("CategoryHierarchy", fields: [parentId], references: [id])
+  children    EquipmentCategory[] @relation("CategoryHierarchy")
+
+  equipments  Equipment[]
+
+  createdAt   DateTime @default(now())
+  updatedAt   DateTime @updatedAt
+
+  @@map("equipment_categories")
+}
+
+model Location {
+  id          String   @id @default(uuid())
+  name        String
+  code        String   @unique
+  building    String?
+  floor       String?
+  area        String?
+
+  equipments  Equipment[]
+
+  createdAt   DateTime @default(now())
+  updatedAt   DateTime @updatedAt
+
+  @@map("locations")
+}
+
+enum EquipmentStatus {
+  OPERATING
+  IDLE
+  MAINTENANCE
+  BREAKDOWN
+  DISPOSED
+}
+
+enum Criticality {
+  HIGH
+  MEDIUM
+  LOW
+}
+
+model EquipmentDocument {
+  id          String   @id @default(uuid())
+  equipmentId String
+  equipment   Equipment @relation(fields: [equipmentId], references: [id], onDelete: Cascade)
+
+  type        DocumentType
+  name        String
+  filePath    String
+  fileSize    Int?
+  mimeType    String?
+
+  createdAt   DateTime @default(now())
+  updatedAt   DateTime @updatedAt
+
+  @@map("equipment_documents")
+}
+
+enum DocumentType {
+  MANUAL
+  DRAWING
+  SPECIFICATION
+  CERTIFICATE
+  PHOTO
+  OTHER
+}
+
+// ============================================
+// 유지보수 관리
+// ============================================
+
+model MaintenanceRequest {
+  id              String   @id @default(uuid())
+  requestNumber   String   @unique
+
+  equipmentId     String
+  equipment       Equipment @relation(fields: [equipmentId], references: [id])
+
+  requesterId     String
+  requester       User @relation("Requester", fields: [requesterId], references: [id])
+
+  type            MaintenanceType
+  priority        Priority @default(MEDIUM)
+  status          RequestStatus @default(PENDING)
+
+  title           String
+  description     String
+
+  requestedDate   DateTime @default(now())
+  desiredDate     DateTime?
+
+  // 관계
+  plans           MaintenancePlan[]
+
+  createdAt       DateTime @default(now())
+  updatedAt       DateTime @updatedAt
+
+  @@map("maintenance_requests")
+}
+
+enum MaintenanceType {
+  CORRECTIVE
+  PREVENTIVE
+  PREDICTIVE
+  IMPROVEMENT
+}
+
+enum Priority {
+  URGENT
+  HIGH
+  MEDIUM
+  LOW
+}
+
+enum RequestStatus {
+  PENDING
+  APPROVED
+  IN_PROGRESS
+  COMPLETED
+  CANCELLED
+  REJECTED
+}
+
+model MaintenancePlan {
+  id              String   @id @default(uuid())
+  planNumber      String   @unique
+
+  requestId       String?
+  request         MaintenanceRequest? @relation(fields: [requestId], references: [id])
+
+  equipmentId     String
+  equipment       Equipment @relation(fields: [equipmentId], references: [id])
+
+  type            MaintenanceType
+  status          PlanStatus @default(DRAFT)
+
+  title           String
+  description     String?
+
+  plannedStartDate DateTime
+  plannedEndDate   DateTime
+  estimatedHours   Decimal? @db.Decimal(10, 2)
+  estimatedCost    Decimal? @db.Decimal(15, 2)
+
+  // 관계
+  works           MaintenanceWork[]
+  materials       MaintenanceMaterial[]
+
+  createdAt       DateTime @default(now())
+  updatedAt       DateTime @updatedAt
+
+  @@map("maintenance_plans")
+}
+
+enum PlanStatus {
+  DRAFT
+  APPROVED
+  IN_PROGRESS
+  COMPLETED
+  CANCELLED
+}
+
+model MaintenanceWork {
+  id              String   @id @default(uuid())
+  workNumber      String   @unique
+
+  planId          String
+  plan            MaintenancePlan @relation(fields: [planId], references: [id])
+
+  assignedToId    String
+  assignedTo      User @relation("AssignedWorker", fields: [assignedToId], references: [id])
+
+  status          WorkStatus @default(ASSIGNED)
+
+  description     String?
+
+  startedAt       DateTime?
+  completedAt     DateTime?
+  actualHours     Decimal? @db.Decimal(10, 2)
+
+  workReport      String?
+
+  createdAt       DateTime @default(now())
+  updatedAt       DateTime @updatedAt
+
+  @@map("maintenance_works")
+}
+
+enum WorkStatus {
+  ASSIGNED
+  IN_PROGRESS
+  PAUSED
+  COMPLETED
+  CANCELLED
+}
+
+model MaintenanceMaterial {
+  id          String   @id @default(uuid())
+  planId      String
+  plan        MaintenancePlan @relation(fields: [planId], references: [id], onDelete: Cascade)
+
+  materialId  String
+  material    Material @relation(fields: [materialId], references: [id])
+
+  quantity    Decimal  @db.Decimal(10, 2)
+  usedQuantity Decimal? @db.Decimal(10, 2)
+
+  @@map("maintenance_materials")
+}
+
+// ============================================
+// 점검 관리
+// ============================================
+
+model InspectionMaster {
+  id              String   @id @default(uuid())
+  code            String   @unique
+  name            String
+  description     String?
+
+  type            InspectionType
+  frequency       InspectionFrequency
+
+  // 점검 항목
+  items           InspectionItem[]
+  schedules       InspectionSchedule[]
+
+  isActive        Boolean  @default(true)
+  createdAt       DateTime @default(now())
+  updatedAt       DateTime @updatedAt
+
+  @@map("inspection_masters")
+}
+
+enum InspectionType {
+  DAILY
+  WEEKLY
+  MONTHLY
+  QUARTERLY
+  YEARLY
+  SPECIAL
+}
+
+enum InspectionFrequency {
+  DAILY
+  WEEKLY
+  BIWEEKLY
+  MONTHLY
+  QUARTERLY
+  SEMI_ANNUALLY
+  ANNUALLY
+}
+
+model InspectionItem {
+  id              String   @id @default(uuid())
+  masterId        String
+  master          InspectionMaster @relation(fields: [masterId], references: [id], onDelete: Cascade)
+
+  sequence        Int
+  name            String
+  description     String?
+  method          String?
+  standard        String?
+
+  inputType       InspectionInputType
+  unit            String?
+  minValue        Decimal? @db.Decimal(15, 4)
+  maxValue        Decimal? @db.Decimal(15, 4)
+  options         Json?    // For SELECT type
+
+  isRequired      Boolean  @default(true)
+
+  results         InspectionItemResult[]
+
+  @@map("inspection_items")
+}
+
+enum InspectionInputType {
+  OK_NG
+  NUMERIC
+  SELECT
+  TEXT
+  PHOTO
+}
+
+model InspectionSchedule {
+  id              String   @id @default(uuid())
+
+  masterId        String
+  master          InspectionMaster @relation(fields: [masterId], references: [id])
+
+  equipmentId     String
+  equipment       Equipment @relation(fields: [equipmentId], references: [id])
+
+  scheduledDate   DateTime
+  dueDate         DateTime
+
+  status          InspectionScheduleStatus @default(SCHEDULED)
+
+  results         InspectionResult[]
+
+  createdAt       DateTime @default(now())
+  updatedAt       DateTime @updatedAt
+
+  @@map("inspection_schedules")
+}
+
+enum InspectionScheduleStatus {
+  SCHEDULED
+  IN_PROGRESS
+  COMPLETED
+  OVERDUE
+  CANCELLED
+}
+
+model InspectionResult {
+  id              String   @id @default(uuid())
+
+  scheduleId      String
+  schedule        InspectionSchedule @relation(fields: [scheduleId], references: [id])
+
+  inspectorId     String
+  inspector       User @relation("Inspector", fields: [inspectorId], references: [id])
+
+  status          InspectionResultStatus @default(PASS)
+
+  startedAt       DateTime
+  completedAt     DateTime?
+
+  remarks         String?
+
+  itemResults     InspectionItemResult[]
+
+  createdAt       DateTime @default(now())
+  updatedAt       DateTime @updatedAt
+
+  @@map("inspection_results")
+}
+
+enum InspectionResultStatus {
+  PASS
+  FAIL
+  CONDITIONAL
+}
+
+model InspectionItemResult {
+  id              String   @id @default(uuid())
+
+  resultId        String
+  result          InspectionResult @relation(fields: [resultId], references: [id], onDelete: Cascade)
+
+  itemId          String
+  item            InspectionItem @relation(fields: [itemId], references: [id])
+
+  value           String?
+  numericValue    Decimal? @db.Decimal(15, 4)
+  status          InspectionResultStatus
+
+  remarks         String?
+  photoPath       String?
+
+  @@map("inspection_item_results")
+}
+
+// ============================================
+// 자재 관리
+// ============================================
+
+model Material {
+  id              String   @id @default(uuid())
+  code            String   @unique
+  name            String
+  description     String?
+
+  categoryId      String?
+  category        MaterialCategory? @relation(fields: [categoryId], references: [id])
+
+  unit            String
+  unitPrice       Decimal? @db.Decimal(15, 2)
+
+  // 재고 관리
+  minStock        Decimal? @db.Decimal(10, 2)
+  maxStock        Decimal? @db.Decimal(10, 2)
+  reorderPoint    Decimal? @db.Decimal(10, 2)
+
+  // 관계
+  stocks          MaterialStock[]
+  transactions    MaterialTransaction[]
+  spareParts      EquipmentSparePart[]
+  maintenanceMaterials MaintenanceMaterial[]
+
+  isActive        Boolean  @default(true)
+  createdAt       DateTime @default(now())
+  updatedAt       DateTime @updatedAt
+
+  @@map("materials")
+}
+
+model MaterialCategory {
+  id          String   @id @default(uuid())
+  name        String
+  code        String   @unique
+  parentId    String?
+  parent      MaterialCategory?  @relation("MaterialCategoryHierarchy", fields: [parentId], references: [id])
+  children    MaterialCategory[] @relation("MaterialCategoryHierarchy")
+
+  materials   Material[]
+
+  createdAt   DateTime @default(now())
+  updatedAt   DateTime @updatedAt
+
+  @@map("material_categories")
+}
+
+model Warehouse {
+  id          String   @id @default(uuid())
+  code        String   @unique
+  name        String
+  description String?
+
+  stocks      MaterialStock[]
+  transactionsFrom MaterialTransaction[] @relation("FromWarehouse")
+  transactionsTo   MaterialTransaction[] @relation("ToWarehouse")
+
+  createdAt   DateTime @default(now())
+  updatedAt   DateTime @updatedAt
+
+  @@map("warehouses")
+}
+
+model MaterialStock {
+  id          String   @id @default(uuid())
+
+  materialId  String
+  material    Material @relation(fields: [materialId], references: [id])
+
+  warehouseId String
+  warehouse   Warehouse @relation(fields: [warehouseId], references: [id])
+
+  quantity    Decimal  @db.Decimal(10, 2)
+
+  updatedAt   DateTime @updatedAt
+
+  @@unique([materialId, warehouseId])
+  @@map("material_stocks")
+}
+
+model MaterialTransaction {
+  id              String   @id @default(uuid())
+  transactionNumber String @unique
+
+  materialId      String
+  material        Material @relation(fields: [materialId], references: [id])
+
+  type            TransactionType
+
+  fromWarehouseId String?
+  fromWarehouse   Warehouse? @relation("FromWarehouse", fields: [fromWarehouseId], references: [id])
+
+  toWarehouseId   String?
+  toWarehouse     Warehouse? @relation("ToWarehouse", fields: [toWarehouseId], references: [id])
+
+  quantity        Decimal  @db.Decimal(10, 2)
+  unitPrice       Decimal? @db.Decimal(15, 2)
+
+  referenceType   String?
+  referenceId     String?
+
+  remarks         String?
+  transactionDate DateTime @default(now())
+
+  createdAt       DateTime @default(now())
+
+  @@map("material_transactions")
+}
+
+enum TransactionType {
+  RECEIPT
+  ISSUE
+  TRANSFER
+  ADJUSTMENT
+  RETURN
+}
+
+model EquipmentSparePart {
+  id          String   @id @default(uuid())
+
+  equipmentId String
+  equipment   Equipment @relation(fields: [equipmentId], references: [id], onDelete: Cascade)
+
+  materialId  String
+  material    Material @relation(fields: [materialId], references: [id])
+
+  quantity    Decimal  @db.Decimal(10, 2)
+  remarks     String?
+
+  @@map("equipment_spare_parts")
+}
+
+// ============================================
+// 고장 관리
+// ============================================
+
+model Failure {
+  id              String   @id @default(uuid())
+  failureNumber   String   @unique
+
+  equipmentId     String
+  equipment       Equipment @relation(fields: [equipmentId], references: [id])
+
+  type            FailureType
+  severity        FailureSeverity
+  status          FailureStatus @default(REPORTED)
+
+  title           String
+  description     String
+
+  occurredAt      DateTime
+  reportedAt      DateTime @default(now())
+  resolvedAt      DateTime?
+
+  rootCause       String?
+  resolution      String?
+
+  downtimeMinutes Int?
+
+  createdAt       DateTime @default(now())
+  updatedAt       DateTime @updatedAt
+
+  @@map("failures")
+}
+
+enum FailureType {
+  MECHANICAL
+  ELECTRICAL
+  HYDRAULIC
+  PNEUMATIC
+  SOFTWARE
+  OPERATOR_ERROR
+  OTHER
+}
+
+enum FailureSeverity {
+  CRITICAL
+  MAJOR
+  MINOR
+}
+
+enum FailureStatus {
+  REPORTED
+  INVESTIGATING
+  IN_REPAIR
+  RESOLVED
+  CLOSED
+}
+
+// ============================================
+// 센서 모니터링
+// ============================================
+
+model Sensor {
+  id              String   @id @default(uuid())
+  code            String   @unique
+  name            String
+
+  equipmentId     String
+  equipment       Equipment @relation(fields: [equipmentId], references: [id])
+
+  type            SensorType
+  unit            String
+
+  minThreshold    Decimal? @db.Decimal(15, 4)
+  maxThreshold    Decimal? @db.Decimal(15, 4)
+
+  isActive        Boolean  @default(true)
+
+  data            SensorData[]
+
+  createdAt       DateTime @default(now())
+  updatedAt       DateTime @updatedAt
+
+  @@map("sensors")
+}
+
+enum SensorType {
+  TEMPERATURE
+  PRESSURE
+  VIBRATION
+  HUMIDITY
+  FLOW
+  LEVEL
+  SPEED
+  CURRENT
+  VOLTAGE
+  OTHER
+}
+
+model SensorData {
+  id          String   @id @default(uuid())
+
+  sensorId    String
+  sensor      Sensor @relation(fields: [sensorId], references: [id], onDelete: Cascade)
+
+  value       Decimal  @db.Decimal(15, 4)
+  recordedAt  DateTime @default(now())
+
+  isAlert     Boolean  @default(false)
+
+  @@index([sensorId, recordedAt])
+  @@map("sensor_data")
+}
+
+// ============================================
+// 시스템 설정
+// ============================================
+
+model SystemConfig {
+  id          String   @id @default(uuid())
+  key         String   @unique
+  value       String
+  description String?
+
+  createdAt   DateTime @default(now())
+  updatedAt   DateTime @updatedAt
+
+  @@map("system_configs")
+}

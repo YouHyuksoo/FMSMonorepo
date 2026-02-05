@@ -1,0 +1,81 @@
+{
+  "title": "Quản lý Tổ chức",
+  "subtitle": "Đăng ký, chỉnh sửa và quản lý thông tin tổ chức.",
+  "add_organization": "Thêm Tổ chức",
+  "edit_organization": "Sửa Tổ chức",
+  "view_organization": "Chi tiết Tổ chức",
+  "delete_organization": "Xóa Tổ chức",
+  "code": "Mã Tổ chức",
+  "name": "Tên Tổ chức",
+  "type": "Loại",
+  "parent_name": "Tổ chức cấp trên",
+  "sort_order": "Thứ tự",
+  "is_active": "Trạng thái",
+  "updated_at": "Cập nhật lúc",
+  "description": "Mô tả",
+  "type_company": "Công ty",
+  "type_department": "Phòng ban",
+  "type_team": "Đội nhóm",
+  "status_active": "Hoạt động",
+  "status_inactive": "Không hoạt động",
+  "search_placeholder": "Tìm theo mã, tên...",
+  "code_placeholder": "VD: DEPT-001",
+  "name_placeholder": "Nhập tên tổ chức",
+  "parent_placeholder": "Chọn tổ chức cấp trên",
+  "description_placeholder": "Nhập mô tả cho tổ chức",
+  "code_description": "Chỉ được dùng chữ in hoa, số, gạch ngang và gạch dưới",
+  "is_active_description": "Kích hoạt tổ chức",
+  "code_required": "Vui lòng nhập mã tổ chức.",
+  "code_pattern": "Mã chỉ được chứa chữ in hoa, số, gạch ngang và gạch dưới.",
+  "name_required": "Vui lòng nhập tên tổ chức.",
+  "parent_required": "Vui lòng chọn tổ chức cấp trên.",
+  "sort_order_min": "Thứ tự sắp xếp phải ít nhất là 1.",
+  "actions": {
+    "view": "Xem",
+    "edit": "Sửa",
+    "delete": "Xóa"
+  },
+  "toast": {
+    "error": "Lỗi",
+    "success": "Thành công",
+    "load_failed": "Không thể tải danh sách tổ chức.",
+    "delete_success": "Tổ chức đã được xóa.",
+    "delete_failed": "Không thể xóa tổ chức.",
+    "add_success": "Tổ chức đã được thêm.",
+    "edit_success": "Tổ chức đã được cập nhật.",
+    "save_failed": "Không thể {mode} tổ chức.",
+    "import_success": "Đã nhập {count} tổ chức.",
+    "import_failed": "Không thể nhập dữ liệu."
+  },
+  "dialog": {
+    "add_title": "Thêm Tổ chức",
+    "add_description": "Thêm tổ chức mới.",
+    "edit_title": "Sửa Tổ chức",
+    "edit_description": "Chỉnh sửa thông tin tổ chức.",
+    "view_title": "Chi tiết Tổ chức",
+    "view_description": "Xem thông tin tổ chức.",
+    "delete_title": "Xóa Tổ chức",
+    "delete_description": "Bạn có chắc muốn xóa tổ chức \"{name}\"?",
+    "delete_warning": "Hành động này không thể hoàn tác.",
+    "cancel": "Hủy",
+    "delete": "Xóa"
+  },
+  "export": {
+    "code": "Mã Tổ chức",
+    "name": "Tên Tổ chức",
+    "type": "Loại",
+    "parent_name": "Tổ chức cấp trên",
+    "description": "Mô tả",
+    "sort_order": "Thứ tự",
+    "is_active": "Trạng thái",
+    "created_at": "Ngày tạo"
+  },
+  "import": {
+    "type_validation": "Loại phải là một trong: company, department, team."
+  },
+  "sample": {
+    "name": "Phòng ban mẫu",
+    "parent_name": "ABC Sản xuất",
+    "description": "Đây là phòng ban mẫu"
+  }
+}

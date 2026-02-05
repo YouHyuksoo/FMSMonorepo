@@ -1,0 +1,111 @@
+{
+  "title": "System Management",
+  "organization_management": "Organization Management",
+  "users_management": "User Management",
+  "permissions_management": "Permission Management",
+  "roles_management": "Role Management",
+  "codes_management": "Basic Code Management",
+  "config_management": "Environment Settings",
+  "language_management": "Language Management",
+  "theme_management": "Theme Settings",
+  "configuration": {
+    "tabs": {
+      "database": "Database",
+      "notifications": "Notifications",
+      "storage": "File Storage",
+      "security": "Security"
+    },
+    "database": {
+      "title": "Database Connection Settings",
+      "description": "Enter PostgreSQL database connection information.",
+      "host": "Host",
+      "port": "Port",
+      "database_name": "Database",
+      "user": "User",
+      "password": "Password",
+      "test_connection": "Test Connection",
+      "save": "Save"
+    },
+    "notifications": {
+      "title": "Notification Settings",
+      "description": "Configure system notification preferences.",
+      "email": "Email Notifications",
+      "email_description": "Receive email notifications for major events.",
+      "sms": "SMS Notifications",
+      "sms_description": "Receive SMS notifications for emergencies.",
+      "push": "Push Notifications",
+      "push_description": "Receive real-time push notifications via mobile app.",
+      "save": "Save"
+    },
+    "storage": {
+      "title": "File Storage Settings",
+      "description": "Configure the storage location for uploaded files.",
+      "local_storage": "Local Server Storage",
+      "storage_path": "Storage Path",
+      "amazon_s3": "Amazon S3",
+      "bucket_name": "Bucket Name",
+      "region": "Region",
+      "access_key": "Access Key",
+      "secret_key": "Secret Key",
+      "save": "Save"
+    },
+    "security": {
+      "title": "Security Settings",
+      "description": "Manage system access and data security settings.",
+      "two_factor_auth": "Two-Factor Authentication (2FA)",
+      "two_factor_auth_description": "Enable two-factor authentication for additional security during login.",
+      "session_timeout": "Session Timeout (minutes)",
+      "session_timeout_description": "Automatically log out after the specified period of inactivity.",
+      "password_policy": "Password Policy",
+      "min_length": "Minimum Length",
+      "complexity_required": "Require uppercase, lowercase, numbers, and special characters",
+      "save": "Save"
+    }
+  },
+  "language": {
+    "title": "Language Management",
+    "tabs": {
+      "dashboard": "Dashboard",
+      "keys": "Translation Key Management",
+      "translations": "Translation Management"
+    },
+    "dashboard": {
+      "overall_progress": "Overall Progress",
+      "translation_keys": "Translation Keys",
+      "total_translation_keys": "Total Translation Keys",
+      "supported_languages": "Supported Languages",
+      "supported_languages_count": "Number of Supported Languages",
+      "language_progress": "Language Progress",
+      "language_progress_description": "Check the translation completion rate for each language"
+    },
+    "keys": {
+      "title": "Translation Key Management",
+      "description": "Add, edit, or delete translation keys",
+      "search_placeholder": "Search translation keys...",
+      "new_key": "New Translation Key",
+      "table": {
+        "key": "Key",
+        "namespace": "Namespace",
+        "description": "Description",
+        "completion": "Completion",
+        "actions": "Actions"
+      }
+    },
+    "translations": {
+      "title": "Translation Management",
+      "description": "Edit translations for each language",
+      "no_translation": "No translation"
+    }
+  },
+  "common": {
+    "save": "Save",
+    "cancel": "Cancel",
+    "edit": "Edit",
+    "delete": "Delete",
+    "create": "Create",
+    "update": "Update",
+    "search": "Search",
+    "actions": "Actions",
+    "level": "Level"
+  }
+}
