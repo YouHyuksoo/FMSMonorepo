@@ -8,9 +8,7 @@ import {
   CardContent,
 } from "@fms/ui/card";
 import { Label } from "@fms/ui/label";
-import { RadioGroup, RadioGroupItem } from "@fms/ui/radio-group";
 import { Input } from "@fms/ui/input";
-import { Button } from "@fms/ui/button";
 
 export function StorageSettings() {
   return (
@@ -22,44 +20,20 @@ export function StorageSettings() {
         </CardDescription>
       </CardHeader>
       <CardContent className="space-y-6">
-        <RadioGroup defaultValue="local" className="space-y-4">
+        <div className="space-y-4">
           <div className="flex items-center space-x-3">
-            <RadioGroupItem value="local" id="local-storage" />
-            <Label htmlFor="local-storage" className="font-normal">
+            <div className="size-2 rounded-full bg-primary" />
+            <Label className="font-medium text-base">
               로컬 서버 저장소
             </Label>
           </div>
-          <div className="pl-7 space-y-2">
-            <Label htmlFor="local-path">저장 경로</Label>
-            <Input id="local-path" defaultValue="/var/fms/uploads" />
+          <div className="pl-5 space-y-2">
+            <Label htmlFor="local-path" className="text-sm text-muted-foreground">저장 경로</Label>
+            <Input id="local-path" defaultValue="/var/fms/uploads" readOnly className="bg-muted" />
           </div>
-          <div className="flex items-center space-x-3">
-            <RadioGroupItem value="s3" id="s3-storage" />
-            <Label htmlFor="s3-storage" className="font-normal">
-              Amazon S3
-            </Label>
-          </div>
-          <div className="pl-7 space-y-4">
-            <div className="space-y-2">
-              <Label htmlFor="s3-bucket">버킷 이름</Label>
-              <Input id="s3-bucket" placeholder="my-fms-bucket" />
-            </div>
-            <div className="space-y-2">
-              <Label htmlFor="s3-region">리전</Label>
-              <Input id="s3-region" placeholder="ap-northeast-2" />
-            </div>
-            <div className="space-y-2">
-              <Label htmlFor="s3-access-key">액세스 키</Label>
-              <Input id="s3-access-key" type="password" />
-            </div>
-            <div className="space-y-2">
-              <Label htmlFor="s3-secret-key">시크릿 키</Label>
-              <Input id="s3-secret-key" type="password" />
-            </div>
-          </div>
-        </RadioGroup>
-        <div className="flex justify-end pt-2">
-          <Button>저장</Button>
+        </div>
+        <div className="p-3 bg-muted rounded-md text-xs text-muted-foreground text-center">
+          파일 저장소는 서버 로컬 디렉토리를 사용하도록 설정되어 있습니다.
         </div>
       </CardContent>
     </Card>

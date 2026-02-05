@@ -27,7 +27,6 @@ import { Icon } from "@/components/ui/Icon";
 import { useToast } from "@/hooks/use-toast";
 import { useCrudState } from "@/hooks/use-crud-state";
 import type { MaintenanceRequest } from "@fms/types";
-import { mockMaintenanceRequests } from "@/lib/mock-data/maintenance";
 import type { ExportColumn } from "@/lib/utils/export-utils";
 import {
   useMaintenanceRequests,
@@ -162,7 +161,7 @@ export function MaintenanceRequestManagementV2() {
     if (USE_MOCK_API) {
       setMockLoading(true);
       setTimeout(() => {
-        setMockRequestData(mockMaintenanceRequests);
+        setMockRequestData([]);
         setMockLoading(false);
       }, 500);
     }

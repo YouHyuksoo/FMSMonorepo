@@ -34,12 +34,6 @@ import {
 import { Icon } from "@/components/ui/Icon"
 import { useToast } from "@/hooks/use-toast"
 import { useCrudState } from "@/hooks/use-crud-state"
-import {
-  materialCategories as mockCategories,
-  materialCodeRules as mockCodeRules,
-  materialAttributeTemplates as mockAttributeTemplates,
-  approvalWorkflows as mockWorkflows,
-} from "@/lib/mock-data/material-master"
 import type { MaterialCategory } from "@fms/types"
 
 // 타입 정의
@@ -170,10 +164,10 @@ export function MaterialMasterManagement() {
 
   // 데이터 로드
   useEffect(() => {
-    setCategories(mockCategories)
-    setCodeRules(mockCodeRules)
-    setAttributeTemplates(mockAttributeTemplates)
-    setWorkflows(mockWorkflows)
+    setCategories([])
+    setCodeRules([])
+    setAttributeTemplates([])
+    setWorkflows([])
     setLoading(false)
   }, [])
 

@@ -23,9 +23,12 @@ import { format } from "date-fns"
 import { ko } from "date-fns/locale"
 import { cn } from "@fms/utils"
 import type { User as UserType } from "@fms/types"
-import type { UserRole } from "@fms/types"
-import { mockRoles, mockUserRoles } from "@/lib/mock-data/permissions"
+import type { UserRole, Role } from "@fms/types"
 import { useToast } from "@/hooks/use-toast"
+
+// 빈 배열로 초기화
+const mockRoles: Role[] = []
+const mockUserRoles: UserRole[] = []
 
 interface UserRoleAssignmentDialogProps {
   open: boolean

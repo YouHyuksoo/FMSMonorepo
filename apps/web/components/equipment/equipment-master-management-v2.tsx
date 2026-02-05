@@ -42,11 +42,6 @@ import type {
   EquipmentCategory,
   EquipmentCodeRule,
 } from "@fms/types";
-import {
-  mockEquipmentTypes,
-  mockEquipmentCategories,
-  mockEquipmentCodeRules,
-} from "@/lib/mock-data/equipment-master";
 
 // ============================================
 // 초기값 정의
@@ -167,9 +162,9 @@ export function EquipmentMasterManagementV2() {
 
   // 데이터 로드
   useEffect(() => {
-    setTypes(mockEquipmentTypes);
-    setCategories(mockEquipmentCategories);
-    setCodeRules(mockEquipmentCodeRules);
+    setTypes([]);
+    setCategories([]);
+    setCodeRules([]);
     setLoading(false);
   }, []);
 

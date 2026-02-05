@@ -41,8 +41,6 @@ import type {
   Certification,
 } from "@fms/types"
 import type { Equipment } from "@fms/types"
-import { mockEquipment } from "@/lib/mock-data/equipment"
-import { mockEquipmentSpecifications, mockSpecificationTemplates } from "@/lib/mock-data/equipment-specification"
 import { useToast } from "@/hooks/use-toast"
 import { useCrudState } from "@/hooks/use-crud-state"
 
@@ -50,9 +48,9 @@ const generateId = (prefix = "id") => `${prefix}-${Date.now()}-${Math.random().t
 
 export function EquipmentSpecificationManagement() {
   const { toast } = useToast()
-  const [equipmentList] = useState<Equipment[]>(mockEquipment)
+  const [equipmentList] = useState<Equipment[]>([])
   const [selectedEquipmentId, setSelectedEquipmentId] = useState<string | undefined>(undefined)
-  const [allSpecifications, setAllSpecifications] = useState<EquipmentSpecification[]>(mockEquipmentSpecifications)
+  const [allSpecifications, setAllSpecifications] = useState<EquipmentSpecification[]>([])
 
   const currentSpecification = useMemo(() => {
     if (!selectedEquipmentId) return undefined
@@ -130,7 +128,6 @@ export function EquipmentSpecificationManagement() {
     }
     const equipment = equipmentList.find((e) => e.id === selectedEquipmentId)
     if (!equipment) return
-    const template = mockSpecificationTemplates.find((t) => t.equipmentType === equipment.type && t.isActive)
     const newSpec: EquipmentSpecification = {
       id: generateId("SPEC-" + equipment.code),
       equipmentId: equipment.id,
@@ -139,9 +136,9 @@ export function EquipmentSpecificationManagement() {
       equipmentType: equipment.type,
       version: "1.0",
       status: "active",
-      specifications: template ? JSON.parse(JSON.stringify(template.specificationGroups)) : [],
-      performanceIndicators: template ? JSON.parse(JSON.stringify(template.performanceIndicators)) : [],
-      operatingConditions: template ? JSON.parse(JSON.stringify(template.operatingConditions)) : [],
+      specifications: [],
+      performanceIndicators: [],
+      operatingConditions: [],
       safetyStandards: [],
       certifications: [],
       createdAt: new Date().toISOString(),

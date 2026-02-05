@@ -10,7 +10,6 @@ import { Badge } from "@fms/ui/badge"
 import { Button } from "@fms/ui/button"
 import { Icon } from "@/components/ui/Icon"
 import { ImportExportDialog } from "@/components/common/import-export-dialog"
-import { mockSensors } from "@/lib/mock-data/sensor"
 import { useTranslation } from "@/lib/language-context"
 import { useCrudState } from "@/hooks/use-crud-state"
 import { useToast } from "@/hooks/use-toast"
@@ -33,7 +32,7 @@ const sensorStatusLabels: Record<string, { label: string; variant: "default" | "
 
 export function SensorOverviewManagement() {
   const { t } = useTranslation("sensor")
-  const [sensors, setSensors] = useState<Sensor[]>(mockSensors)
+  const [sensors, setSensors] = useState<Sensor[]>([])
   const { toast } = useToast()
 
   // CRUD 상태 관리 훅 사용

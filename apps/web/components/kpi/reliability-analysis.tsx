@@ -1,7 +1,6 @@
 "use client"
 
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@fms/ui/card"
-import { mockReliabilityAnalysis } from "@/lib/mock-data/mtbf"
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@fms/ui/select"
 import { useState } from "react"
 import {
@@ -20,11 +19,27 @@ import {
   Radar,
 } from "recharts"
 
+// TODO: 실제 API에서 신뢰성 분석 데이터를 가져와야 함
+const reliabilityAnalysisData: {
+  equipmentId: string
+  equipmentName: string
+  weibullShape: number
+  weibullScale: number
+  characteristicLife: number
+  meanLifetime: number
+  medianLifetime: number
+  hazardRate: number
+  bathTubPhase: "early" | "useful" | "wearout"
+  reliabilityAt1000h: number
+  reliabilityAt5000h: number
+  reliabilityAt10000h: number
+}[] = []
+
 export function ReliabilityAnalysis() {
-  const [selectedEquipment, setSelectedEquipment] = useState<string>(mockReliabilityAnalysis[0].equipmentId)
+  const [selectedEquipment, setSelectedEquipment] = useState<string>("")
 
   // 선택된 설비의 신뢰성 분석 데이터
-  const selectedAnalysis = mockReliabilityAnalysis.find((analysis) => analysis.equipmentId === selectedEquipment)
+  const selectedAnalysis = reliabilityAnalysisData.find((analysis) => analysis.equipmentId === selectedEquipment)
 
   // 신뢰도 곡선 데이터 생성 (와이불 분포 기반)
   const generateReliabilityCurve = (shape: number, scale: number) => {
@@ -100,7 +115,7 @@ export function ReliabilityAnalysis() {
             <SelectValue placeholder="설비 선택" />
           </SelectTrigger>
           <SelectContent>
-            {mockReliabilityAnalysis.map((analysis) => (
+            {reliabilityAnalysisData.map((analysis) => (
               <SelectItem key={analysis.equipmentId} value={analysis.equipmentId}>
                 {analysis.equipmentName}
               </SelectItem>

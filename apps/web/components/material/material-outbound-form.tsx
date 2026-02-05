@@ -7,8 +7,6 @@ import { Form, FormControl, FormField, FormItem, FormLabel, FormMessage } from "
 import { Input } from "@fms/ui/input"
 import { Textarea } from "@fms/ui/textarea"
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@fms/ui/select"
-import { mockMaterials } from "@/lib/mock-data/material" // Corrected import path
-import { mockMaterialStocks } from "@/lib/mock-data/material-stock" // Corrected import name
 
 const formSchema = z.object({
   materialCode: z.string().min(1, { message: "자재를 선택해주세요." }),
@@ -38,14 +36,12 @@ export default function MaterialOutboundForm({ onSubmit, onCancel }: MaterialOut
   })
 
   const selectedMaterialCode = form.watch("materialCode")
-  const selectedMaterial = mockMaterials.find((m) => m.materialCode === selectedMaterialCode)
-  const availableStock = mockMaterialStocks.find((s) => s.materialCode === selectedMaterialCode)?.currentStock || 0
+  // TODO: 실제 API에서 자재 및 재고 정보를 가져와야 함
+  const selectedMaterial = null
+  const availableStock = 0
 
   const handleSubmit = (values: z.infer<typeof formSchema>) => {
-    if (selectedMaterial && values.quantity > availableStock) {
-      form.setError("quantity", { message: `재고가 부족합니다. 현재 재고: ${availableStock} ${selectedMaterial.unit}` })
-      return
-    }
+    // TODO: 실제 재고 확인 로직 구현 필요
     onSubmit(values)
   }
 
@@ -65,22 +61,14 @@ export default function MaterialOutboundForm({ onSubmit, onCancel }: MaterialOut
                   </SelectTrigger>
                 </FormControl>
                 <SelectContent>
-                  {mockMaterials.map((material) => (
-                    <SelectItem key={material.materialCode} value={material.materialCode}>
-                      {material.materialName} ({material.materialCode})
-                    </SelectItem>
-                  ))}
+                  {/* TODO: 실제 API에서 자재 목록을 가져와야 함 */}
                 </SelectContent>
               </Select>
               <FormMessage />
             </FormItem>
           )}
         />
-        {selectedMaterial && (
-          <div className="text-sm text-muted-foreground">
-            단위: {selectedMaterial.unit}, 현재 재고: {availableStock} {selectedMaterial.unit}
-          </div>
-        )}
+        {/* TODO: 선택된 자재 정보 표시 */}
         <FormField
           control={form.control}
           name="quantity"

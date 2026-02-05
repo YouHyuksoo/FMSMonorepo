@@ -55,6 +55,7 @@ export function DashboardSidebar({
       children: [
         { titleKey: "dashboard.integrated", href: "/dashboard" },
         { titleKey: "sensor.dashboard", href: "/sensor/dashboard" },
+        { titleKey: "location.monitor_management", href: "/location/monitor" },
       ],
     },
     {
@@ -63,8 +64,20 @@ export function DashboardSidebar({
       href: "/master",
       children: [
         { titleKey: "equipment.master_management", href: "/equipment/master" },
+        { titleKey: "materials.master_management", href: "/materials/master" },
         { titleKey: "sensor.groups", href: "/sensor/groups" },
         { titleKey: "sensor.types", href: "/sensor/types" },
+        {
+          titleKey: "maintenanceTemplate.master",
+          href: "/maintenance-template/master",
+        },
+        {
+          titleKey: "maintenanceTemplate.standard",
+          href: "/maintenance-template/standard",
+        },
+        { titleKey: "preventive.master", href: "/preventive/master" },
+        { titleKey: "location.layout_management", href: "/location/layout" },
+        { titleKey: "system.codes_management", href: "/system/codes" },
       ],
     },
     {
@@ -73,12 +86,18 @@ export function DashboardSidebar({
       href: "/equipment",
       children: [
         { titleKey: "equipment.overview", href: "/equipment/overview" },
-        { titleKey: "equipment.registration_management", href: "/equipment/register" },
+        {
+          titleKey: "equipment.registration_management",
+          href: "/equipment/register",
+        },
         { titleKey: "equipment.bom_management", href: "/equipment/bom" },
         { titleKey: "equipment.spec", href: "/equipment/spec" },
         { titleKey: "equipment.docs", href: "/equipment/docs" },
         { titleKey: "sensor.overview", href: "/sensor/overview" },
-        { titleKey: "sensor.registration_management", href: "/sensor/register" },
+        {
+          titleKey: "sensor.registration_management",
+          href: "/sensor/register",
+        },
         { titleKey: "sensor.analysis", href: "/sensor/analysis" },
       ],
     },
@@ -97,17 +116,29 @@ export function DashboardSidebar({
       icon: "build",
       href: "/maintenance",
       children: [
-        { titleKey: "maintenance.request_management", href: "/maintenance/request" },
+        {
+          titleKey: "maintenance.request_management",
+          href: "/maintenance/request",
+        },
         { titleKey: "maintenance.plan_management", href: "/maintenance/plan" },
-        { titleKey: "maintenance.complete_management", href: "/maintenance/complete" },
-        { titleKey: "maintenanceTemplate.master", href: "/maintenance-template/master" },
-        { titleKey: "maintenanceTemplate.standard", href: "/maintenance-template/standard" },
-        { titleKey: "materials.registration_management", href: "/materials/register" },
-        { titleKey: "materials.master_management", href: "/materials/master" },
-        { titleKey: "materials.inventory_management", href: "/materials/stock" },
+        {
+          titleKey: "maintenance.complete_management",
+          href: "/maintenance/complete",
+        },
+        {
+          titleKey: "materials.registration_management",
+          href: "/materials/register",
+        },
+        {
+          titleKey: "materials.inventory_management",
+          href: "/materials/stock",
+        },
         { titleKey: "materials.inbound", href: "/materials/inbound" },
         { titleKey: "materials.outbound", href: "/materials/outbound" },
-        { titleKey: "materials.issuance_request", href: "/materials/issuance-request" },
+        {
+          titleKey: "materials.issuance_request",
+          href: "/materials/issuance-request",
+        },
       ],
     },
     {
@@ -124,7 +155,6 @@ export function DashboardSidebar({
       icon: "calendar_month",
       href: "/preventive",
       children: [
-        { titleKey: "preventive.master", href: "/preventive/master" },
         { titleKey: "preventive.order", href: "/preventive/order" },
         { titleKey: "preventive.calendar", href: "/preventive/calendar" },
       ],
@@ -135,9 +165,18 @@ export function DashboardSidebar({
       href: "/metering",
       children: [
         { titleKey: "metering.reading_management", href: "/metering/reading" },
-        { titleKey: "metering.calibration_management", href: "/metering/calibration" },
-        { titleKey: "metering.analytics_management", href: "/metering/analytics" },
-        { titleKey: "metering.calendar_management", href: "/metering/calendar" },
+        {
+          titleKey: "metering.calibration_management",
+          href: "/metering/calibration",
+        },
+        {
+          titleKey: "metering.analytics_management",
+          href: "/metering/analytics",
+        },
+        {
+          titleKey: "metering.calendar_management",
+          href: "/metering/calendar",
+        },
       ],
     },
     {
@@ -145,8 +184,14 @@ export function DashboardSidebar({
       icon: "psychology",
       href: "/prediction",
       children: [
-        { titleKey: "prediction.result_management", href: "/prediction/result" },
-        { titleKey: "prediction.sensor_management", href: "/prediction/sensor" },
+        {
+          titleKey: "prediction.result_management",
+          href: "/prediction/result",
+        },
+        {
+          titleKey: "prediction.sensor_management",
+          href: "/prediction/sensor",
+        },
       ],
     },
     {
@@ -159,22 +204,16 @@ export function DashboardSidebar({
       ],
     },
     {
-      titleKey: "location.title",
-      icon: "map",
-      href: "/location",
-      children: [
-        { titleKey: "location.layout_management", href: "/location/layout" },
-        { titleKey: "location.monitor_management", href: "/location/monitor" },
-      ],
-    },
-    {
       titleKey: "mobile.title",
       icon: "smartphone",
       href: "/mobile",
       children: [
         { titleKey: "mobile.qr_management", href: "/mobile/qr" },
         { titleKey: "mobile.result_management", href: "/mobile/result" },
-        { titleKey: "mobile.failure_register", href: "/mobile-qr/failure-register" },
+        {
+          titleKey: "mobile.failure_register",
+          href: "/mobile-qr/failure-register",
+        },
       ],
     },
     {
@@ -182,13 +221,12 @@ export function DashboardSidebar({
       icon: "settings",
       href: "/system",
       children: [
-        { titleKey: "system.organization_management", href: "/system/organization" },
+        {
+          titleKey: "system.organization_management",
+          href: "/system/organization",
+        },
         { titleKey: "system.users_management", href: "/system/users" },
-        { titleKey: "system.permissions_management", href: "/system/permissions" },
-        { titleKey: "system.roles_management", href: "/system/permissions/roles" },
-        { titleKey: "system.codes_management", href: "/system/codes" },
         { titleKey: "system.configuration", href: "/system/configuration" },
-        { titleKey: "system.language_management", href: "/system/language" },
       ],
     },
   ];
@@ -204,8 +242,9 @@ export function DashboardSidebar({
     // 현재 경로에 해당하는 부모 메뉴 자동 확장
     const activeParent = menuItems.find((item) =>
       item.children?.some(
-        (child) => pathname === child.href || pathname.startsWith(child.href + "/")
-      )
+        (child) =>
+          pathname === child.href || pathname.startsWith(child.href + "/"),
+      ),
     );
     if (activeParent) {
       setExpandedItems((prev) => {
@@ -220,7 +259,10 @@ export function DashboardSidebar({
   // expandedItems 변경 시 localStorage에 저장
   useEffect(() => {
     if (isMounted) {
-      localStorage.setItem("sidebarExpandedItems", JSON.stringify(expandedItems));
+      localStorage.setItem(
+        "sidebarExpandedItems",
+        JSON.stringify(expandedItems),
+      );
     }
   }, [expandedItems, isMounted]);
 
@@ -228,7 +270,7 @@ export function DashboardSidebar({
     setExpandedItems((prev) =>
       prev.includes(titleKey)
         ? prev.filter((item) => item !== titleKey)
-        : [...prev, titleKey]
+        : [...prev, titleKey],
     );
   };
 
@@ -238,7 +280,8 @@ export function DashboardSidebar({
 
   const isParentActive = (item: MenuItem) => {
     return item.children?.some(
-      (child) => pathname === child.href || pathname.startsWith(child.href + "/")
+      (child) =>
+        pathname === child.href || pathname.startsWith(child.href + "/"),
     );
   };
 
@@ -261,7 +304,7 @@ export function DashboardSidebar({
           "border-r border-border dark:border-border-dark",
           "flex flex-col transition-all duration-300 ease-in-out",
           isOpen ? "translate-x-0" : "-translate-x-full lg:translate-x-0",
-          "lg:flex"
+          "lg:flex",
         )}
       >
         {/* Toggle Button (Desktop) */}
@@ -278,10 +321,12 @@ export function DashboardSidebar({
 
         {/* Menu Area */}
         <nav className="flex-1 overflow-y-auto p-2 scrollbar-thin scrollbar-thumb-gray-300 dark:scrollbar-thumb-gray-600 scrollbar-track-transparent">
-          <p className={cn(
-            "px-3 text-xs font-bold text-text-secondary uppercase tracking-wider mb-2",
-            isCollapsed ? "lg:hidden" : ""
-          )}>
+          <p
+            className={cn(
+              "px-3 text-xs font-bold text-text-secondary uppercase tracking-wider mb-2",
+              isCollapsed ? "lg:hidden" : "",
+            )}
+          >
             Menu
           </p>
 
@@ -302,7 +347,7 @@ export function DashboardSidebar({
                       isCollapsed ? "lg:justify-center lg:px-0" : "",
                       parentActive
                         ? "bg-primary/10 text-primary"
-                        : "text-text dark:text-white hover:bg-surface dark:hover:bg-surface-dark"
+                        : "text-text dark:text-white hover:bg-surface dark:hover:bg-surface-dark",
                     )}
                   >
                     <Icon
@@ -310,13 +355,15 @@ export function DashboardSidebar({
                       size="sm"
                       className={cn(
                         "shrink-0",
-                        parentActive ? "text-primary" : "text-text-secondary"
+                        parentActive ? "text-primary" : "text-text-secondary",
                       )}
                     />
-                    <span className={cn(
-                      "text-sm font-medium flex-1 text-left truncate",
-                      isCollapsed ? "lg:hidden" : ""
-                    )}>
+                    <span
+                      className={cn(
+                        "text-sm font-medium flex-1 text-left truncate",
+                        isCollapsed ? "lg:hidden" : "",
+                      )}
+                    >
                       {t(item.titleKey)}
                     </span>
                     {!isCollapsed && (
@@ -337,7 +384,7 @@ export function DashboardSidebar({
                       isCollapsed ? "lg:justify-center lg:px-0" : "",
                       isActive(item.href)
                         ? "bg-primary/10 text-primary border border-primary/20"
-                        : "text-text dark:text-white hover:bg-surface dark:hover:bg-surface-dark"
+                        : "text-text dark:text-white hover:bg-surface dark:hover:bg-surface-dark",
                     )}
                   >
                     <Icon
@@ -345,13 +392,17 @@ export function DashboardSidebar({
                       size="sm"
                       className={cn(
                         "shrink-0",
-                        isActive(item.href) ? "text-primary" : "text-text-secondary"
+                        isActive(item.href)
+                          ? "text-primary"
+                          : "text-text-secondary",
                       )}
                     />
-                    <span className={cn(
-                      "text-sm font-medium truncate",
-                      isCollapsed ? "lg:hidden" : ""
-                    )}>
+                    <span
+                      className={cn(
+                        "text-sm font-medium truncate",
+                        isCollapsed ? "lg:hidden" : "",
+                      )}
+                    >
                       {t(item.titleKey)}
                     </span>
                   </Link>
@@ -370,7 +421,7 @@ export function DashboardSidebar({
                             "flex items-center w-full h-8 px-3 text-sm rounded-md transition-colors",
                             childActive
                               ? "bg-primary/10 text-primary"
-                              : "text-text-secondary hover:bg-surface dark:hover:bg-surface-dark hover:text-text dark:hover:text-white"
+                              : "text-text-secondary hover:bg-surface dark:hover:bg-surface-dark hover:text-text dark:hover:text-white",
                           )}
                         >
                           <span className="truncate">{t(child.titleKey)}</span>
@@ -385,26 +436,35 @@ export function DashboardSidebar({
         </nav>
 
         {/* Bottom Area */}
-        <div className={cn(
-          "p-4 pt-0 flex flex-col gap-1 shrink-0",
-          isCollapsed ? "lg:p-2 lg:pt-0" : ""
-        )}>
-          <div className={cn(
-            "h-px bg-border dark:bg-border-dark my-2",
-            isCollapsed ? "lg:mx-0" : ""
-          )} />
+        <div
+          className={cn(
+            "p-4 pt-0 flex flex-col gap-1 shrink-0",
+            isCollapsed ? "lg:p-2 lg:pt-0" : "",
+          )}
+        >
+          <div
+            className={cn(
+              "h-px bg-border dark:bg-border-dark my-2",
+              isCollapsed ? "lg:mx-0" : "",
+            )}
+          />
 
           <button
             title={isCollapsed ? "Logout" : undefined}
             className={cn(
               "flex items-center gap-3 px-3 py-2.5 rounded-lg transition-colors w-full text-left",
               "text-text dark:text-white hover:bg-surface dark:hover:bg-surface-dark",
-              isCollapsed ? "lg:justify-center lg:px-0" : ""
+              isCollapsed ? "lg:justify-center lg:px-0" : "",
             )}
             onClick={() => console.log("Logout clicked")}
           >
             <Icon name="logout" size="sm" className="text-text-secondary" />
-            <span className={cn("text-sm font-medium", isCollapsed ? "lg:hidden" : "")}>
+            <span
+              className={cn(
+                "text-sm font-medium",
+                isCollapsed ? "lg:hidden" : "",
+              )}
+            >
               Logout
             </span>
           </button>

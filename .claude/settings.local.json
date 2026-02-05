@@ -33,7 +33,8 @@
       "Bash(pnpm --filter web build:*)",
       "Bash(pnpm run build:*)",
       "Bash(grep:*)",
-      "Bash(pnpm turbo run build:*)"
+      "Bash(pnpm turbo run build:*)",
+      "mcp__playwright__browser_hover"
     ]
   }
 }

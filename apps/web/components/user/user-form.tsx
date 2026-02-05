@@ -7,7 +7,6 @@ import {
   type FormGroup,
 } from "@fms/ui/standard-form";
 import type { User, UserFormData } from "@fms/types";
-import { mockOrganizations } from "@/lib/mock-data/organizations";
 import { useTranslation } from "@/lib/language-context";
 
 interface UserFormProps {
@@ -52,17 +51,11 @@ export function UserForm({
   >([]);
 
   useEffect(() => {
-    // 회사 옵션 설정
-    const companies = mockOrganizations
-      .filter((org) => org.type === "company")
-      .map((org) => ({ label: org.name, value: org.id }));
-    setCompanyOptions(companies);
+    // 회사 옵션 설정 (실제 환경에서는 API에서 가져옴)
+    setCompanyOptions([]);
 
-    // 부서 옵션 설정
-    const departments = mockOrganizations
-      .filter((org) => org.type === "department" || org.type === "team")
-      .map((org) => ({ label: org.name, value: org.id }));
-    setDepartmentOptions(departments);
+    // 부서 옵션 설정 (실제 환경에서는 API에서 가져옴)
+    setDepartmentOptions([]);
   }, []);
 
   const validatePassword = (value: any, formData: Record<string, any>) => {
@@ -256,12 +249,6 @@ export function UserForm({
   const handleSubmit = async (data: Record<string, any>) => {
     // confirmPassword 제거
     const { confirmPassword, ...submitData } = data;
-
-    // 조직 정보 매핑
-    const company = mockOrganizations.find((org) => org.id === data.companyId);
-    const department = mockOrganizations.find(
-      (org) => org.id === data.departmentId
-    );
 
     const userFormData: UserFormData = {
       username: data.username,

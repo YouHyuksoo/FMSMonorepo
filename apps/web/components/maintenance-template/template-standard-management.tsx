@@ -22,12 +22,11 @@ import { Textarea } from "@fms/ui/textarea"
 import { ScrollArea } from "@fms/ui/scroll-area"
 import { Card, CardContent, CardHeader, CardTitle } from "@fms/ui/card"
 import { type InspectionStandard, type InspectionStandardItem } from "@fms/types"
-import {
-  mockInspectionStandards,
-  mockEquipmentTypes,
-  mockInspectionMasters,
-} from "@/lib/mock-data/inspection-standard"
 import { useToast } from "@/hooks/use-toast"
+
+// TODO: API에서 데이터 가져오기
+const equipmentTypes: { id: string; name: string }[] = []
+const inspectionMasters: { id: string; name: string }[] = []
 import { useCrudState } from "@/hooks/use-crud-state"
 
 /** 오늘 날짜를 YYYY-MM-DD 형식으로 반환 */
@@ -38,7 +37,7 @@ const getTodayIsoDate = () => {
 export function TemplateStandardManagement() {
   const { toast } = useToast()
   const [activeTab, setActiveTab] = useState("all")
-  const [data, setData] = useState<InspectionStandard[]>(mockInspectionStandards)
+  const [data, setData] = useState<InspectionStandard[]>([])
 
   // 기준서 CRUD 상태
   const standardCrud = useCrudState<InspectionStandard>()
@@ -333,7 +332,7 @@ export function TemplateStandardManagement() {
           <div className="space-y-1.5">
             <Label>기본 템플릿 *</Label>
             <select disabled={isViewOnly} value={targetData.masterId} onChange={(e) => onChange("masterId", e.target.value)} className="w-full px-3 py-2 border rounded-lg bg-background dark:bg-background-dark">
-              {mockInspectionMasters.map((m) => (
+              {inspectionMasters.map((m) => (
                 <option key={m.id} value={m.id}>
                   {m.name}
                 </option>
@@ -343,7 +342,7 @@ export function TemplateStandardManagement() {
           <div className="space-y-1.5">
             <Label>설비유형 *</Label>
             <select disabled={isViewOnly} value={targetData.equipmentTypeId} onChange={(e) => onChange("equipmentTypeId", e.target.value)} className="w-full px-3 py-2 border rounded-lg bg-background dark:bg-background-dark">
-              {mockEquipmentTypes.map((et) => (
+              {equipmentTypes.map((et) => (
                 <option key={et.id} value={et.id}>
                   {et.name}
                 </option>

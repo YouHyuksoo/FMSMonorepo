@@ -26,12 +26,10 @@ import { useAuth } from "@/lib/auth-context"
 import { Icon } from "@fms/ui/icon"
 import { useTranslation, useLanguage, supportedLanguages } from "@/lib/language-context"
 import { cn } from "@fms/utils"
+import { getCompaniesForLogin } from "@/lib/data/organizations"
 
-const companies = [
-  { id: "company1", name: "ABC 제조" },
-  { id: "company2", name: "XYZ 산업" },
-  { id: "company3", name: "DEF 엔지니어링" },
-]
+// 조직 시드 데이터에서 회사 목록 가져오기
+const companies = getCompaniesForLogin()
 
 export function LoginForm() {
   const [companyId, setCompanyId] = useState("")
@@ -281,13 +279,13 @@ export function LoginForm() {
             <p className="text-sm font-medium text-foreground mb-3">{t("test_accounts")}</p>
             <div className="space-y-2 text-xs text-muted-foreground">
               <p>
-                <span className="font-medium text-foreground">{t("admin")}</span> admin / admin123 (ABC 제조)
+                <span className="font-medium text-foreground">{t("admin")}</span> admin / admin123 (베트남법인)
               </p>
               <p>
-                <span className="font-medium text-foreground">{t("user")}</span> user1 / user123 (ABC 제조)
+                <span className="font-medium text-foreground">{t("user")}</span> user1 / user123 (중국법인)
               </p>
               <p>
-                <span className="font-medium text-foreground">{t("manager")}</span> manager / manager123 (XYZ 산업)
+                <span className="font-medium text-foreground">{t("manager")}</span> manager / manager123 (인도법인)
               </p>
             </div>
           </div>

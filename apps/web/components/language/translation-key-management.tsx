@@ -22,8 +22,7 @@ import { Badge } from "@fms/ui/badge"
 import { DataTable } from "@/components/common/data-table"
 import { useTranslation } from "@/lib/language-context"
 import { useCrudState } from "@/hooks/use-crud-state"
-import { mockTranslationKeys, mockTranslations } from "@/lib/mock-data/translations"
-import type { TranslationKey } from "@fms/types"
+import type { TranslationKey, Translation } from "@fms/types"
 
 export function TranslationKeyManagement() {
   const { t } = useTranslation("language")
@@ -33,11 +32,15 @@ export function TranslationKeyManagement() {
   // CRUD 상태 관리
   const crud = useCrudState<TranslationKey>()
 
+  // 번역 키 및 번역 데이터 (실제 API 연동 시 대체 필요)
+  const translationKeys: TranslationKey[] = []
+  const translations: Translation[] = []
+
   // 네임스페이스 목록
-  const namespaces = ["all", ...new Set(mockTranslationKeys.map((k) => k.namespace))]
+  const namespaces = ["all", ...new Set(translationKeys.map((k) => k.namespace))]
 
   // 필터링된 번역 키
-  const filteredKeys = mockTranslationKeys.filter((key) => {
+  const filteredKeys = translationKeys.filter((key) => {
     const matchesSearch =
       key.key.toLowerCase().includes(searchTerm.toLowerCase()) ||
       key.namespace.toLowerCase().includes(searchTerm.toLowerCase()) ||
@@ -48,12 +51,12 @@ export function TranslationKeyManagement() {
 
   // 번역 키별 번역 완성도 계산
   const getKeyCompleteness = (keyId: string) => {
-    const translations = mockTranslations.filter((t) => t.keyId === keyId)
-    const approvedTranslations = translations.filter((t) => t.isApproved)
+    const keyTranslations = translations.filter((t) => t.keyId === keyId)
+    const approvedTranslations = keyTranslations.filter((t) => t.isApproved)
     return {
       total: 4, // 지원 언어 수
       completed: approvedTranslations.length,
-      pending: translations.length - approvedTranslations.length,
+      pending: keyTranslations.length - approvedTranslations.length,
     }
   }
 
@@ -146,7 +149,7 @@ export function TranslationKeyManagement() {
             <CardTitle className="text-sm font-medium">{t("total_keys", "language", "총 키 수")}</CardTitle>
           </CardHeader>
           <CardContent>
-            <div className="text-2xl font-bold">{mockTranslationKeys.length}</div>
+            <div className="text-2xl font-bold">{translationKeys.length}</div>
           </CardContent>
         </Card>
         <Card>
@@ -165,7 +168,7 @@ export function TranslationKeyManagement() {
           </CardHeader>
           <CardContent>
             <div className="text-2xl font-bold text-green-600">
-              {mockTranslations.filter((t) => t.isApproved).length}
+              {translations.filter((t) => t.isApproved).length}
             </div>
           </CardContent>
         </Card>
@@ -177,7 +180,7 @@ export function TranslationKeyManagement() {
           </CardHeader>
           <CardContent>
             <div className="text-2xl font-bold text-orange-600">
-              {mockTranslations.filter((t) => !t.isApproved).length}
+              {translations.filter((t) => !t.isApproved).length}
             </div>
           </CardContent>
         </Card>

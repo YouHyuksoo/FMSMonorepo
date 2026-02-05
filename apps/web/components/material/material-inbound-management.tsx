@@ -15,7 +15,6 @@ import { DataTable, type DataTableColumn, type DataTableAction } from "@/compone
 import { Badge } from "@fms/ui/badge"
 import { Dialog, DialogContent, DialogHeader, DialogTitle } from "@fms/ui/dialog"
 import { Icon } from "@/components/ui/Icon"
-import { mockMaterialInboundTransactions } from "@/lib/mock-data/material-inbound"
 import type { MaterialTransaction } from "@fms/types"
 import { useToast } from "@/hooks/use-toast"
 import { useCrudState } from "@/hooks/use-crud-state"
@@ -45,7 +44,7 @@ function downloadExcel<T extends Record<string, any>>(data: T[], columns: { key:
 }
 
 export function MaterialInboundManagement() {
-  const [transactions, setTransactions] = useState<MaterialTransaction[]>(mockMaterialInboundTransactions)
+  const [transactions, setTransactions] = useState<MaterialTransaction[]>([])
   const { toast } = useToast()
   const crud = useCrudState<MaterialTransaction>()
 

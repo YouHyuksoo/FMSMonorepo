@@ -2,7 +2,16 @@
 
 import { Card, CardContent, CardHeader, CardTitle } from "@fms/ui/card"
 import { Line, XAxis, YAxis, CartesianGrid, Tooltip, Legend, ResponsiveContainer, AreaChart, Area } from "recharts"
-import { mockHealthTrendData } from "@/lib/mock-data/equipment-health"
+
+// TODO: 실제 API에서 건강지수 추이 데이터를 가져와야 함
+const healthTrendData: {
+  date: string
+  overallHealth: number
+  reliability: number
+  availability: number
+  maintainability: number
+  performance: number
+}[] = []
 
 export function HealthTrendChart() {
   return (
@@ -13,7 +22,7 @@ export function HealthTrendChart() {
       <CardContent>
         <div className="h-80">
           <ResponsiveContainer width="100%" height="100%">
-            <AreaChart data={mockHealthTrendData}>
+            <AreaChart data={healthTrendData}>
               <CartesianGrid strokeDasharray="3 3" />
               <XAxis dataKey="date" />
               <YAxis domain={[0, 100]} />

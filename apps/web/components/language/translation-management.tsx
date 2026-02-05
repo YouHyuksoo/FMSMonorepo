@@ -30,21 +30,42 @@ import { Textarea } from "@fms/ui/textarea"
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@fms/ui/card"
 import { Badge } from "@fms/ui/badge"
 import { useTranslation, supportedLanguages } from "@/lib/language-context"
-import { mockTranslationKeys, mockTranslations, getTranslationProgress } from "@/lib/mock-data/translations"
-import type { SupportedLanguage, Translation } from "@fms/types"
+import type { SupportedLanguage, Translation, TranslationKey } from "@fms/types"
 
 export function TranslationManagement() {
   const { t, currentLanguage } = useTranslation("language")
   const [selectedLanguage, setSelectedLanguage] = useState<SupportedLanguage>("ko")
   const [editingTranslation, setEditingTranslation] = useState<string | null>(null)
 
+  // 번역 키 및 번역 데이터 (실제 API 연동 시 대체 필요)
+  const translationKeys: TranslationKey[] = []
+  const translations: Translation[] = []
+
+  // 번역 진행률 계산
+  const getTranslationProgress = () => {
+    const languages: SupportedLanguage[] = ["ko", "en", "ja", "zh"]
+    return languages.map((lang) => {
+      const langTranslations = translations.filter((t) => t.language === lang)
+      const approved = langTranslations.filter((t) => t.isApproved).length
+      const total = translationKeys.length
+      return {
+        language: lang,
+        totalKeys: total,
+        translatedKeys: approved,
+        pendingKeys: langTranslations.length - approved,
+        missingKeys: total - langTranslations.length,
+        progress: total > 0 ? Math.round((approved / total) * 100) : 0,
+      }
+    })
+  }
+
   const progressData = getTranslationProgress()
   const currentProgress = progressData.find((p) => p.language === selectedLanguage)
 
   // 선택된 언어의 번역 데이터
   const getTranslationsForLanguage = (language: SupportedLanguage) => {
-    return mockTranslationKeys.map((key) => {
-      const translation = mockTranslations.find((t) => t.keyId === key.id && t.language === language)
+    return translationKeys.map((key) => {
+      const translation = translations.find((t) => t.keyId === key.id && t.language === language)
       return {
         key,
         translation,

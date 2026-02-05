@@ -1,7 +1,6 @@
 "use client"
 
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@fms/ui/card"
-import { mockFailurePatterns } from "@/lib/mock-data/mtbf"
 import {
   BarChart,
   Bar,
@@ -18,9 +17,21 @@ import {
 
 const COLORS = ["#0088FE", "#00C49F", "#FFBB28", "#FF8042", "#8884D8", "#82CA9D", "#FF6B6B", "#6B66FF"]
 
+// TODO: 실제 API에서 고장 패턴 데이터를 가져와야 함
+const failurePatterns: {
+  equipmentType: string
+  failureType: string
+  frequency: number
+  seasonality: string
+  timeOfDay: string
+  commonCauses: string[]
+  preventiveMeasures: string[]
+  averageDowntime: number
+}[] = []
+
 export function FailurePatternAnalysis() {
   // 고장 유형별 빈도 데이터 가공
-  const failureTypeData = mockFailurePatterns.map((pattern) => ({
+  const failureTypeData = failurePatterns.map((pattern) => ({
     name:
       pattern.failureType === "mechanical"
         ? "기계적 고장"
@@ -34,29 +45,29 @@ export function FailurePatternAnalysis() {
   const seasonalityData = [
     {
       name: "봄",
-      value: mockFailurePatterns
+      value: failurePatterns
         .filter((p) => p.seasonality === "spring")
         .reduce((acc, curr) => acc + curr.frequency, 0),
     },
     {
       name: "여름",
-      value: mockFailurePatterns
+      value: failurePatterns
         .filter((p) => p.seasonality === "summer")
         .reduce((acc, curr) => acc + curr.frequency, 0),
     },
     {
       name: "가을",
-      value: mockFailurePatterns.filter((p) => p.seasonality === "fall").reduce((acc, curr) => acc + curr.frequency, 0),
+      value: failurePatterns.filter((p) => p.seasonality === "fall").reduce((acc, curr) => acc + curr.frequency, 0),
     },
     {
       name: "겨울",
-      value: mockFailurePatterns
+      value: failurePatterns
         .filter((p) => p.seasonality === "winter")
         .reduce((acc, curr) => acc + curr.frequency, 0),
     },
     {
       name: "계절성 없음",
-      value: mockFailurePatterns.filter((p) => p.seasonality === "none").reduce((acc, curr) => acc + curr.frequency, 0),
+      value: failurePatterns.filter((p) => p.seasonality === "none").reduce((acc, curr) => acc + curr.frequency, 0),
     },
   ]
 
@@ -64,34 +75,34 @@ export function FailurePatternAnalysis() {
   const timeOfDayData = [
     {
       name: "오전",
-      value: mockFailurePatterns
+      value: failurePatterns
         .filter((p) => p.timeOfDay === "morning")
         .reduce((acc, curr) => acc + curr.frequency, 0),
     },
     {
       name: "오후",
-      value: mockFailurePatterns
+      value: failurePatterns
         .filter((p) => p.timeOfDay === "afternoon")
         .reduce((acc, curr) => acc + curr.frequency, 0),
     },
     {
       name: "저녁",
-      value: mockFailurePatterns
+      value: failurePatterns
         .filter((p) => p.timeOfDay === "evening")
         .reduce((acc, curr) => acc + curr.frequency, 0),
     },
     {
       name: "야간",
-      value: mockFailurePatterns.filter((p) => p.timeOfDay === "night").reduce((acc, curr) => acc + curr.frequency, 0),
+      value: failurePatterns.filter((p) => p.timeOfDay === "night").reduce((acc, curr) => acc + curr.frequency, 0),
     },
     {
       name: "시간대 무관",
-      value: mockFailurePatterns.filter((p) => p.timeOfDay === "any").reduce((acc, curr) => acc + curr.frequency, 0),
+      value: failurePatterns.filter((p) => p.timeOfDay === "any").reduce((acc, curr) => acc + curr.frequency, 0),
     },
   ]
 
   // 설비 유형별 고장 빈도 데이터 가공
-  const equipmentTypeData = mockFailurePatterns.map((pattern) => ({
+  const equipmentTypeData = failurePatterns.map((pattern) => ({
     name: pattern.equipmentType,
     value: pattern.frequency,
   }))
@@ -203,7 +214,7 @@ export function FailurePatternAnalysis() {
         </CardHeader>
         <CardContent>
           <div className="space-y-4">
-            {mockFailurePatterns.map((pattern, index) => (
+            {failurePatterns.map((pattern, index) => (
               <div key={index} className="border rounded-lg p-4">
                 <h4 className="font-medium text-lg mb-2">
                   {pattern.equipmentType} -{" "}

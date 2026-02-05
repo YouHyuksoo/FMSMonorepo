@@ -28,7 +28,6 @@ import {
 import { useToast } from "@/hooks/use-toast";
 import { useCrudState } from "@/hooks/use-crud-state";
 import type { MaintenanceRequest } from "@fms/types";
-import { mockMaintenanceRequests } from "@/lib/mock-data/maintenance";
 import type { ExportColumn } from "@/lib/utils/export-utils";
 import {
   useMaintenanceRequests,
@@ -72,7 +71,7 @@ export function MaintenanceRequestManagement() {
     if (USE_MOCK_API) {
       setMockLoading(true);
       setTimeout(() => {
-        setMockRequestData(mockMaintenanceRequests);
+        setMockRequestData([]);
         setMockLoading(false);
       }, 500);
     }

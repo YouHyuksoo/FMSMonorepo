@@ -22,7 +22,6 @@ import {
 } from "@fms/ui/dialog"
 import { Input } from "@fms/ui/input"
 import { Icon } from "@/components/ui/Icon"
-import { mockMaterialStocks } from "@/lib/mock-data/material-stock"
 import { useCrudState } from "@/hooks/use-crud-state"
 import { useToast } from "@/hooks/use-toast"
 import type { MaterialStock } from "@fms/types"
@@ -51,7 +50,7 @@ function downloadExcel<T extends Record<string, any>>(data: T[], columns: { key:
 }
 
 export function MaterialStockManagement() {
-  const [stocks, setStocks] = useState<MaterialStock[]>(mockMaterialStocks)
+  const [stocks, setStocks] = useState<MaterialStock[]>([])
   const { toast } = useToast()
   const crud = useCrudState<MaterialStock>()
 

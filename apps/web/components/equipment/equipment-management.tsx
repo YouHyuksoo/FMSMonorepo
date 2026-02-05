@@ -28,7 +28,6 @@ import { Icon } from "@/components/ui/Icon";
 import { useToast } from "@/hooks/use-toast";
 import { useCrudState } from "@/hooks/use-crud-state";
 import type { Equipment, EquipmentFormData } from "@fms/types";
-import { mockEquipment } from "@/lib/mock-data/equipment";
 import type { ExportColumn } from "@/lib/utils/export-utils";
 import {
   useEquipments,
@@ -88,7 +87,7 @@ export function EquipmentManagement() {
       const loadMockData = async () => {
         setMockLoading(true);
         await new Promise((resolve) => setTimeout(resolve, 500));
-        setMockEquipmentData(mockEquipment);
+        setMockEquipmentData([]);
         setMockLoading(false);
       };
       loadMockData();

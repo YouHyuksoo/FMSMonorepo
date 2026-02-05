@@ -10,7 +10,6 @@ import { Label } from "@fms/ui/label"
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@fms/ui/select"
 import { Textarea } from "@fms/ui/textarea"
 import { DatePicker } from "@fms/ui/date-picker"
-import { mockEquipments } from "@/lib/mock-data/equipment"
 import type { MeterReading } from "@fms/types"
 import { meterTypeLabels, meterReadingStatusLabels } from "@fms/types"
 
@@ -74,14 +73,12 @@ export function MeterReadingForm({ isOpen, onClose, onSubmit, initialData }: Met
   }
 
   const handleEquipmentChange = (equipmentId: string) => {
-    const equipment = mockEquipments.find((e) => e.id === equipmentId)
-    if (equipment) {
-      setFormData((prev) => ({
-        ...prev,
-        equipmentId,
-        equipmentName: equipment.name,
-      }))
-    }
+    // TODO: 실제 API에서 설비 정보를 가져와야 함
+    setFormData((prev) => ({
+      ...prev,
+      equipmentId,
+      equipmentName: "",
+    }))
   }
 
   const handleDateChange = (date: Date | undefined) => {
@@ -112,11 +109,7 @@ export function MeterReadingForm({ isOpen, onClose, onSubmit, initialData }: Met
                     <SelectValue placeholder="설비 선택" />
                   </SelectTrigger>
                   <SelectContent>
-                    {mockEquipments.map((equipment) => (
-                      <SelectItem key={equipment.id} value={equipment.id}>
-                        {equipment.name}
-                      </SelectItem>
-                    ))}
+                    {/* TODO: 실제 API에서 설비 목록을 가져와야 함 */}
                   </SelectContent>
                 </Select>
               </div>

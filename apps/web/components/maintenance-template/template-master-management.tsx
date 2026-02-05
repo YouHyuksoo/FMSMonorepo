@@ -21,13 +21,6 @@ import { Input } from "@fms/ui/input"
 import { Textarea } from "@fms/ui/textarea"
 import { ScrollArea } from "@fms/ui/scroll-area"
 import { type InspectionMaster, type InspectionMasterItem, PeriodType } from "@fms/types"
-import {
-  mockInspectionMasters,
-  mockEquipmentTypes,
-  mockInspectionTypes,
-  mockDepartments,
-  mockUsers,
-} from "@/lib/mock-data/inspection-master"
 import { useToast } from "@/hooks/use-toast"
 import { useCrudState } from "@/hooks/use-crud-state"
 
@@ -46,10 +39,16 @@ const periodTypeLabels: Record<string, string> = {
   ON_DEMAND: "필요시",
 }
 
+// 빈 옵션 배열 (API에서 로드 필요)
+const equipmentTypes: { id: string; name: string }[] = []
+const inspectionTypes: { id: string; name: string }[] = []
+const departments: { id: string; name: string }[] = []
+const users: { id: string; name: string }[] = []
+
 export function TemplateMasterManagement() {
   const { toast } = useToast()
   const [activeTab, setActiveTab] = useState("all")
-  const [data, setData] = useState<InspectionMaster[]>(mockInspectionMasters)
+  const [data, setData] = useState<InspectionMaster[]>([])
 
   // 마스터 템플릿 CRUD 상태
   const masterCrud = useCrudState<InspectionMaster>()
@@ -275,10 +274,10 @@ export function TemplateMasterManagement() {
   const handleSaveMaster = () => {
     const masterToSave = { ...masterFormData } as InspectionMaster
 
-    masterToSave.equipmentType = mockEquipmentTypes.find((et) => et.id === masterFormData.equipmentTypeId) || masterFormData.equipmentType
-    masterToSave.inspectionType = mockInspectionTypes.find((it) => it.id === masterFormData.inspectionTypeId) || masterFormData.inspectionType
-    masterToSave.department = mockDepartments.find((d) => d.id === masterFormData.departmentId) || masterFormData.department
-    masterToSave.responsibleUser = mockUsers.find((u) => u.id === masterFormData.responsibleUserId) || masterFormData.responsibleUser
+    masterToSave.equipmentType = equipmentTypes.find((et) => et.id === masterFormData.equipmentTypeId) || masterFormData.equipmentType
+    masterToSave.inspectionType = inspectionTypes.find((it) => it.id === masterFormData.inspectionTypeId) || masterFormData.inspectionType
+    masterToSave.department = departments.find((d) => d.id === masterFormData.departmentId) || masterFormData.department
+    masterToSave.responsibleUser = users.find((u) => u.id === masterFormData.responsibleUserId) || masterFormData.responsibleUser
     masterToSave.updatedAt = new Date().toISOString()
     masterToSave.items = masterToSave.items || []
 
@@ -403,7 +402,7 @@ export function TemplateMasterManagement() {
               onChange={(e) => onChangeHandler("equipmentTypeId", e.target.value)}
               className="w-full px-3 py-2 border rounded-lg bg-background dark:bg-background-dark"
             >
-              {mockEquipmentTypes.map((et) => (
+              {equipmentTypes.map((et) => (
                 <option key={et.id} value={et.id}>
                   {et.name}
                 </option>
@@ -418,7 +417,7 @@ export function TemplateMasterManagement() {
               onChange={(e) => onChangeHandler("inspectionTypeId", e.target.value)}
               className="w-full px-3 py-2 border rounded-lg bg-background dark:bg-background-dark"
             >
-              {mockInspectionTypes.map((it) => (
+              {inspectionTypes.map((it) => (
                 <option key={it.id} value={it.id}>
                   {it.name}
                 </option>

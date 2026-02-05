@@ -5,8 +5,6 @@ import { Button } from "@fms/ui/button"
 import { QrScannerModal } from "@/components/mobile-qr/qr-scanner-modal"
 import { MobileFailureCaptureForm } from "@/components/mobile-qr/mobile-failure-capture-form"
 import type { Equipment } from "@fms/types"
-import { mockEquipment } from "@/lib/mock-data/equipment" // For lookup
-import { mockFailures } from "@/lib/mock-data/failure" // For saving (direct modification for mock)
 import { useToast } from "@/hooks/use-toast"
 import { Icon } from "@fms/ui/icon"
 import type { Failure } from "@fms/types"
@@ -28,32 +26,21 @@ export default function MobileQrFailureRegisterPage() {
   const handleScanSuccess = (decodedText: string) => {
     // Assuming QR code contains equipment ID
     const equipmentId = decodedText.trim()
-    const foundEquipment = mockEquipment.find((eq) => eq.id === equipmentId || eq.code === equipmentId)
+    // TODO: 실제 API에서 설비 정보를 조회해야 함
+    // const foundEquipment = await fetchEquipmentById(equipmentId)
 
-    if (foundEquipment) {
-      setScannedEquipment(foundEquipment)
-      setIsScannerOpen(false)
-      setRegistrationComplete(false) // Reset completion state for new scan
-      toast({
-        title: "스캔 성공",
-        description: `설비: ${foundEquipment.name} (${foundEquipment.code})`,
-      })
-    } else {
-      toast({
-        title: "스캔 오류",
-        description: "등록된 설비 정보를 찾을 수 없습니다.",
-        variant: "destructive",
-      })
-      // Keep scanner open or allow user to retry
-      setScannedEquipment(null) // Clear any previous scan
-      setIsScannerOpen(true) // Re-open scanner
-    }
+    toast({
+      title: "스캔 오류",
+      description: "등록된 설비 정보를 찾을 수 없습니다. (API 연동 필요)",
+      variant: "destructive",
+    })
+    // Keep scanner open or allow user to retry
+    setScannedEquipment(null) // Clear any previous scan
+    setIsScannerOpen(true) // Re-open scanner
   }
 
   const handleFailureSubmit = (failureData: Failure) => {
-    // In a real app, this would be an API call.
-    // For mock, directly add to the mockFailures array.
-    mockFailures.unshift(failureData) // Add to the beginning of the array
+    // TODO: 실제 API를 통해 고장 정보를 저장해야 함
     console.log("New failure registered:", failureData)
     toast({
       title: "고장 등록 완료",

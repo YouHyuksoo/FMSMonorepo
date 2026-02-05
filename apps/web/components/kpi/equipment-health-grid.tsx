@@ -3,10 +3,13 @@
 import { Card, CardContent, CardHeader, CardTitle } from "@fms/ui/card"
 import { Badge } from "@fms/ui/badge"
 import { Progress } from "@fms/ui/progress"
-import { mockEquipmentHealth } from "@/lib/mock-data/kpi"
 import { Icon } from "@fms/ui/icon"
+import type { EquipmentHealth } from "@fms/types"
 
 export function EquipmentHealthGrid() {
+  // 설비 건강 데이터 (실제 API 연동 시 대체 필요)
+  const equipmentHealth: EquipmentHealth[] = []
+
   const getHealthColor = (score: number) => {
     if (score >= 90) return "text-green-600"
     if (score >= 80) return "text-blue-600"
@@ -45,7 +48,7 @@ export function EquipmentHealthGrid() {
       </div>
 
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-        {mockEquipmentHealth.map((equipment) => (
+        {equipmentHealth.map((equipment) => (
           <Card key={equipment.equipmentId} className={getHealthBgColor(equipment.healthScore)}>
             <CardHeader className="pb-3">
               <div className="flex items-center justify-between">

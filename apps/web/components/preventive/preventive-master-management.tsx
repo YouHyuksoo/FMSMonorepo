@@ -22,17 +22,13 @@ import { PreventiveMasterForm } from "./preventive-master-form"
 import { useToast } from "@/hooks/use-toast"
 import { useCrudState } from "@/hooks/use-crud-state"
 import { type PreventiveMaster, PreventivePeriodType, preventivePeriodTypeLabels } from "@fms/types"
-import { mockPreventiveMasters } from "@/lib/mock-data/preventive"
-
 import type { Equipment } from "@fms/types"
-import { mockEquipment } from "@/lib/mock-data/equipment"
 import type { InspectionMaster } from "@fms/types"
-import { mockInspectionMasters } from "@/lib/mock-data/inspection-master"
 
 export function PreventiveMasterManagement() {
-  const [masters, setMasters] = useState<PreventiveMaster[]>(mockPreventiveMasters)
-  const [equipmentList] = useState<Equipment[]>(mockEquipment)
-  const [templateList] = useState<InspectionMaster[]>(mockInspectionMasters)
+  const [masters, setMasters] = useState<PreventiveMaster[]>([])
+  const [equipmentList] = useState<Equipment[]>([])
+  const [templateList] = useState<InspectionMaster[]>([])
 
   // 페이지네이션 상태
   const [currentPage, setCurrentPage] = useState(1)

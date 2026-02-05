@@ -8,9 +8,6 @@ import { Table, TableBody, TableCell, TableHead, TableHeader, TableRow } from "@
 import { Input } from "@fms/ui/input"
 import { Textarea } from "@fms/ui/textarea"
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@fms/ui/select"
-import { mockTPMTeams, tpmActivityTypes, tpmPillars } from "@/lib/mock-data/tpm"
-import { mockUsers } from "@/lib/mock-data/users"
-import { mockEquipment } from "@/lib/mock-data/equipment"
 import { useTranslation } from "@/lib/language-context"
 import { Icon } from "@fms/ui/icon"
 import type { TPMActivity, TPMActivityFormData, TPMGoal, TPMSubActivity } from "@fms/types"
@@ -32,23 +29,13 @@ export function TPMActivityForm({ open, onOpenChange, onSubmit, initialData, mod
   const [newActivity, setNewActivity] = useState<Partial<TPMSubActivity>>({})
 
   // 분임조 옵션
-  const teamOptions = mockTPMTeams.map((team) => ({
-    label: team.name,
-    value: team.id,
-    description: team.department,
-  }))
+  const teamOptions: Array<{ label: string; value: string; description?: string }> = []
 
   // 활동 유형 옵션
-  const activityTypeOptions = tpmActivityTypes.map((type) => ({
-    label: type.label,
-    value: type.value,
-  }))
+  const activityTypeOptions: Array<{ label: string; value: string }> = []
 
   // TPM 기둥 옵션
-  const pillarOptions = tpmPillars.map((pillar) => ({
-    label: pillar.label,
-    value: pillar.value,
-  }))
+  const pillarOptions: Array<{ label: string; value: string }> = []
 
   // 우선순위 옵션
   const priorityOptions = [
@@ -58,18 +45,10 @@ export function TPMActivityForm({ open, onOpenChange, onSubmit, initialData, mod
   ]
 
   // 설비 옵션
-  const equipmentOptions = mockEquipment.map((eq) => ({
-    label: `${eq.code} - ${eq.name}`,
-    value: eq.id,
-    description: eq.location,
-  }))
+  const equipmentOptions: Array<{ label: string; value: string; description?: string }> = []
 
   // 사용자 옵션
-  const userOptions = mockUsers.map((user) => ({
-    label: `${user.name} (${user.department})`,
-    value: user.id,
-    description: user.position,
-  }))
+  const userOptions: Array<{ label: string; value: string; description?: string }> = []
 
   const formFields: FormField[] = [
     {
@@ -350,12 +329,12 @@ export function TPMActivityForm({ open, onOpenChange, onSubmit, initialData, mod
                     <div>
                       <Select
                         onValueChange={(value) => {
-                          const user = mockUsers.find((u) => u.id === value)
-                          if (user) {
+                          const selectedUser = userOptions.find((u) => u.value === value)
+                          if (selectedUser) {
                             setNewActivity({
                               ...newActivity,
-                              assignedTo: user.id,
-                              assignedToName: user.name,
+                              assignedTo: selectedUser.value,
+                              assignedToName: selectedUser.label.split(" (")[0],
                             })
                           }
                         }}

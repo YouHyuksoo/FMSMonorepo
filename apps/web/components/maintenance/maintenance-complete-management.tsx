@@ -25,7 +25,6 @@ import {
 import { useToast } from "@/hooks/use-toast";
 import { useCrudState } from "@/hooks/use-crud-state";
 import type { MaintenanceWork } from "@fms/types";
-import { mockMaintenanceWorks } from "@/lib/mock-data/maintenance";
 import type { ExportColumn } from "@/lib/utils/export-utils";
 import { Icon } from "@/components/ui/Icon";
 
@@ -50,7 +49,7 @@ export function MaintenanceCompleteManagement() {
     setLoading(true);
     try {
       await new Promise((resolve) => setTimeout(resolve, 1000));
-      setWorks(mockMaintenanceWorks);
+      setWorks([]);
     } catch (error) {
       toast({
         title: "오류",

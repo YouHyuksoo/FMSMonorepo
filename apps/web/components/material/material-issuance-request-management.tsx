@@ -21,7 +21,6 @@ import {
 import { useToast } from "@/hooks/use-toast"
 import { useCrudState } from "@/hooks/use-crud-state"
 import MaterialIssuanceRequestForm from "./material-issuance-request-form"
-import { mockMaterialIssuanceRequests } from "@/lib/mock-data/material-issuance"
 import type { MaterialIssuanceRequest } from "@fms/types"
 
 // 상태 설정
@@ -49,7 +48,7 @@ function downloadExcel<T extends Record<string, any>>(data: T[], columns: { key:
 }
 
 export function MaterialIssuanceRequestManagement() {
-  const [requests, setRequests] = useState<MaterialIssuanceRequest[]>(mockMaterialIssuanceRequests)
+  const [requests, setRequests] = useState<MaterialIssuanceRequest[]>([])
   const { toast } = useToast()
   const crud = useCrudState<MaterialIssuanceRequest>()
 

@@ -30,7 +30,6 @@ import type {
   MaintenanceRequest,
   MaintenanceWork,
 } from "@fms/types";
-import { mockMaintenancePlans } from "@/lib/mock-data/maintenance";
 import type { ExportColumn } from "@/lib/utils/export-utils";
 import {
   useMaintenancePlans,
@@ -75,7 +74,7 @@ export function MaintenancePlanManagement() {
     if (USE_MOCK_API) {
       setMockLoading(true);
       setTimeout(() => {
-        setMockPlanData(mockMaintenancePlans);
+        setMockPlanData([]);
         setMockLoading(false);
       }, 500);
     }

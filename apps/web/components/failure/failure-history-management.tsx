@@ -25,10 +25,9 @@ import {
   FailurePriority,
   FailureType,
 } from "@fms/types";
-import { mockFailures } from "@/lib/mock-data/failure";
 
 export function FailureHistoryManagement() {
-  const [failures, setFailures] = useState<Failure[]>(mockFailures);
+  const [failures, setFailures] = useState<Failure[]>([]);
   const { toast } = useToast();
 
   // 페이지네이션 상태

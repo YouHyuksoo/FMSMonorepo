@@ -21,7 +21,6 @@ import {
 import { useToast } from "@/hooks/use-toast"
 import { Icon } from "@fms/ui/icon"
 import type { Role, Permission, PermissionResource } from "@fms/types"
-import { mockRoles, mockPermissions } from "@/lib/mock-data/permissions"
 
 interface RoleFormData {
   name: string
@@ -54,8 +53,9 @@ const permissionGroups: Record<PermissionResource, { label: string; icon: string
 }
 
 export default function RoleManagementPage() {
-  const [roles, setRoles] = useState<Role[]>(mockRoles)
-  const [permissions, setPermissions] = useState<Permission[]>(mockPermissions)
+  // TODO: 실제 API에서 역할 및 권한 데이터를 가져와야 함
+  const [roles, setRoles] = useState<Role[]>([])
+  const [permissions, setPermissions] = useState<Permission[]>([])
   const [selectedRole, setSelectedRole] = useState<Role | null>(null)
   const [isDialogOpen, setIsDialogOpen] = useState(false)
   const [isDeleteDialogOpen, setIsDeleteDialogOpen] = useState(false)

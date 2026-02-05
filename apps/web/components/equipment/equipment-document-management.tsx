@@ -29,14 +29,16 @@ import { Textarea } from "@fms/ui/textarea"
 import { Icon } from "@fms/ui/icon"
 import { cn } from "@fms/utils"
 import { DataTable, type Column, type DataTableAction } from "@/components/common/data-table"
-import { mockEquipmentDocuments, documentCategories, documentStatuses } from "@/lib/mock-data/equipment-documents"
-import { mockEquipment } from "@/lib/mock-data/equipment"
 import type { EquipmentDocument, DocumentFormData } from "@fms/types"
 import { useToast } from "@/hooks/use-toast"
 import { useCrudState } from "@/hooks/use-crud-state"
 import DocumentApprovalWorkflow from "./document-approval-workflow"
-import { mockDocumentApprovals } from "@/lib/mock-data/document-approvals"
 import type { DocumentApproval } from "@fms/types"
+
+// 빈 옵션 배열 (API에서 로드 필요)
+const documentCategories: { value: string; label: string }[] = []
+const documentStatuses: { value: string; label: string; color?: string }[] = []
+const equipmentList: { id: string; code: string; name: string }[] = []
 import { useTranslation } from "@/lib/language-context"
 
 export function EquipmentDocumentManagement() {
@@ -46,7 +48,7 @@ export function EquipmentDocumentManagement() {
   // useCrudState 훅으로 다이얼로그 상태 관리
   const crud = useCrudState<EquipmentDocument>()
 
-  const [documents, setDocuments] = useState<EquipmentDocument[]>(mockEquipmentDocuments)
+  const [documents, setDocuments] = useState<EquipmentDocument[]>([])
   const [formData, setFormData] = useState<DocumentFormData>({
     equipmentId: "",
     title: "",
@@ -55,7 +57,7 @@ export function EquipmentDocumentManagement() {
     tags: [],
     expiryDate: "",
   })
-  const [approvals, setApprovals] = useState<DocumentApproval[]>(mockDocumentApprovals)
+  const [approvals, setApprovals] = useState<DocumentApproval[]>([])
   const [currentUserRole] = useState<"author" | "reviewer" | "admin">("reviewer") // 실제로는 인증 컨텍스트에서 가져옴
   const [currentUserId] = useState("user-002") // 실제로는 인증 컨텍스트에서 가져옴
 
@@ -151,8 +153,8 @@ export function EquipmentDocumentManagement() {
     const newDocument: EquipmentDocument = {
       id: `doc-${Date.now()}`,
       equipmentId: formData.equipmentId,
-      equipmentCode: mockEquipment.find((eq) => eq.id === formData.equipmentId)?.code || "",
-      equipmentName: mockEquipment.find((eq) => eq.id === formData.equipmentId)?.name || "",
+      equipmentCode: equipmentList.find((eq) => eq.id === formData.equipmentId)?.code || "",
+      equipmentName: equipmentList.find((eq) => eq.id === formData.equipmentId)?.name || "",
       title: formData.title,
       description: formData.description,
       category: formData.category,
@@ -384,7 +386,7 @@ export function EquipmentDocumentManagement() {
                   <SelectValue placeholder={t("doc_mgmt.select_equipment_placeholder")} />
                 </SelectTrigger>
                 <SelectContent>
-                  {mockEquipment.map((equipment) => (
+                  {equipmentList.map((equipment) => (
                     <SelectItem key={equipment.id} value={equipment.id}>
                       {equipment.code} - {equipment.name}
                     </SelectItem>

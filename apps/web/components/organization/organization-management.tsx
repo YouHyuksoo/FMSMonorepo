@@ -23,13 +23,13 @@ import { Icon } from "@/components/ui/Icon"
 import { useToast } from "@/hooks/use-toast"
 import { useCrudState } from "@/hooks/use-crud-state"
 import type { Organization, OrganizationFormData } from "@fms/types"
-import { mockOrganizations } from "@/lib/mock-data/organizations"
 import type { ExportColumn, ImportColumn } from "@/lib/utils/export-utils"
 import { useTranslation } from "@/lib/language-context"
+import { seedOrganizations } from "@/lib/data/organizations"
 
 export function OrganizationManagement() {
-  // 데이터 상태
-  const [organizations, setOrganizations] = useState<Organization[]>([])
+  // 데이터 상태 - 시드 데이터로 초기화
+  const [organizations, setOrganizations] = useState<Organization[]>(seedOrganizations)
   const [loading, setLoading] = useState(true)
   const [selectedRows, setSelectedRows] = useState<Organization[]>([])
 
@@ -51,8 +51,10 @@ export function OrganizationManagement() {
   const loadOrganizations = async () => {
     setLoading(true)
     try {
-      await new Promise((resolve) => setTimeout(resolve, 1000))
-      setOrganizations(mockOrganizations)
+      await new Promise((resolve) => setTimeout(resolve, 500))
+      // 실제 API 연동 시 이 부분을 API 호출로 대체
+      // 현재는 시드 데이터 사용
+      setOrganizations(seedOrganizations)
     } catch (error) {
       toast({
         title: t("toast.error"),

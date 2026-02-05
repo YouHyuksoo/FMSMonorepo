@@ -9,13 +9,6 @@ import { DataTable, type Column } from "@/components/common/data-table"
 import { MtbfTrendChart } from "./mtbf-trend-chart"
 import { FailurePatternAnalysis } from "./failure-pattern-analysis"
 import { ReliabilityAnalysis } from "./reliability-analysis"
-import {
-  mockMtbfAnalysis,
-  mockFailureHistory,
-  mockMtbfTrends,
-  mockFailurePatterns,
-  mockReliabilityAnalysis,
-} from "@/lib/mock-data/mtbf"
 import type {
   MtbfAnalysis,
   FailureHistory,
@@ -61,6 +54,13 @@ export function MtbfDashboard() {
   const [failurePatterns, setFailurePatterns] = useState<FailurePattern[]>([])
   const [reliabilityAnalysisData, setReliabilityAnalysisData] = useState<ReliabilityAnalysisType[]>([])
 
+  // 데이터 소스 (실제 API 연동 시 대체 필요)
+  const initialMtbfAnalysis: MtbfAnalysis[] = []
+  const initialFailureHistory: FailureHistory[] = []
+  const initialMtbfTrends: MtbfTrend[] = []
+  const initialFailurePatterns: FailurePattern[] = []
+  const initialReliabilityAnalysis: ReliabilityAnalysisType[] = []
+
   const [selectedEquipment, setSelectedEquipment] = useState<string>("all")
   const [dateRange, setDateRange] = useState<string>("6m")
 
@@ -76,23 +76,23 @@ export function MtbfDashboard() {
       try {
         // API 호출 시뮬레이션
         const overviewData = await simulateApiCall(
-          mockMtbfAnalysis.filter(
+          initialMtbfAnalysis.filter(
             (item) => selectedEquipment === "all" || item.id === selectedEquipment,
             // 실제로는 dateRange도 필터링에 사용해야 합니다.
           ),
         )
         setMtbfData(overviewData)
 
-        const historyData = await simulateApiCall(mockFailureHistory)
+        const historyData = await simulateApiCall(initialFailureHistory)
         setFailureHistory(historyData)
 
-        const trendsData = await simulateApiCall(mockMtbfTrends)
+        const trendsData = await simulateApiCall(initialMtbfTrends)
         setMtbfTrends(trendsData)
 
-        const patternsData = await simulateApiCall(mockFailurePatterns)
+        const patternsData = await simulateApiCall(initialFailurePatterns)
         setFailurePatterns(patternsData)
 
-        const reliabilityData = await simulateApiCall(mockReliabilityAnalysis)
+        const reliabilityData = await simulateApiCall(initialReliabilityAnalysis)
         setReliabilityAnalysisData(reliabilityData)
 
         // Calculate overall stats from (potentially filtered) overviewData
@@ -130,7 +130,7 @@ export function MtbfDashboard() {
       title: "설비유형",
       sortable: true,
       filterable: true,
-      filterOptions: [...new Set(mockMtbfAnalysis.map((item) => item.equipmentType))].map((type) => ({
+      filterOptions: [...new Set(initialMtbfAnalysis.map((item) => item.equipmentType))].map((type) => ({
         label: type,
         value: type,
       })),
@@ -301,7 +301,7 @@ export function MtbfDashboard() {
                 </SelectTrigger>
                 <SelectContent>
                   <SelectItem value="all">전체 설비</SelectItem>
-                  {mockMtbfAnalysis.map(
+                  {initialMtbfAnalysis.map(
                     (
                       eq, // Use full mock list for filter options
                     ) => (

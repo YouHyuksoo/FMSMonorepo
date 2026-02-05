@@ -16,8 +16,6 @@ import {
   preventivePriorityLabels,
   type PreventiveMaster, // Added for preventiveMasters prop
 } from "@fms/types"
-import { mockPreventiveMasters } from "@/lib/mock-data/preventive" // Keep for fallback if prop not provided
-import { mockUsers } from "@/lib/mock-data/users"
 import { getTodayIsoDate } from "@fms/utils" // For setting today's date
 import type { User } from "@fms/types" // For users prop
 
@@ -50,8 +48,8 @@ export function PreventiveOrderForm({
   open,
   onOpenChange,
   onSave,
-  preventiveMasters = mockPreventiveMasters, // Use prop or fallback to mock
-  users = mockUsers, // Use prop or fallback to mock
+  preventiveMasters = [],
+  users = [],
 }: PreventiveOrderFormProps) {
   const [formData, setFormData] = useState<Partial<PreventiveOrder>>(initialFormData)
 

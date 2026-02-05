@@ -43,11 +43,6 @@ import type {
   EquipmentCodeRule,
   EquipmentCodeSegment,
 } from "@fms/types";
-import {
-  mockEquipmentTypes,
-  mockEquipmentCategories,
-  mockEquipmentCodeRules,
-} from "@/lib/mock-data/equipment-master";
 import { useTranslation } from "@/lib/language-context";
 
 // --- 설비 유형 관리 ---
@@ -89,7 +84,7 @@ function EquipmentTypeManagementTab({ tabsList }: TabProps) {
   const [pageSize, setPageSize] = useState(20);
 
   useEffect(() => {
-    setTypes(mockEquipmentTypes);
+    setTypes([]);
   }, []);
 
   useEffect(() => {
@@ -409,7 +404,7 @@ function EquipmentCategoryManagementTab({ tabsList }: TabProps) {
   const [pageSize, setPageSize] = useState(20);
 
   useEffect(() => {
-    setCategories(mockEquipmentCategories);
+    setCategories([]);
   }, []);
 
   useEffect(() => {
@@ -680,7 +675,7 @@ function EquipmentCodeRuleManagementTab({ tabsList }: TabProps) {
   const [pageSize, setPageSize] = useState(20);
 
   useEffect(() => {
-    setRules(mockEquipmentCodeRules);
+    setRules([]);
   }, []);
 
   useEffect(() => {

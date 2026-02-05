@@ -9,7 +9,7 @@ const nextConfig = {
   images: {
     unoptimized: true,
   },
-  transpilePackages: ['recharts']
+  transpilePackages: ['recharts', '@fms/ui', '@fms/utils', '@fms/types']
 }
 
 export default nextConfig

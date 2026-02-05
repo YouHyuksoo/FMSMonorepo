@@ -25,8 +25,6 @@ import {
   FailureType,
   FailurePriority,
 } from "@fms/types";
-import { mockFailures } from "@/lib/mock-data/failure";
-import { mockEquipment } from "@/lib/mock-data/equipment";
 import { FailureForm } from "./desktop-failure-form";
 import { useTranslation } from "@/lib/language-context";
 
@@ -63,9 +61,7 @@ export function FailureRegisterManagement() {
   // useCrudState 훅으로 CRUD 상태 관리
   const crud = useCrudState<Failure>();
 
-  const [failures, setFailures] = useState<Failure[]>(
-    mockFailures.map((f) => ({ ...f, attachments: f.attachments || [] }))
-  );
+  const [failures, setFailures] = useState<Failure[]>([]);
 
   // 페이지네이션 상태
   const [currentPage, setCurrentPage] = useState(1);
@@ -384,7 +380,7 @@ export function FailureRegisterManagement() {
         onOpenChange={crud.setFormOpen}
         failure={crud.selectedItem}
         onSave={handleSave}
-        equipmentOptions={mockEquipment}
+        equipmentOptions={[]}
       />
 
       <ImportExportDialog

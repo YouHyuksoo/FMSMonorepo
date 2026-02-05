@@ -1,12 +1,15 @@
 "use client"
 
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@fms/ui/card"
-import { mockMtbfRecommendations } from "@/lib/mock-data/mtbf"
 import { Progress } from "@fms/ui/progress"
+import type { MtbfRecommendation } from "@fms/types"
 import { Button } from "@fms/ui/button"
 import { Icon } from "@fms/ui/icon"
 
 export function MtbfRecommendations() {
+  // MTBF 권장사항 데이터 (실제 API 연동 시 대체 필요)
+  const mtbfRecommendations: MtbfRecommendation[] = []
+
   return (
     <div className="space-y-4">
       <div className="flex justify-between items-center">
@@ -23,7 +26,7 @@ export function MtbfRecommendations() {
         </div>
       </div>
 
-      {mockMtbfRecommendations.map((recommendation) => (
+      {mtbfRecommendations.map((recommendation) => (
         <Card key={recommendation.equipmentId} className="overflow-hidden">
           <CardHeader className="bg-muted/50">
             <div className="flex justify-between items-center">

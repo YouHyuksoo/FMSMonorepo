@@ -30,7 +30,6 @@ import { Label } from "@fms/ui/label"
 import { Textarea } from "@fms/ui/textarea"
 import { ScrollArea } from "@fms/ui/scroll-area"
 import { Icon } from "@fms/ui/icon"
-import { mockEquipmentBOMs, mockBOMTemplates } from "@/lib/mock-data/equipment-bom"
 import type { EquipmentBOM, BOMItem, BOMTemplate } from "@fms/types"
 import { cn } from "@fms/utils"
 import { useTranslation } from "@/lib/language-context"
@@ -270,11 +269,9 @@ export function EquipmentBOMManagement() {
   const { t } = useTranslation("equipment")
   const partTypeLabels = usePartTypeLabels()
   const bomStatusLabels = useBomStatusLabels()
-  const [boms, setBOMs] = useState<EquipmentBOM[]>(mockEquipmentBOMs)
-  const [templates, setTemplates] = useState<BOMTemplate[]>(mockBOMTemplates)
-  const [selectedBOMId, setSelectedBOMId] = useState<string | null>(
-    mockEquipmentBOMs.length > 0 ? mockEquipmentBOMs[0].id : null,
-  )
+  const [boms, setBOMs] = useState<EquipmentBOM[]>([])
+  const [templates, setTemplates] = useState<BOMTemplate[]>([])
+  const [selectedBOMId, setSelectedBOMId] = useState<string | null>(null)
 
   // BOM 생성 다이얼로그용 CRUD 상태
   const bomCrud = useCrudState<EquipmentBOM>()

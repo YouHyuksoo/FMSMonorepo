@@ -1,7 +1,6 @@
 "use client"
 import { StandardForm, type FormField, type FormGroup } from "@fms/ui/standard-form"
 import type { MaintenanceRequest, MaintenanceFormData } from "@fms/types"
-import { mockEquipment } from "@/lib/mock-data/equipment"
 import { useTranslation } from "@/lib/language-context"
 
 interface MaintenanceFormProps {
@@ -17,13 +16,7 @@ export function MaintenanceForm({ open, onOpenChange, onSubmit, initialData, mod
   const { t: tCommon } = useTranslation("common")
 
   // 설비 옵션
-  const equipmentOptions = mockEquipment
-    .filter((eq) => eq.isActive)
-    .map((eq) => ({
-      label: `${eq.code} - ${eq.name}`,
-      value: eq.id,
-      description: `${eq.location} / ${eq.department}`,
-    }))
+  const equipmentOptions: Array<{ label: string; value: string; description?: string }> = []
 
   // 요청 유형 옵션
   const requestTypeOptions = [

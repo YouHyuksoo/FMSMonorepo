@@ -13,12 +13,11 @@ import { CalibrationForm } from "./calibration-form"
 import { ImportExportDialog } from "@/components/common/import-export-dialog"
 import { useCrudState } from "@/hooks/use-crud-state"
 import { useToast } from "@/hooks/use-toast"
-import { mockCalibrationRecords } from "@/lib/mock-data/metering"
 import type { CalibrationRecord } from "@fms/types"
 import { calibrationResultLabels, calibrationStatusLabels } from "@fms/types"
 
 export function CalibrationManagement() {
-  const [records, setRecords] = useState<CalibrationRecord[]>(mockCalibrationRecords)
+  const [records, setRecords] = useState<CalibrationRecord[]>([])
   const { toast } = useToast()
 
   // CRUD 상태 관리 훅 사용

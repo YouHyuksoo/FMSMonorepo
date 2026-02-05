@@ -12,7 +12,6 @@ import { Icon } from "@/components/ui/Icon"
 import { MeterReadingForm } from "./meter-reading-form"
 import { ImportExportDialog } from "@/components/common/import-export-dialog"
 import { type MeterReading } from "@fms/types"
-import { mockMeterReadings } from "@/lib/mock-data/metering"
 import { useCrudState } from "@/hooks/use-crud-state"
 import { useToast } from "@/hooks/use-toast"
 
@@ -33,7 +32,7 @@ const meterReadingStatusLabels: Record<string, string> = {
 }
 
 export function MeterReadingManagement() {
-  const [readings, setReadings] = useState<MeterReading[]>(mockMeterReadings)
+  const [readings, setReadings] = useState<MeterReading[]>([])
   const { toast } = useToast()
 
   // useCrudState 훅을 사용하여 CRUD 상태 관리

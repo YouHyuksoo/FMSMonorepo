@@ -4,15 +4,15 @@ import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@fms/
 import { Progress } from "@fms/ui/progress"
 import { Badge } from "@fms/ui/badge"
 import { useTranslation, supportedLanguages } from "@/lib/language-context"
-import { getTranslationProgress, getNamespaceProgress } from "@/lib/mock-data/translations"
 
 export function TranslationDashboard() {
   const { t } = useTranslation("language")
 
-  const progressData = getTranslationProgress()
-  const namespaceData = getNamespaceProgress()
+  // TODO: 실제 API에서 번역 진행률 데이터를 가져와야 함
+  const progressData: { language: string; progress: number; translatedKeys: number; totalKeys: number; pendingKeys: number; missingKeys: number }[] = []
+  const namespaceData: { namespace: string; totalKeys: number; languageProgress: { language: string; progress: number }[] }[] = []
 
-  const overallProgress = Math.round(progressData.reduce((sum, p) => sum + p.progress, 0) / progressData.length)
+  const overallProgress = progressData.length > 0 ? Math.round(progressData.reduce((sum, p) => sum + p.progress, 0) / progressData.length) : 0
 
   return (
     <div className="space-y-6">

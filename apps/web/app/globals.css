@@ -129,25 +129,25 @@
    tweakcn 테마 적용 (https://tweakcn.com/)
    ============================================ */
 .dark {
-  /* shadcn/ui 색상 변수 */
-  --background: oklch(0.1649 0.0352 281.8285);
+  /* shadcn/ui 색상 변수 - WBSMASTER 스타일 (더 어두운 배경) */
+  --background: oklch(0.10 0.025 280);
   --foreground: oklch(0.9513 0.0074 260.7315);
-  --card: oklch(0.2542 0.0611 281.1423);
+  --card: oklch(0.16 0.04 280);
   --card-foreground: oklch(0.9513 0.0074 260.7315);
-  --popover: oklch(0.2542 0.0611 281.1423);
+  --popover: oklch(0.16 0.04 280);
   --popover-foreground: oklch(0.9513 0.0074 260.7315);
   --primary: oklch(0.6726 0.2904 341.4084);
   --primary-foreground: oklch(1 0 0);
-  --secondary: oklch(0.2542 0.0611 281.1423);
+  --secondary: oklch(0.16 0.04 280);
   --secondary-foreground: oklch(0.9513 0.0074 260.7315);
-  --muted: oklch(0.2123 0.0522 280.9917);
+  --muted: oklch(0.14 0.035 280);
   --muted-foreground: oklch(0.6245 0.05 278.1046);
   --accent: oklch(0.8903 0.1739 171.269);
-  --accent-foreground: oklch(0.1649 0.0352 281.8285);
+  --accent-foreground: oklch(0.10 0.025 280);
   --destructive: oklch(0.6535 0.2348 34.037);
   --destructive-foreground: oklch(1 0 0);
-  --border: oklch(0.3279 0.0832 280.789);
-  --input: oklch(0.3279 0.0832 280.789);
+  --border: oklch(0.25 0.06 280);
+  --input: oklch(0.25 0.06 280);
   --ring: oklch(0.6726 0.2904 341.4084);
 
   /* 차트 색상 */
@@ -157,14 +157,14 @@
   --chart-4: oklch(0.8903 0.1739 171.269);
   --chart-5: oklch(0.9168 0.1915 101.407);
 
-  /* 사이드바 색상 */
-  --sidebar: oklch(0.1649 0.0352 281.8285);
+  /* 사이드바 색상 - WBSMASTER 스타일 */
+  --sidebar: oklch(0.10 0.025 280);
   --sidebar-foreground: oklch(0.9513 0.0074 260.7315);
   --sidebar-primary: oklch(0.6726 0.2904 341.4084);
   --sidebar-primary-foreground: oklch(1 0 0);
   --sidebar-accent: oklch(0.8903 0.1739 171.269);
-  --sidebar-accent-foreground: oklch(0.1649 0.0352 281.8285);
-  --sidebar-border: oklch(0.3279 0.0832 280.789);
+  --sidebar-accent-foreground: oklch(0.10 0.025 280);
+  --sidebar-border: oklch(0.25 0.06 280);
   --sidebar-ring: oklch(0.6726 0.2904 341.4084);
 
   /* 폰트 */
@@ -197,18 +197,18 @@
     0px 4px 8px -2px hsl(0 0% 0% / 0.1), 0px 8px 10px -3px hsl(0 0% 0% / 0.1);
   --shadow-2xl: 0px 4px 8px -2px hsl(0 0% 0% / 0.25);
 
-  /* 컴포넌트 호환 변수 (기존 코드 호환용) - 다크모드 */
+  /* 컴포넌트 호환 변수 (기존 코드 호환용) - 다크모드 WBSMASTER 스타일 */
   --text: var(--foreground);
   --text-secondary: oklch(0.6 0.03 260);
-  --surface: oklch(0.22 0.04 280);
-  --surface-hover: oklch(0.28 0.05 280);
-  --surface-dark: oklch(0.18 0.035 280);
-  --background-white: oklch(0.2 0.04 280);
-  --background-dark: oklch(0.12 0.025 280);
-  --border-dark: oklch(0.28 0.05 280);
-  --border-hover: oklch(0.35 0.06 280);
+  --surface: oklch(0.14 0.035 280);
+  --surface-hover: oklch(0.18 0.04 280);
+  --surface-dark: oklch(0.12 0.03 280);
+  --background-white: oklch(0.14 0.035 280);
+  --background-dark: oklch(0.08 0.02 280);
+  --border-dark: oklch(0.22 0.05 280);
+  --border-hover: oklch(0.28 0.06 280);
   --primary-hover: oklch(0.72 0.3 341);
-  --card-hover: oklch(0.28 0.06 280);
+  --card-hover: oklch(0.20 0.05 280);
 }
 
 /* ============================================
@@ -306,6 +306,25 @@
   --shadow-lg: var(--shadow-lg);
   --shadow-xl: var(--shadow-xl);
   --shadow-2xl: var(--shadow-2xl);
+}
+
+/* ============================================
+   DataTable 행 스타일
+   ============================================ */
+.data-table-row {
+  border-bottom: 1px solid #e5e7eb;
+}
+
+.data-table-row:hover {
+  background-color: #f1f5f9;
+}
+
+.dark .data-table-row {
+  border-bottom-color: #374151;
+}
+
+.dark .data-table-row:hover {
+  background-color: #1f2937;
 }
 
 /* ============================================

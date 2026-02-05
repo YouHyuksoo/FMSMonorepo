@@ -7,9 +7,6 @@ import { Card, CardContent, CardHeader, CardTitle } from "@fms/ui/card"
 import { Table, TableBody, TableCell, TableHead, TableHeader, TableRow } from "@fms/ui/table"
 import { Input } from "@fms/ui/input"
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@fms/ui/select"
-import { mockUsers } from "@/lib/mock-data/users"
-import { tpmMemberRoles } from "@/lib/mock-data/tpm"
-import { mockEquipment } from "@/lib/mock-data/equipment"
 import { useTranslation } from "@/lib/language-context"
 import { Icon } from "@fms/ui/icon"
 import type { TPMTeam, TPMTeamFormData, TPMTeamMember } from "@fms/types"
@@ -51,24 +48,13 @@ export function TPMTeamForm({ open, onOpenChange, onSubmit, initialData, mode }:
   ]
 
   // 사용자 옵션
-  const userOptions = mockUsers.map((user) => ({
-    label: `${user.name} (${user.department})`,
-    value: user.id,
-    description: user.position,
-  }))
+  const userOptions: Array<{ label: string; value: string; description?: string }> = []
 
   // 설비 옵션
-  const equipmentOptions = mockEquipment.map((eq) => ({
-    label: `${eq.code} - ${eq.name}`,
-    value: eq.id,
-    description: eq.location,
-  }))
+  const equipmentOptions: Array<{ label: string; value: string; description?: string }> = []
 
   // 역할 옵션
-  const roleOptions = tpmMemberRoles.map((role) => ({
-    label: role.label,
-    value: role.value,
-  }))
+  const roleOptions: Array<{ label: string; value: string }> = []
 
   const formFields: FormField[] = [
     {
@@ -198,7 +184,7 @@ export function TPMTeamForm({ open, onOpenChange, onSubmit, initialData, mode }:
                       <TableCell>{member.department}</TableCell>
                       <TableCell>{member.position}</TableCell>
                       <TableCell>
-                        {tpmMemberRoles.find((role) => role.value === member.role)?.label || member.role}
+                        {roleOptions.find((role) => role.value === member.role)?.label || member.role}
                       </TableCell>
                       <TableCell>{member.joinDate}</TableCell>
                       <TableCell>
@@ -226,14 +212,14 @@ export function TPMTeamForm({ open, onOpenChange, onSubmit, initialData, mode }:
                     <div>
                       <Select
                         onValueChange={(value) => {
-                          const user = mockUsers.find((u) => u.id === value)
-                          if (user) {
+                          const selectedUser = userOptions.find((u) => u.value === value)
+                          if (selectedUser) {
                             setNewMember({
                               ...newMember,
-                              userId: user.id,
-                              userName: user.name,
-                              department: user.department,
-                              position: user.position,
+                              userId: selectedUser.value,
+                              userName: selectedUser.label.split(" (")[0],
+                              department: selectedUser.label.match(/\(([^)]+)\)/)?.[1] || "",
+                              position: selectedUser.description || "",
                             })
                           }
                         }}

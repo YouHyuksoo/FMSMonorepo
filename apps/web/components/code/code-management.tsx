@@ -28,7 +28,6 @@ import { Tabs, TabsContent, TabsList, TabsTrigger } from "@fms/ui/tabs"
 import { useToast } from "@/hooks/use-toast"
 import { useCrudState } from "@/hooks/use-crud-state"
 import type { CodeGroup, Code, CodeGroupFormData, CodeFormData } from "@fms/types"
-import { mockCodeGroups, mockCodes } from "@/lib/mock-data/codes"
 
 export function CodeManagement() {
   const [codeGroups, setCodeGroups] = useState<CodeGroup[]>([])
@@ -61,8 +60,8 @@ export function CodeManagement() {
     setLoading(true)
     try {
       await new Promise((resolve) => setTimeout(resolve, 1000))
-      setCodeGroups(mockCodeGroups)
-      setCodes(mockCodes)
+      setCodeGroups([])
+      setCodes([])
     } catch (error) {
       toast({
         title: "오류",

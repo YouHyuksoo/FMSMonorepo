@@ -14,8 +14,6 @@ import { Icon } from "@/components/ui/Icon"
 import { useToast } from "@/hooks/use-toast"
 import { useCrudState } from "@/hooks/use-crud-state"
 import MaterialOutboundForm from "./material-outbound-form"
-import { mockMaterialOutboundTransactions } from "@/lib/mock-data/material-outbound"
-import { mockMaterialIssuanceRequests } from "@/lib/mock-data/material-issuance"
 import type { MaterialTransaction, MaterialIssuanceRequest } from "@fms/types"
 
 // 상태 설정
@@ -50,8 +48,8 @@ function downloadExcel<T extends Record<string, any>>(data: T[], columns: { key:
 }
 
 export function MaterialOutboundManagement() {
-  const [outboundTransactions, setOutboundTransactions] = useState<MaterialTransaction[]>(mockMaterialOutboundTransactions)
-  const [issuanceRequests, setIssuanceRequests] = useState<MaterialIssuanceRequest[]>(mockMaterialIssuanceRequests)
+  const [outboundTransactions, setOutboundTransactions] = useState<MaterialTransaction[]>([])
+  const [issuanceRequests, setIssuanceRequests] = useState<MaterialIssuanceRequest[]>([])
   const [selectedRequestIds, setSelectedRequestIds] = useState<string[]>([])
   const [activeTab, setActiveTab] = useState("request-based")
 

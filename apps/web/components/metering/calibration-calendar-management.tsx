@@ -12,7 +12,6 @@
 
 import { useState, useEffect } from "react"
 import { CalibrationCalendar } from "./calibration-calendar"
-import { mockCalibrationRecords } from "@/lib/mock-data/metering"
 import type { CalibrationRecord } from "@fms/types"
 
 export function CalibrationCalendarManagement() {
@@ -20,9 +19,8 @@ export function CalibrationCalendarManagement() {
 
   // 계측기검교정 관리와 동일한 데이터 로드
   useEffect(() => {
-    // 실제 환경에서는 API에서 데이터를 가져오겠지만,
-    // 현재는 계측기검교정 관리와 동일한 목업 데이터 사용
-    setCalibrations(mockCalibrationRecords)
+    // 실제 환경에서는 API에서 데이터를 가져옴
+    setCalibrations([])
   }, [])
 
   const handleCalibrationUpdate = (updatedCalibrations: CalibrationRecord[]) => {

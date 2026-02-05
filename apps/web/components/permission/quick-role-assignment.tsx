@@ -12,7 +12,6 @@ import {
 } from "@fms/ui/dropdown-menu"
 import { Badge } from "@fms/ui/badge"
 import { Icon } from "@fms/ui/icon"
-import { mockRoles } from "@/lib/mock-data/permissions"
 import type { User } from "@fms/types"
 import type { Role } from "@fms/types"
 import { useToast } from "@/hooks/use-toast"
@@ -93,7 +92,7 @@ export function QuickRoleAssignment({ user, onRoleAssigned }: QuickRoleAssignmen
       <DropdownMenuContent align="end" className="w-56">
         <DropdownMenuLabel>역할 선택</DropdownMenuLabel>
         <DropdownMenuSeparator />
-        {mockRoles.map((role) => (
+        {[].map((role) => (
           <DropdownMenuItem key={role.id} onClick={() => handleQuickAssign(role)} className="flex items-center gap-2">
             <div className={getRoleColor(role.level)}>{getRoleIcon(role.name)}</div>
             <div className="flex-1">

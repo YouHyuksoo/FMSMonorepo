@@ -21,7 +21,6 @@ import { Button } from "@fms/ui/button"
 import { Icon } from "@/components/ui/Icon"
 import { ImportExportDialog } from "@/components/common/import-export-dialog"
 import { TPMTeamForm } from "./tpm-team-form"
-import { mockTPMTeams } from "@/lib/mock-data/tpm"
 import { useTranslation } from "@/lib/language-context"
 import { useToast } from "@/hooks/use-toast"
 import { useCrudState } from "@/hooks/use-crud-state"
@@ -31,7 +30,7 @@ export function TPMTeamManagement() {
   const { t } = useTranslation("tpm")
   const { t: tCommon } = useTranslation("common")
   const { toast } = useToast()
-  const [teams, setTeams] = useState<TPMTeam[]>(mockTPMTeams)
+  const [teams, setTeams] = useState<TPMTeam[]>([])
 
   // 페이지네이션 상태
   const [currentPage, setCurrentPage] = useState(1)

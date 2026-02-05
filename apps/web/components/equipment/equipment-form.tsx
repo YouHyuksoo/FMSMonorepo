@@ -8,11 +8,6 @@ import {
 } from "@fms/ui/standard-form";
 import type { Equipment, EquipmentFormData } from "@fms/types";
 import type { EquipmentCategory } from "@fms/types";
-import {
-  mockEquipmentTypes,
-  mockEquipmentCategories,
-  mockEquipmentCodeRules,
-} from "@/lib/mock-data/equipment-master";
 import { useTranslation } from "@/lib/language-context";
 import { Button } from "@fms/ui/button";
 import { Icon } from "@fms/ui/icon";
@@ -51,9 +46,9 @@ export function EquipmentForm({
   );
 
   // 마스터 데이터 조회
-  const equipmentTypes = mockEquipmentTypes;
-  const equipmentCategories = mockEquipmentCategories;
-  const codeRules = mockEquipmentCodeRules;
+  const equipmentTypes: Array<{ id: string; name: string; description?: string; isActive: boolean; properties: Array<{ code: string; name: string; description?: string; dataType: string; required: boolean; isActive: boolean; order: number; options?: Array<{ label: string; value: string }>; regex?: string }> }> = [];
+  const equipmentCategories: EquipmentCategory[] = [];
+  const codeRules: Array<{ isActive: boolean; appliedTo: string[]; separator: string; segments: Array<{ type: string; value?: string; length?: number; padChar?: string }> }> = [];
 
   // 선택된 설비 유형 정보
   const selectedType = equipmentTypes.find(

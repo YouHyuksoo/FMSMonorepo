@@ -3,12 +3,15 @@
 import { Card, CardContent, CardHeader, CardTitle } from "@fms/ui/card"
 import { Badge } from "@fms/ui/badge"
 import { Button } from "@fms/ui/button"
-import { mockEquipmentHealthDetails } from "@/lib/mock-data/equipment-health"
 import { Icon } from "@fms/ui/icon"
+import type { EquipmentHealthDetail } from "@fms/types"
 
 export function HealthRecommendations() {
+  // 설비 건강 상세 데이터 (실제 API 연동 시 대체 필요)
+  const equipmentHealthDetails: EquipmentHealthDetail[] = []
+
   // 모든 권장사항을 수집하고 우선순위별로 정렬
-  const allRecommendations = mockEquipmentHealthDetails
+  const allRecommendations = equipmentHealthDetails
     .flatMap((equipment) =>
       equipment.recommendations.map((rec) => ({
         ...rec,

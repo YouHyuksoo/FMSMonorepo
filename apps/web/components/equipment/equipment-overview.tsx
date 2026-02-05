@@ -19,7 +19,6 @@ import { DataTable } from "@/components/common/data-table"
 import { Dialog, DialogContent, DialogHeader, DialogTitle } from "@fms/ui/dialog"
 import { Card, CardContent, CardHeader, CardTitle } from "@fms/ui/card"
 import { useToast } from "@/hooks/use-toast"
-import { mockEquipment } from "@/lib/mock-data/equipment"
 import type { Equipment } from "@fms/types"
 import type { Column } from "@/components/common/data-table"
 import { Icon } from "@fms/ui/icon"
@@ -39,7 +38,7 @@ export function EquipmentOverview() {
     setLoading(true)
     try {
       await new Promise((resolve) => setTimeout(resolve, 500))
-      setEquipment(mockEquipment)
+      setEquipment([])
     } catch (error) {
       toast({
         title: "오류",

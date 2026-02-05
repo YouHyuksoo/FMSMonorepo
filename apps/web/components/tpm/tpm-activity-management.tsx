@@ -12,15 +12,17 @@ import { Button } from "@fms/ui/button"
 import { Icon } from "@/components/ui/Icon"
 import { ImportExportDialog } from "@/components/common/import-export-dialog"
 import { TPMActivityForm } from "./tpm-activity-form"
-import { mockTPMActivities, mockTPMTeams } from "@/lib/mock-data/tpm"
-import { mockEquipment } from "@/lib/mock-data/equipment"
 import { useToast } from "@/hooks/use-toast"
 import { useCrudState } from "@/hooks/use-crud-state"
 import { type TPMActivity, type TPMActivityFormData, tpmPillarLabels } from "@fms/types"
 
+// 빈 옵션 배열 (API에서 로드 필요)
+const tpmTeams: { id: string; name: string }[] = []
+const equipmentList: { id: string; name: string }[] = []
+
 export function TPMActivityManagement() {
   const { toast } = useToast()
-  const [activities, setActivities] = useState<TPMActivity[]>(mockTPMActivities as any)
+  const [activities, setActivities] = useState<TPMActivity[]>([])
   const [activeTab, setActiveTab] = useState("all")
 
   // 페이지네이션 상태
@@ -185,8 +187,8 @@ export function TPMActivityManagement() {
           id: `temp-${Date.now()}`,
           activityNo: `TPM-ACT-${new Date().getFullYear()}-${String(activities.length + 1).padStart(3, "0")}`,
           ...data,
-          teamName: mockTPMTeams.find((t) => t.id === data.teamId)?.name || "",
-          equipmentNames: data.equipmentIds.map((id) => mockEquipment.find((eq) => eq.id === id)?.name || ""),
+          teamName: tpmTeams.find((t) => t.id === data.teamId)?.name || "",
+          equipmentNames: data.equipmentIds.map((id) => equipmentList.find((eq) => eq.id === id)?.name || ""),
           status: "planned",
           completionRate: 0,
           isActive: true,
@@ -203,8 +205,8 @@ export function TPMActivityManagement() {
         const updatedActivity: TPMActivity = {
           ...crud.selectedItem,
           ...(data as any),
-          teamName: mockTPMTeams.find((t) => t.id === data.teamId)?.name || crud.selectedItem.teamName,
-          equipmentNames: data.equipmentIds.map((id) => mockEquipment.find((eq) => eq.id === id)?.name || ""),
+          teamName: tpmTeams.find((t) => t.id === data.teamId)?.name || crud.selectedItem.teamName,
+          equipmentNames: data.equipmentIds.map((id) => equipmentList.find((eq) => eq.id === id)?.name || ""),
           updatedAt: new Date().toISOString(),
           updatedBy: "current-user",
         }

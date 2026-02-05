@@ -3,19 +3,23 @@
 import { Card, CardContent, CardHeader, CardTitle } from "@fms/ui/card"
 import { Badge } from "@fms/ui/badge"
 import { Progress } from "@fms/ui/progress"
-import { mockKpiMetrics, mockEquipmentHealth } from "@/lib/mock-data/kpi"
 import { Icon } from "@fms/ui/icon"
+import type { KpiMetric, EquipmentHealth } from "@fms/types"
 
 export function KpiDashboard() {
-  const totalEquipment = mockKpiMetrics.length
-  const avgMtbf = mockKpiMetrics.reduce((sum, item) => sum + item.mtbf, 0) / totalEquipment
-  const avgMttr = mockKpiMetrics.reduce((sum, item) => sum + item.mttr, 0) / totalEquipment
-  const avgAvailability = mockKpiMetrics.reduce((sum, item) => sum + item.availability, 0) / totalEquipment
-  const avgOee = mockKpiMetrics.reduce((sum, item) => sum + item.oee, 0) / totalEquipment
+  // KPI 데이터 (실제 API 연동 시 대체 필요)
+  const kpiMetrics: KpiMetric[] = []
+  const equipmentHealth: EquipmentHealth[] = []
 
-  const healthyEquipment = mockEquipmentHealth.filter((eq) => eq.riskLevel === "low").length
-  const warningEquipment = mockEquipmentHealth.filter((eq) => eq.riskLevel === "medium").length
-  const criticalEquipment = mockEquipmentHealth.filter(
+  const totalEquipment = kpiMetrics.length || 1 // 0으로 나누기 방지
+  const avgMtbf = kpiMetrics.reduce((sum, item) => sum + item.mtbf, 0) / totalEquipment
+  const avgMttr = kpiMetrics.reduce((sum, item) => sum + item.mttr, 0) / totalEquipment
+  const avgAvailability = kpiMetrics.reduce((sum, item) => sum + item.availability, 0) / totalEquipment
+  const avgOee = kpiMetrics.reduce((sum, item) => sum + item.oee, 0) / totalEquipment
+
+  const healthyEquipment = equipmentHealth.filter((eq) => eq.riskLevel === "low").length
+  const warningEquipment = equipmentHealth.filter((eq) => eq.riskLevel === "medium").length
+  const criticalEquipment = equipmentHealth.filter(
     (eq) => eq.riskLevel === "high" || eq.riskLevel === "critical",
   ).length
 
@@ -142,7 +146,7 @@ export function KpiDashboard() {
           </CardHeader>
           <CardContent>
             <div className="space-y-4">
-              {mockKpiMetrics.map((kpi) => (
+              {kpiMetrics.map((kpi) => (
                 <div key={kpi.id} className="flex items-center justify-between p-3 border rounded-lg">
                   <div className="flex items-center space-x-3">
                     <div className={`w-3 h-3 rounded-full ${getRiskColor(kpi.riskLevel)}`} />

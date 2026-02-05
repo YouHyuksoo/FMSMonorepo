@@ -22,12 +22,13 @@ import { UsageTrendChart } from "./usage-trend-chart"
 import { MeterTypeComparisonChart } from "./meter-type-comparison-chart"
 import { CostAnalysisChart } from "./cost-analysis-chart"
 import { EquipmentUsageChart } from "./equipment-usage-chart"
-import { mockMeterReadings } from "@/lib/mock-data/metering"
+import type { MeterReading } from "@fms/types"
 import { meterTypeLabels } from "@fms/types"
 
 export function MeterReadingCharts() {
   const [timeRange, setTimeRange] = useState<string>("30")
   const [meterType, setMeterType] = useState<string>("all")
+  const [meterReadings] = useState<MeterReading[]>([])
 
   // 시간 범위에 따라 데이터 필터링
   const filteredData = useMemo(() => {
@@ -54,7 +55,7 @@ export function MeterReadingCharts() {
         startDate.setDate(today.getDate() - 30)
     }
 
-    let data = mockMeterReadings.filter((reading) => {
+    let data = meterReadings.filter((reading) => {
       const readingDate = new Date(reading.readingDate)
       return readingDate >= startDate && readingDate <= today
     })
@@ -65,7 +66,7 @@ export function MeterReadingCharts() {
     }
 
     return data
-  }, [timeRange, meterType])
+  }, [timeRange, meterType, meterReadings])
 
   // 필터 컨트롤
   const filterControls = (

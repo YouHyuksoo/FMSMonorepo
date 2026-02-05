@@ -28,7 +28,7 @@
     "title": "보전자재관리",
     "registration_management": "자재등록관리",
     "master_management": "자재마스터관리",
-    "inventory_management": "재고마스터관리",
+    "inventory_management": "재고정보관리",
     "inbound": "자재입고관리",
     "outbound": "자재출고관리",
     "issuance_request": "자재출고요청"

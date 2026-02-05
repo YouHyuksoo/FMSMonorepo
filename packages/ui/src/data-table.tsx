@@ -130,6 +130,7 @@ export interface DataTableProps<T> {
   title?: string;
   subtitle?: string;
   headerLeft?: React.ReactNode;
+  headerRight?: React.ReactNode;
   addButtonText?: string;
   showSearch?: boolean;
   showFilter?: boolean;
@@ -223,6 +224,7 @@ export function DataTable<T extends Record<string, any>>({
   title,
   subtitle,
   headerLeft,
+  headerRight,
   addButtonText,
   showSearch = true,
   showFilter = true,
@@ -511,26 +513,29 @@ export function DataTable<T extends Record<string, any>>({
           )}
 
           {/* 내보내기 */}
-          {showExport && onExport && (
+          {!headerRight && showExport && onExport && (
             <Button variant="outline" size="icon" onClick={onExport} title="엑셀 다운로드">
               <Icon name="download" size="sm" />
             </Button>
           )}
 
           {/* 가져오기 */}
-          {showImport && onImport && (
+          {!headerRight && showImport && onImport && (
             <Button variant="outline" size="icon" onClick={onImport} title="가져오기">
               <Icon name="upload" size="sm" />
             </Button>
           )}
 
           {/* 추가 버튼 */}
-          {onAdd && (
+          {!headerRight && onAdd && (
             <Button onClick={onAdd}>
               <Icon name="add" size="sm" className="mr-2" />
               {addButtonTextText}
             </Button>
           )}
+
+          {/* 커스텀 헤더 오른쪽 */}
+          {headerRight}
         </div>
       </div>
 
@@ -629,7 +634,7 @@ export function DataTable<T extends Record<string, any>>({
               </div>
             )}
             {inlineActions && actions.length > 0 && (
-              <div>{labels.actions}</div>
+              <div className="flex items-center">{labels.actions}</div>
             )}
             {visibleColumns.map((column) => (
               <div
@@ -672,7 +677,7 @@ export function DataTable<T extends Record<string, any>>({
               </div>
             ))}
             {!inlineActions && actions.length > 0 && (
-              <div>{labels.actions}</div>
+              <div className="flex items-center">{labels.actions}</div>
             )}
           </div>
 
@@ -698,10 +703,9 @@ export function DataTable<T extends Record<string, any>>({
               <div
                 key={record.id || index}
                 className={cn(
-                  "grid gap-2 px-4 py-3 items-center",
-                  "border-b border-border/50 dark:border-border/30",
-                  "hover:bg-muted/30 dark:hover:bg-muted/10",
-                  "transition-colors",
+                  "grid gap-2 px-4 py-1 items-center",
+                  "data-table-row",
+                  "transition-colors cursor-default",
                   "min-w-[800px]",
                   isRowSelected(record) && "bg-primary/5 dark:bg-primary/10"
                 )}

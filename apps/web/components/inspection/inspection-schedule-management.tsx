@@ -18,12 +18,8 @@ import {
   DialogFooter,
 } from "@fms/ui/dialog"
 import type { InspectionSchedule } from "@fms/types"
-import { mockInspectionSchedules } from "@/lib/mock-data/inspection-schedule"
 import { useToast } from "@/hooks/use-toast"
 import { useCrudState } from "@/hooks/use-crud-state"
-import { mockInspectionStandards } from "@/lib/mock-data/inspection-standard"
-import { mockEquipments } from "@/lib/mock-data/equipment"
-import { mockUsers } from "@/lib/mock-data/users"
 import {
   useInspectionSchedules,
   useCreateInspectionSchedule,
@@ -31,6 +27,11 @@ import {
 
 // Mock/API 모드 전환
 const USE_MOCK_API = process.env.NEXT_PUBLIC_USE_MOCK_API === "true"
+
+// 빈 옵션 배열 (API에서 로드 필요)
+const inspectionStandards: { id: string; name: string }[] = []
+const equipments: { id: string; name: string; location?: string }[] = []
+const users: { id: string; name: string; department?: string }[] = []
 
 export function InspectionScheduleManagement() {
   // API 훅 (API 모드에서만 사용)
@@ -67,7 +68,7 @@ export function InspectionScheduleManagement() {
     if (USE_MOCK_API) {
       setMockLoading(true)
       setTimeout(() => {
-        setMockScheduleData(mockInspectionSchedules)
+        setMockScheduleData([])
         setMockLoading(false)
       }, 500)
     }
@@ -331,9 +332,9 @@ export function InspectionScheduleManagement() {
       return
     }
 
-    const selectedStandard = mockInspectionStandards.find((s) => s.id === formData.standardId)
-    const selectedEquipment = mockEquipments.find((e) => e.id === formData.equipmentId)
-    const selectedUser = mockUsers.find((u) => u.id === formData.assignedToId)
+    const selectedStandard = inspectionStandards.find((s) => s.id === formData.standardId)
+    const selectedEquipment = equipments.find((e) => e.id === formData.equipmentId)
+    const selectedUser = users.find((u) => u.id === formData.assignedToId)
 
     if (crud.formMode === "create") {
       const newSchedule: any = {
@@ -492,7 +493,7 @@ export function InspectionScheduleManagement() {
                   className="w-full px-3 py-2 border rounded-lg bg-background dark:bg-background-dark text-text dark:text-white"
                 >
                   <option value="">점검 기준서를 선택하세요</option>
-                  {mockInspectionStandards.map((standard) => (
+                  {inspectionStandards.map((standard) => (
                     <option key={standard.id} value={standard.id}>
                       {standard.name}
                     </option>
@@ -510,7 +511,7 @@ export function InspectionScheduleManagement() {
                   className="w-full px-3 py-2 border rounded-lg bg-background dark:bg-background-dark text-text dark:text-white"
                 >
                   <option value="">설비를 선택하세요</option>
-                  {mockEquipments.map((equipment) => (
+                  {equipments.map((equipment) => (
                     <option key={equipment.id} value={equipment.id}>
                       {equipment.name} ({equipment.location})
                     </option>
@@ -528,7 +529,7 @@ export function InspectionScheduleManagement() {
                   className="w-full px-3 py-2 border rounded-lg bg-background dark:bg-background-dark text-text dark:text-white"
                 >
                   <option value="">담당자를 선택하세요</option>
-                  {mockUsers.map((user) => (
+                  {users.map((user) => (
                     <option key={user.id} value={user.id}>
                       {user.name} ({user.department})
                     </option>

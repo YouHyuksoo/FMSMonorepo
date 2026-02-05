@@ -8,7 +8,6 @@ import { Badge } from "@fms/ui/badge"
 import { Skeleton } from "@fms/ui/skeleton"
 import type { PreventiveScheduleRecord } from "@fms/types"
 import { cn } from "@fms/utils"
-import { mockPreventiveScheduleRecords } from "@/lib/mock-data/preventive-schedule"
 
 const daysInMonth = (year: number, month: number) => new Date(year, month + 1, 0).getDate()
 const firstDayOfMonth = (year: number, month: number) => new Date(year, month, 1).getDay() // 0 (Sun) - 6 (Sat)
@@ -23,7 +22,7 @@ export function PreventiveMaintenanceCalendar() {
   useEffect(() => {
     // Simulate API call
     setTimeout(() => {
-      setSchedules(mockPreventiveScheduleRecords)
+      setSchedules([])
       setLoading(false)
     }, 500)
   }, [])

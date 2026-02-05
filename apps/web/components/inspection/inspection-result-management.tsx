@@ -21,14 +21,11 @@ import { Badge } from "@fms/ui/badge"
 import { Dialog, DialogContent, DialogDescription, DialogHeader, DialogTitle } from "@fms/ui/dialog"
 import { Progress } from "@fms/ui/progress"
 import type { InspectionResult, InspectionResultItem } from "@fms/types"
-import { mockInspectionResults } from "@/lib/mock-data/inspection-result"
 import { useToast } from "@/hooks/use-toast"
 import { useCrudState } from "@/hooks/use-crud-state"
 import { Icon } from "@fms/ui/icon"
 import { DataTable } from "@/components/common/data-table"
 import Image from "next/image"
-import { mockInspectionSchedules } from "@/lib/mock-data/inspection-schedule"
-import { mockUsers } from "@/lib/mock-data/users"
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@fms/ui/select"
 import { Textarea } from "@fms/ui/textarea"
 import {
@@ -74,7 +71,7 @@ export function InspectionResultManagement() {
     if (USE_MOCK_API) {
       setMockLoading(true)
       setTimeout(() => {
-        setMockResultData(mockInspectionResults)
+        setMockResultData([])
         setMockLoading(false)
       }, 500)
     }
@@ -296,7 +293,7 @@ export function InspectionResultManagement() {
       const resultToAdd: InspectionResult = {
         id: `result-${Date.now()}`,
         scheduleId: formData.scheduleId,
-        schedule: mockInspectionSchedules.find((s) => s.id === formData.scheduleId) || null,
+        schedule: null,
         startedAt: formData.startedAt,
         completedAt: formData.completedAt || undefined,
         duration: formData.duration ? Number.parseInt(formData.duration) : undefined,
@@ -305,7 +302,7 @@ export function InspectionResultManagement() {
         abnormalItemCount: 0,
         items: [],
         notes: formData.notes || undefined,
-        completedBy: mockUsers.find((u) => u.id === formData.completedById) || null,
+        completedBy: null,
         createdAt: new Date().toISOString(),
         updatedAt: new Date().toISOString(),
       }
@@ -322,13 +319,13 @@ export function InspectionResultManagement() {
       const updatedResult: InspectionResult = {
         ...crud.selectedItem,
         scheduleId: formData.scheduleId,
-        schedule: mockInspectionSchedules.find((s) => s.id === formData.scheduleId) || null,
+        schedule: null,
         startedAt: formData.startedAt,
         completedAt: formData.completedAt || undefined,
         duration: formData.duration ? Number.parseInt(formData.duration) : undefined,
         status: formData.status as "in-progress" | "completed" | "incomplete",
         notes: formData.notes || undefined,
-        completedBy: mockUsers.find((u) => u.id === formData.completedById) || null,
+        completedBy: null,
         updatedAt: new Date().toISOString(),
       }
 
@@ -575,11 +572,7 @@ export function InspectionResultManagement() {
                     <SelectValue placeholder="스케줄 선택" />
                   </SelectTrigger>
                   <SelectContent>
-                    {mockInspectionSchedules.map((schedule) => (
-                      <SelectItem key={schedule.id} value={schedule.id}>
-                        {schedule.standard?.name} - {schedule.equipment?.name}
-                      </SelectItem>
-                    ))}
+                    {/* 스케줄 옵션은 API에서 로드 */}
                   </SelectContent>
                 </Select>
               </div>
@@ -593,11 +586,7 @@ export function InspectionResultManagement() {
                     <SelectValue placeholder="점검자 선택" />
                   </SelectTrigger>
                   <SelectContent>
-                    {mockUsers.map((user) => (
-                      <SelectItem key={user.id} value={user.id}>
-                        {user.name} ({user.department})
-                      </SelectItem>
-                    ))}
+                    {/* 사용자 옵션은 API에서 로드 */}
                   </SelectContent>
                 </Select>
               </div>

@@ -4,16 +4,19 @@ import { Card, CardContent, CardHeader, CardTitle } from "@fms/ui/card"
 import { Badge } from "@fms/ui/badge"
 import { Progress } from "@fms/ui/progress"
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@fms/ui/tabs"
-import { mockEquipmentHealthDetails } from "@/lib/mock-data/equipment-health"
 import { Icon } from "@fms/ui/icon"
+import type { EquipmentHealthDetail } from "@fms/types"
 
 export function EquipmentHealthDashboard() {
-  const totalEquipment = mockEquipmentHealthDetails.length
-  const healthyEquipment = mockEquipmentHealthDetails.filter((eq) => eq.healthScore >= 80).length
-  const warningEquipment = mockEquipmentHealthDetails.filter((eq) => eq.healthScore >= 60 && eq.healthScore < 80).length
-  const criticalEquipment = mockEquipmentHealthDetails.filter((eq) => eq.healthScore < 60).length
+  // 설비 건강 상세 데이터 (실제 API 연동 시 대체 필요)
+  const equipmentHealthDetails: EquipmentHealthDetail[] = []
+
+  const totalEquipment = equipmentHealthDetails.length || 1 // 0으로 나누기 방지
+  const healthyEquipment = equipmentHealthDetails.filter((eq) => eq.healthScore >= 80).length
+  const warningEquipment = equipmentHealthDetails.filter((eq) => eq.healthScore >= 60 && eq.healthScore < 80).length
+  const criticalEquipment = equipmentHealthDetails.filter((eq) => eq.healthScore < 60).length
   const averageHealth = Math.round(
-    mockEquipmentHealthDetails.reduce((sum, eq) => sum + eq.healthScore, 0) / totalEquipment,
+    equipmentHealthDetails.reduce((sum, eq) => sum + eq.healthScore, 0) / totalEquipment,
   )
 
   const getHealthColor = (score: number) => {
@@ -135,7 +138,7 @@ export function EquipmentHealthDashboard() {
 
             <TabsContent value="grid" className="space-y-4">
               <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
-                {mockEquipmentHealthDetails.map((equipment) => (
+                {equipmentHealthDetails.map((equipment) => (
                   <Card key={equipment.equipmentId} className="hover:shadow-md transition-shadow">
                     <CardHeader className="pb-3">
                       <div className="flex items-center justify-between">
@@ -229,7 +232,7 @@ export function EquipmentHealthDashboard() {
                     </tr>
                   </thead>
                   <tbody>
-                    {mockEquipmentHealthDetails.map((equipment) => (
+                    {equipmentHealthDetails.map((equipment) => (
                       <tr key={equipment.equipmentId} className="border-b">
                         <td className="p-4">
                           <div>

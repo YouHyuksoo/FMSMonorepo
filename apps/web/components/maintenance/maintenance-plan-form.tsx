@@ -1,9 +1,6 @@
 "use client"
 import { StandardForm, type FormField, type FormGroup } from "@fms/ui/standard-form"
 import type { MaintenancePlan, MaintenanceRequest, MaintenancePlanFormData } from "@fms/types"
-import { mockEquipment } from "@/lib/mock-data/equipment"
-import { mockUsers } from "@/lib/mock-data/users"
-import { mockOrganizations } from "@/lib/mock-data/organizations"
 import { getTodayIsoDate } from "@fms/utils"
 
 interface MaintenancePlanFormProps {
@@ -39,13 +36,7 @@ export function MaintenancePlanForm({
   open,
   onOpenChange,
 }: MaintenancePlanFormProps) {
-  const equipmentOptions = mockEquipment
-    .filter((eq) => eq.isActive)
-    .map((eq) => ({
-      label: `${eq.code} - ${eq.name}`,
-      value: eq.id,
-      description: `${eq.location} / ${eq.department}`,
-    }))
+  const equipmentOptions: Array<{ label: string; value: string; description?: string }> = []
 
   const workTypeOptions = [
     { label: "수리", value: "repair" },
@@ -62,18 +53,9 @@ export function MaintenancePlanForm({
     { label: "낮음", value: "low" },
   ]
 
-  const userOptions = mockUsers.map((user) => ({
-    label: user.name,
-    value: user.id,
-    description: user.team,
-  }))
+  const userOptions: Array<{ label: string; value: string; description?: string }> = []
 
-  const teamOptions = mockOrganizations
-    .filter((org) => org.type === "team")
-    .map((team) => ({
-      label: team.name,
-      value: team.id,
-    }))
+  const teamOptions: Array<{ label: string; value: string }> = []
 
   const formFields: FormField[] = [
     {
